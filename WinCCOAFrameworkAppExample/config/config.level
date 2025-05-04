@@ -1,0 +1,7 @@
+
+
+[ui]
+LoadCtrlLibs = "siemensframeworkappexample_hook.ctl"
+
+[ctrl]
+LoadCtrlLibs = "siemensframeworkappexample_hook.ctl"

@@ -1,0 +1,118 @@
+V 14
+2
+LANG:10000 0 
+LANG:10001 0 
+PANEL,-1 -1 177 181 N "_3DFace" 0
+"main()
+{
+  dpConnect(\"func\",\"datasystem1:Simulator.FireAlm\");
+
+}
+
+void func(string dp, bool val)
+{
+  RECTANGLE1.backCol = val ? \"Life_safety\" : \"paper-grey-300\";
+}
+" 0
+ E E E E 1 -1 -1 0  128 45
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "94.1104"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+13 4
+"PUSH_BUTTON3"
+"Btn_Style2"
+1 -3.593549468212001e-15 -6.782608695652176 E E E 1 E 1 E N "tl_button_text" E N "panelHeader" E E
+ E E
+4 0 0 0 0 0
+E E E
+1
+2
+LANG:10000 0 
+LANG:10001 0 
+
+2
+"hoverbclr" "N \"SimulationButtonHover\""
+"layoutAlignment" "AlignNone"
+2
+LANG:10000 43 MS Shell Dlg 2,-1,22,5,50,0,0,0,0,0,Regular
+LANG:10001 43 MS Shell Dlg 2,-1,19,5,50,0,0,0,0,0,Regular
+0  -2.000000000000004 -1.000000000000003 178 182
+
+T 
+2
+LANG:10000 12 PUSH_BUTTON3
+LANG:10001 19 SIMULATE FIRE ALARM
+"main(mapping event)
+{
+  dpSet(\"datasystem1:Simulator.MuteFireAlm\" ,0);
+  dpSet(\"datasystem1:Simulator.MuteFireAlm\" ,1);
+}" 0
+ E E "main()
+{
+  this.text=\"SIMULATE \\nFIRE ALARM\";
+}" 0
+
+6 5
+"RECTANGLE1"
+""
+1 -3.552713678800501e-15 5.913043478260861 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.017241379310345 0 1.070040899795501 0 -6.327198364008169 0 E -3.552713678800501e-15 5.913043478260861 174 176
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+0

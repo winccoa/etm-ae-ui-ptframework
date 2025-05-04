@@ -1,0 +1,109 @@
+V 14
+6
+LANG:10000 0 
+LANG:10001 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+PANEL,-1 -1 198 47 N "_3DFace" 0
+E E E E E 1 -1 -1 0  0 0
+""0  1
+E "public void SetVisible(bool show){
+  txt.visible(show);
+}
+
+public void SetText(langString name){
+  txt.text(name);
+}
+
+public void SetForeColor(string color){
+  txt.foreCol(color);
+}
+public string GetName(){return self.name;}
+" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "108.888"
+1 1 0 0 0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+14 0
+"txt"
+""
+1 0 0 E E E 1 E 1 E N "color-soft-text" E N "_Transparent" E E
+ E E
+0 0 0 0 0 0
+E E E
+1
+6
+LANG:10000 0 
+LANG:10001 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+3
+"transparentForMouse" ""
+"sizePolicy" "Expanding Preferred"
+"layoutAlignment" "AlignNone"
+6
+LANG:10000 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10001 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10010 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10009 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10007 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10004 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+0  -2 -2 253 49
+2 "0s" 0 0 0 8 0 -1  E E E
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+4 0 "LAYOUT_GROUP1" -1
+1 0 
+0 
+
+"S 0" "0 0 1 1"
+"" ""
+0 1 0 0
+0

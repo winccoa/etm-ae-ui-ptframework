@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Reporting"
+  targetNamespace="urn:Siemens.OA"
+  xmlns:tns="urn:Siemens.OA"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="urn:Siemens.OA"
+  xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:HTTP="http://schemas.xmlsoap.org/wsdl/http/"
+  xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+  xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+  xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+  <schema targetNamespace="urn:Siemens.OA"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:Siemens.OA"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <complexType name="dateValue"><!-- ns__dateValue -->
+          <sequence>
+            <element name="date" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__dateValue::date -->
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__dateValue::value -->
+            <element name="status" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/><!-- ns__dateValue::status -->
+          </sequence>
+    </complexType>
+    <complexType name="alertAttribute"><!-- ns__alertAttribute -->
+          <sequence>
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__alertAttribute::value -->
+            <element name="date" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::date -->
+            <element name="state" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::state -->
+            <element name="abbr" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::abbr -->
+            <element name="prior" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::prior -->
+            <element name="text" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::text -->
+            <element name="direction" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::direction -->
+            <element name="ack-state" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_state -->
+            <element name="ack-time" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_time -->
+            <element name="ack-user" type="xsd:unsignedInt" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_user -->
+            <element name="comment" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::comment -->
+          </sequence>
+    </complexType>
+    <complexType name="QueryValue"><!-- ns__QueryValue -->
+          <sequence>
+            <element name="column1" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column1 -->
+            <element name="column2" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column2 -->
+            <element name="column3" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column3 -->
+            <element name="column4" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column4 -->
+            <element name="column5" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column5 -->
+            <element name="column6" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column6 -->
+            <element name="column7" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column7 -->
+          </sequence>
+    </complexType>
+    <complexType name="dpNameValue"><!-- ns__dpNameValue -->
+          <sequence>
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpNameValue::dpName -->
+          </sequence>
+    </complexType>
+    <complexType name="dpInfoValue"><!-- ns__dpInfoValue -->
+          <sequence>
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::dpName -->
+            <element name="description" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::description -->
+            <element name="alias" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::alias -->
+            <element name="unit" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::unit -->
+            <element name="lang" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::lang -->
+          </sequence>
+    </complexType>
+    <complexType name="returnValue"><!-- ns__returnValue -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnValue::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnValue::errorText -->
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__returnValue::value -->
+          </sequence>
+    </complexType>
+    <complexType name="returnDateValueList"><!-- ns__returnDateValueList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnDateValueList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnDateValueList::errorText -->
+            <element name="table" type="ns:dateValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnDateValueList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnAlertAttributeList"><!-- ns__returnAlertAttributeList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnAlertAttributeList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnAlertAttributeList::errorText -->
+            <element name="table" type="ns:alertAttribute" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnAlertAttributeList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnQueryValueList"><!-- ns__returnQueryValueList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnQueryValueList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnQueryValueList::errorText -->
+            <element name="table" type="ns:QueryValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnQueryValueList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnDpInfoList"><!-- ns__returnDpInfoList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnDpInfoList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnDpInfoList::errorText -->
+            <element name="table" type="ns:dpInfoValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnDpInfoList::table -->
+          </sequence>
+    </complexType>
+  </schema>
+
+</types>
+
+<message name="dpGet">
+  <part name="dpName" type="xsd:string"/><!-- ns__dpGet::dpName -->
+  <part name="lang" type="xsd:string"/><!-- ns__dpGet::lang -->
+</message>
+
+<message name="getReturnValueResponse">
+  <part name="return" type="ns:returnValue"/><!-- ns__dpGet::return_ -->
+</message>
+
+<message name="dpGetPeriod">
+  <part name="startTime" type="xsd:dateTime"/><!-- ns__dpGetPeriod::startTime -->
+  <part name="endTime" type="xsd:dateTime"/><!-- ns__dpGetPeriod::endTime -->
+  <part name="bonus" type="xsd:int"/><!-- ns__dpGetPeriod::bonus -->
+  <part name="dpName" type="xsd:string"/><!-- ns__dpGetPeriod::dpName -->
+</message>
+
+<message name="getDateValueListResponse">
+  <part name="return" type="ns:returnDateValueList"/><!-- ns__dpGetPeriod::return_ -->
+</message>
+
+<message name="dpGetAsynch">
+  <part name="time" type="xsd:dateTime"/><!-- ns__dpGetAsynch::time -->
+  <part name="dpName" type="xsd:string"/><!-- ns__dpGetAsynch::dpName -->
+</message>
+
+<message name="alertGetPeriod">
+  <part name="startTime" type="xsd:dateTime"/><!-- ns__alertGetPeriod::startTime -->
+  <part name="endTime" type="xsd:dateTime"/><!-- ns__alertGetPeriod::endTime -->
+  <part name="alertAttribute" type="xsd:string"/><!-- ns__alertGetPeriod::alertAttribute -->
+  <part name="lang" type="xsd:string"/><!-- ns__alertGetPeriod::lang -->
+</message>
+
+<message name="getAlertAttributeListResponse">
+  <part name="return" type="ns:returnAlertAttributeList"/><!-- ns__alertGetPeriod::return_ -->
+</message>
+
+<message name="dpQuery">
+  <part name="query" type="xsd:string"/><!-- ns__dpQuery::query -->
+  <part name="lang" type="xsd:string"/><!-- ns__dpQuery::lang -->
+</message>
+
+<message name="getQueryValueListResponse">
+  <part name="return" type="ns:returnQueryValueList"/><!-- ns__dpQuery::return_ -->
+</message>
+
+<message name="dpNames">
+  <part name="dpPattern" type="xsd:string"/><!-- ns__dpNames::dpPattern -->
+  <part name="dpType" type="xsd:string"/><!-- ns__dpNames::dpType -->
+  <part name="lang" type="xsd:string"/><!-- ns__dpNames::lang -->
+  <part name="descriptionMode" type="xsd:int"/><!-- ns__dpNames::descriptionMode -->
+</message>
+
+<message name="getDpInfoListResponse">
+  <part name="return" type="ns:returnDpInfoList"/><!-- ns__dpNames::return_ -->
+</message>
+
+<portType name="ReportingPortType">
+  <operation name="dpGet">
+    <documentation>
+      Returns values of data point attributes in variables
+    </documentation>
+    <input message="tns:dpGet"/>
+    <output message="tns:getReturnValueResponse"/>
+  </operation>
+  <operation name="dpGetPeriod">
+    <documentation>
+      Returns the values of data point attributes over a specific period
+    </documentation>
+    <input message="tns:dpGetPeriod"/>
+    <output message="tns:getDateValueListResponse"/>
+  </operation>
+  <operation name="dpGetAsynch">
+    <documentation>
+      Returns values of data point attributes at a particular source time
+    </documentation>
+    <input message="tns:dpGetAsynch"/>
+    <output message="tns:getDateValueListResponse"/>
+  </operation>
+  <operation name="alertGetPeriod">
+    <documentation>
+      Returns values for the alert attributes of the data point elements for which alerts were added to the database
+    </documentation>
+    <input message="tns:alertGetPeriod"/>
+    <output message="tns:getAlertAttributeListResponse"/>
+  </operation>
+  <operation name="dpQuery">
+    <documentation>
+      Retrieves attribute values with the help of SQL statements
+    </documentation>
+    <input message="tns:dpQuery"/>
+    <output message="tns:getQueryValueListResponse"/>
+  </operation>
+  <operation name="dpNames">
+    <documentation>
+      Returns all the data point names or data point element names that match a pattern
+    </documentation>
+    <input message="tns:dpNames"/>
+    <output message="tns:getDpInfoListResponse"/>
+  </operation>
+</portType>
+
+<binding name="Reporting" type="tns:ReportingPortType">
+  <SOAP:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="dpGet">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+  <operation name="dpGetPeriod">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+  <operation name="dpGetAsynch">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+  <operation name="alertGetPeriod">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+  <operation name="dpQuery">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+  <operation name="dpNames">
+    <SOAP:operation style="rpc" soapAction=""/>
+    <input>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </input>
+    <output>
+          <SOAP:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Siemens.OA"/>
+    </output>
+  </operation>
+</binding>
+
+<service name="Reporting">
+  <documentation>
+    WinCC OA Reporting WSDL file
+  </documentation>
+  <port name="Reporting" binding="tns:Reporting">
+    <SOAP:address location="http://localhost:8080/"/>
+  </port>
+</service>
+
+</definitions>

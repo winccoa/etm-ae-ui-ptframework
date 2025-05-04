@@ -1,0 +1,156 @@
+2025-02-12 11:55:20.442 CET [9568] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-12 11:55:20.446 CET [9568] LOG:  listening on IPv6 address "::", port 15432
+2025-02-12 11:55:20.446 CET [9568] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-12 11:55:20.455 CET [9568] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-12 11:55:20.557 CET [20468] LOG:  database system was shut down at 2025-02-12 11:55:11 CET
+2025-02-12 11:55:20.797 CET [9568] LOG:  database system is ready to accept connections
+2025-02-12 11:55:21.812 CET [9568] LOG:  received fast shutdown request
+2025-02-12 11:55:21.813 CET [9568] LOG:  aborting any active transactions
+2025-02-12 11:55:21.842 CET [9568] LOG:  background worker "logical replication launcher" (PID 25172) exited with exit code 1
+2025-02-12 11:55:21.846 CET [20700] LOG:  shutting down
+2025-02-12 11:55:21.847 CET [20700] LOG:  checkpoint starting: shutdown immediate
+2025-02-12 11:55:22.135 CET [20700] LOG:  checkpoint complete: wrote 1014 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.138 s, sync=0.145 s, total=0.290 s; sync files=350, longest=0.002 s, average=0.001 s; distance=4752 kB, estimate=4752 kB; lsn=0/1A119E8, redo lsn=0/1A119E8
+2025-02-12 11:55:22.253 CET [9568] LOG:  database system is shut down
+2025-02-12 11:55:22.733 CET [35560] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-12 11:55:22.735 CET [35560] LOG:  listening on IPv6 address "::", port 15432
+2025-02-12 11:55:22.736 CET [35560] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-12 11:55:22.743 CET [35560] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-12 11:55:22.819 CET [11452] LOG:  database system was shut down at 2025-02-12 11:55:22 CET
+2025-02-12 11:55:22.994 CET [35560] LOG:  database system is ready to accept connections
+2025-02-12 12:00:22.820 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:00:23.190 CET [35560] LOG:  could not reserve shared memory region (addr=000001BAEC100000) for child 0000000000001440: error code 487
+2025-02-12 12:00:39.566 CET [20676] LOG:  checkpoint complete: wrote 156 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=16.699 s, sync=0.033 s, total=16.747 s; sync files=82, longest=0.002 s, average=0.001 s; distance=722 kB, estimate=722 kB; lsn=0/1AE8810, redo lsn=0/1AC64A0
+2025-02-12 12:05:22.582 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:05:24.611 CET [20676] LOG:  checkpoint complete: wrote 19 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.004 s, sync=0.015 s, total=2.030 s; sync files=18, longest=0.005 s, average=0.001 s; distance=148 kB, estimate=665 kB; lsn=0/1AEB558, redo lsn=0/1AEB520
+2025-02-12 12:10:22.613 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:10:29.533 CET [20676] LOG:  checkpoint complete: wrote 64 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.891 s, sync=0.022 s, total=6.921 s; sync files=41, longest=0.005 s, average=0.001 s; distance=314 kB, estimate=630 kB; lsn=0/1B61288, redo lsn=0/1B39DB0
+2025-02-12 12:15:22.535 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:15:25.196 CET [20676] LOG:  checkpoint complete: wrote 25 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.638 s, sync=0.012 s, total=2.662 s; sync files=20, longest=0.002 s, average=0.001 s; distance=172 kB, estimate=584 kB; lsn=0/1B64F28, redo lsn=0/1B64EF0
+2025-02-12 12:17:00.552 CET [35560] LOG:  could not reserve shared memory region (addr=000001BAEC100000) for child 0000000000001434: error code 487
+2025-02-12 12:20:22.209 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:20:26.072 CET [20676] LOG:  checkpoint complete: wrote 36 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.831 s, sync=0.019 s, total=3.864 s; sync files=29, longest=0.005 s, average=0.001 s; distance=180 kB, estimate=543 kB; lsn=0/1B922F0, redo lsn=0/1B922B8
+2025-02-12 12:24:23.371 CET [35560] LOG:  could not reserve shared memory region (addr=000001BAEC100000) for child 00000000000014CC: error code 487
+2025-02-12 12:25:22.081 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:25:25.510 CET [20676] LOG:  checkpoint complete: wrote 32 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.407 s, sync=0.014 s, total=3.430 s; sync files=25, longest=0.005 s, average=0.001 s; distance=159 kB, estimate=505 kB; lsn=0/1BB9F00, redo lsn=0/1BB9EC8
+2025-02-12 12:30:22.516 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:30:26.717 CET [20676] LOG:  checkpoint complete: wrote 39 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.178 s, sync=0.015 s, total=4.202 s; sync files=28, longest=0.005 s, average=0.001 s; distance=211 kB, estimate=476 kB; lsn=0/1BEEEA8, redo lsn=0/1BEEE70
+2025-02-12 12:35:22.726 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:35:30.477 CET [20676] LOG:  checkpoint complete: wrote 71 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=7.670 s, sync=0.023 s, total=7.751 s; sync files=44, longest=0.002 s, average=0.001 s; distance=374 kB, estimate=465 kB; lsn=0/1C73FE8, redo lsn=0/1C4C770
+2025-02-12 12:40:22.483 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:40:26.785 CET [20676] LOG:  checkpoint complete: wrote 40 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.275 s, sync=0.013 s, total=4.302 s; sync files=29, longest=0.001 s, average=0.001 s; distance=197 kB, estimate=439 kB; lsn=0/1C7DEA8, redo lsn=0/1C7DE70
+2025-02-12 12:45:22.792 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:45:26.106 CET [20676] LOG:  checkpoint complete: wrote 31 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.291 s, sync=0.012 s, total=3.314 s; sync files=26, longest=0.002 s, average=0.001 s; distance=157 kB, estimate=410 kB; lsn=0/1CA53A0, redo lsn=0/1CA5368
+2025-02-12 12:50:22.121 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:50:25.854 CET [20676] LOG:  checkpoint complete: wrote 35 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.716 s, sync=0.010 s, total=3.733 s; sync files=26, longest=0.001 s, average=0.001 s; distance=197 kB, estimate=389 kB; lsn=0/1CD6A98, redo lsn=0/1CD6A60
+2025-02-12 12:55:22.856 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 12:55:28.457 CET [20676] LOG:  checkpoint complete: wrote 52 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.573 s, sync=0.017 s, total=5.602 s; sync files=32, longest=0.005 s, average=0.001 s; distance=247 kB, estimate=375 kB; lsn=0/1D15628, redo lsn=0/1D148B0
+2025-02-12 13:00:22.472 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:00:28.527 CET [20676] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.024 s, sync=0.017 s, total=6.056 s; sync files=31, longest=0.002 s, average=0.001 s; distance=276 kB, estimate=365 kB; lsn=0/1D59A40, redo lsn=0/1D59A08
+2025-02-12 13:05:22.534 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:05:26.743 CET [20676] LOG:  checkpoint complete: wrote 39 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.185 s, sync=0.016 s, total=4.209 s; sync files=28, longest=0.005 s, average=0.001 s; distance=211 kB, estimate=350 kB; lsn=0/1D8E808, redo lsn=0/1D8E7D0
+2025-02-12 13:10:22.750 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:10:27.197 CET [20676] LOG:  checkpoint complete: wrote 41 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.396 s, sync=0.037 s, total=4.448 s; sync files=28, longest=0.003 s, average=0.002 s; distance=195 kB, estimate=334 kB; lsn=0/1DBF428, redo lsn=0/1DBF3F0
+2025-02-12 13:15:22.210 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:15:26.637 CET [20676] LOG:  checkpoint complete: wrote 41 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.406 s, sync=0.013 s, total=4.427 s; sync files=30, longest=0.002 s, average=0.001 s; distance=204 kB, estimate=321 kB; lsn=0/1DF2760, redo lsn=0/1DF2728
+2025-02-12 13:17:33.978 CET [35560] LOG:  could not reserve shared memory region (addr=000001BAEC100000) for child 0000000000001238: error code 487
+2025-02-12 13:20:22.643 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:20:26.413 CET [20676] LOG:  checkpoint complete: wrote 35 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.745 s, sync=0.017 s, total=3.770 s; sync files=27, longest=0.005 s, average=0.001 s; distance=182 kB, estimate=307 kB; lsn=0/1E20060, redo lsn=0/1E20028
+2025-02-12 13:25:22.416 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:25:26.508 CET [20676] LOG:  checkpoint complete: wrote 38 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.060 s, sync=0.016 s, total=4.093 s; sync files=29, longest=0.002 s, average=0.001 s; distance=201 kB, estimate=297 kB; lsn=0/1E52528, redo lsn=0/1E524B8
+2025-02-12 13:30:22.512 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:30:25.854 CET [20676] LOG:  checkpoint complete: wrote 31 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.318 s, sync=0.015 s, total=3.342 s; sync files=26, longest=0.002 s, average=0.001 s; distance=160 kB, estimate=283 kB; lsn=0/1E7C5F0, redo lsn=0/1E7A6C0
+2025-02-12 13:35:22.864 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:35:27.612 CET [20676] LOG:  checkpoint complete: wrote 44 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.711 s, sync=0.023 s, total=4.748 s; sync files=30, longest=0.005 s, average=0.001 s; distance=224 kB, estimate=277 kB; lsn=0/1EB2908, redo lsn=0/1EB2898
+2025-02-12 13:40:22.629 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:40:26.940 CET [20676] LOG:  checkpoint complete: wrote 40 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.285 s, sync=0.015 s, total=4.312 s; sync files=28, longest=0.005 s, average=0.001 s; distance=207 kB, estimate=270 kB; lsn=0/1EE75A0, redo lsn=0/1EE6668
+2025-02-12 13:45:22.943 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:45:28.015 CET [20676] LOG:  checkpoint complete: wrote 47 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.041 s, sync=0.017 s, total=5.072 s; sync files=32, longest=0.006 s, average=0.001 s; distance=234 kB, estimate=266 kB; lsn=0/1F21418, redo lsn=0/1F20EF8
+2025-02-12 13:50:22.025 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:50:29.718 CET [20676] LOG:  checkpoint complete: wrote 71 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.658 s, sync=0.028 s, total=7.694 s; sync files=53, longest=0.002 s, average=0.001 s; distance=295 kB, estimate=295 kB; lsn=0/1F6DCA8, redo lsn=0/1F6AED8
+2025-02-12 13:55:22.728 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 13:55:31.287 CET [20676] LOG:  checkpoint complete: wrote 79 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.535 s, sync=0.015 s, total=8.560 s; sync files=31, longest=0.004 s, average=0.001 s; distance=330 kB, estimate=330 kB; lsn=0/1FBD9E8, redo lsn=0/1FBD9B0
+2025-02-12 14:00:22.304 CET [20676] LOG:  checkpoint starting: time
+2025-02-12 14:00:28.047 CET [20676] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=5.708 s, sync=0.017 s, total=5.743 s; sync files=34, longest=0.002 s, average=0.001 s; distance=299 kB, estimate=327 kB; lsn=0/2008818, redo lsn=0/20087E0
+2025-02-12 14:03:28.545 CET [35560] LOG:  received fast shutdown request
+2025-02-12 14:03:28.547 CET [35560] LOG:  aborting any active transactions
+2025-02-12 14:03:28.547 CET [30716] FATAL:  terminating connection due to administrator command
+2025-02-12 14:03:28.561 CET [35560] LOG:  background worker "logical replication launcher" (PID 20556) exited with exit code 1
+2025-02-12 14:03:28.566 CET [20676] LOG:  shutting down
+2025-02-12 14:03:28.568 CET [20676] LOG:  checkpoint starting: shutdown immediate
+2025-02-12 14:03:28.642 CET [20676] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.051 s, sync=0.017 s, total=0.076 s; sync files=31, longest=0.002 s, average=0.001 s; distance=303 kB, estimate=325 kB; lsn=0/2054430, redo lsn=0/2054430
+2025-02-12 14:03:28.692 CET [35560] LOG:  database system is shut down
+2025-02-12 14:06:02.554 CET [18980] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-12 14:06:02.555 CET [18980] LOG:  listening on IPv6 address "::", port 15432
+2025-02-12 14:06:02.555 CET [18980] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-12 14:06:02.561 CET [18980] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-12 14:06:02.644 CET [19676] LOG:  database system was shut down at 2025-02-12 14:03:28 CET
+2025-02-12 14:06:02.840 CET [18980] LOG:  database system is ready to accept connections
+2025-02-12 14:11:02.640 CET [19664] LOG:  checkpoint starting: time
+2025-02-12 14:11:09.472 CET [19664] LOG:  checkpoint complete: wrote 65 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.805 s, sync=0.019 s, total=6.832 s; sync files=40, longest=0.001 s, average=0.001 s; distance=300 kB, estimate=300 kB; lsn=0/20D6B30, redo lsn=0/209F598
+2025-02-12 14:16:02.480 CET [19664] LOG:  checkpoint starting: time
+2025-02-12 14:16:05.252 CET [19664] LOG:  checkpoint complete: wrote 26 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.756 s, sync=0.008 s, total=2.772 s; sync files=14, longest=0.002 s, average=0.001 s; distance=272 kB, estimate=297 kB; lsn=0/20E4158, redo lsn=0/20E37C8
+2025-02-12 14:20:12.135 CET [18980] LOG:  received fast shutdown request
+2025-02-12 14:20:12.137 CET [18980] LOG:  aborting any active transactions
+2025-02-12 14:20:12.137 CET [32664] FATAL:  terminating connection due to administrator command
+2025-02-12 14:20:12.148 CET [18980] LOG:  background worker "logical replication launcher" (PID 30828) exited with exit code 1
+2025-02-12 14:20:12.154 CET [19664] LOG:  shutting down
+2025-02-12 14:20:12.155 CET [19664] LOG:  checkpoint starting: shutdown immediate
+2025-02-12 14:20:12.239 CET [19664] LOG:  checkpoint complete: wrote 63 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.054 s, sync=0.021 s, total=0.086 s; sync files=36, longest=0.001 s, average=0.001 s; distance=316 kB, estimate=316 kB; lsn=0/2132A18, redo lsn=0/2132A18
+2025-02-12 14:20:12.289 CET [18980] LOG:  database system is shut down
+2025-02-19 16:47:32.610 CET [16492] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-19 16:47:32.611 CET [16492] LOG:  listening on IPv6 address "::", port 15432
+2025-02-19 16:47:32.612 CET [16492] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-19 16:47:32.621 CET [16492] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-19 16:47:32.732 CET [31768] LOG:  database system was shut down at 2025-02-18 16:29:11 CET
+2025-02-19 16:47:32.952 CET [16492] LOG:  database system is ready to accept connections
+2025-02-19 16:52:32.719 CET [34376] LOG:  checkpoint starting: time
+2025-02-19 16:52:45.602 CET [34376] LOG:  checkpoint complete: wrote 119 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=12.837 s, sync=0.035 s, total=12.884 s; sync files=66, longest=0.005 s, average=0.001 s; distance=592 kB, estimate=592 kB; lsn=0/7A02070, redo lsn=0/79B6248
+2025-02-19 16:55:14.987 CET [16492] LOG:  received fast shutdown request
+2025-02-19 16:55:14.988 CET [16492] LOG:  aborting any active transactions
+2025-02-19 16:55:14.989 CET [29748] FATAL:  terminating connection due to administrator command
+2025-02-19 16:55:14.989 CET [14956] FATAL:  terminating connection due to administrator command
+2025-02-19 16:55:14.998 CET [16492] LOG:  background worker "logical replication launcher" (PID 14724) exited with exit code 1
+2025-02-19 16:55:15.009 CET [34376] LOG:  shutting down
+2025-02-19 16:55:15.011 CET [34376] LOG:  checkpoint starting: shutdown immediate
+2025-02-19 16:55:15.110 CET [34376] LOG:  checkpoint complete: wrote 106 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.064 s, sync=0.030 s, total=0.102 s; sync files=62, longest=0.002 s, average=0.001 s; distance=571 kB, estimate=590 kB; lsn=0/7A45098, redo lsn=0/7A45098
+2025-02-19 16:55:15.173 CET [16492] LOG:  database system is shut down
+2025-03-05 12:49:19.219 CET [9756] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-05 12:49:19.222 CET [9756] LOG:  listening on IPv6 address "::", port 15432
+2025-03-05 12:49:19.222 CET [9756] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-05 12:49:19.231 CET [9756] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-05 12:49:19.334 CET [30592] LOG:  database system was shut down at 2025-03-04 12:22:43 CET
+2025-03-05 12:49:19.528 CET [9756] LOG:  database system is ready to accept connections
+2025-03-05 12:49:20.557 CET [9756] LOG:  could not reserve shared memory region (addr=000001F13F680000) for child 0000000000001494: error code 487
+2025-03-05 12:54:19.322 CET [9084] LOG:  checkpoint starting: time
+2025-03-05 12:54:30.401 CET [9084] LOG:  checkpoint complete: wrote 104 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=11.028 s, sync=0.036 s, total=11.080 s; sync files=60, longest=0.005 s, average=0.001 s; distance=595 kB, estimate=595 kB; lsn=0/84E5FA0, redo lsn=0/8488EA0
+2025-03-05 12:59:19.410 CET [9084] LOG:  checkpoint starting: time
+2025-03-05 12:59:23.664 CET [9756] LOG:  could not reserve shared memory region (addr=000001F13F680000) for child 00000000000014C0: error code 487
+2025-03-05 12:59:29.449 CET [9084] LOG:  checkpoint complete: wrote 93 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=10.015 s, sync=0.016 s, total=10.040 s; sync files=25, longest=0.005 s, average=0.001 s; distance=581 kB, estimate=594 kB; lsn=0/8574068, redo lsn=0/851A600
+2025-03-05 13:04:19.464 CET [9084] LOG:  checkpoint starting: time
+2025-03-05 13:04:24.096 CET [9084] LOG:  checkpoint complete: wrote 43 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.614 s, sync=0.012 s, total=4.633 s; sync files=24, longest=0.002 s, average=0.001 s; distance=424 kB, estimate=577 kB; lsn=0/85E3AC8, redo lsn=0/8584968
+2025-03-05 13:09:19.103 CET [9084] LOG:  checkpoint starting: time
+2025-03-05 13:09:26.138 CET [9084] LOG:  checkpoint complete: wrote 65 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.006 s, sync=0.012 s, total=7.036 s; sync files=29, longest=0.001 s, average=0.001 s; distance=453 kB, estimate=564 kB; lsn=0/8656878, redo lsn=0/85F5FF8
+2025-03-05 13:14:19.150 CET [9084] LOG:  checkpoint starting: time
+2025-03-05 13:14:27.584 CET [9084] LOG:  checkpoint complete: wrote 78 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.410 s, sync=0.016 s, total=8.434 s; sync files=30, longest=0.005 s, average=0.001 s; distance=463 kB, estimate=554 kB; lsn=0/86C8B10, redo lsn=0/8669CF8
+2025-03-05 13:15:52.575 CET [9756] LOG:  received fast shutdown request
+2025-03-05 13:15:52.576 CET [9756] LOG:  aborting any active transactions
+2025-03-05 13:15:52.576 CET [17268] FATAL:  terminating connection due to administrator command
+2025-03-05 13:15:52.585 CET [9756] LOG:  background worker "logical replication launcher" (PID 21220) exited with exit code 1
+2025-03-05 13:15:52.595 CET [9084] LOG:  shutting down
+2025-03-05 13:15:52.597 CET [9084] LOG:  checkpoint starting: shutdown immediate
+2025-03-05 13:15:52.685 CET [9084] LOG:  checkpoint complete: wrote 75 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.062 s, sync=0.019 s, total=0.091 s; sync files=34, longest=0.002 s, average=0.001 s; distance=509 kB, estimate=550 kB; lsn=0/86E9410, redo lsn=0/86E9410
+2025-03-05 13:15:52.738 CET [9756] LOG:  database system is shut down
+2025-03-05 13:54:03.761 CET [8552] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-05 13:54:03.763 CET [8552] LOG:  listening on IPv6 address "::", port 15432
+2025-03-05 13:54:03.763 CET [8552] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-05 13:54:03.771 CET [8552] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-05 13:54:03.880 CET [29216] LOG:  database system was shut down at 2025-03-05 13:15:52 CET
+2025-03-05 13:54:04.190 CET [8552] LOG:  database system is ready to accept connections
+2025-03-05 13:58:27.972 CET [8552] LOG:  received fast shutdown request
+2025-03-05 13:58:27.974 CET [8552] LOG:  aborting any active transactions
+2025-03-05 13:58:27.974 CET [5804] FATAL:  terminating connection due to administrator command
+2025-03-05 13:58:27.983 CET [8552] LOG:  background worker "logical replication launcher" (PID 29764) exited with exit code 1
+2025-03-05 13:58:27.988 CET [31448] LOG:  shutting down
+2025-03-05 13:58:27.989 CET [31448] LOG:  checkpoint starting: shutdown immediate
+2025-03-05 13:58:28.117 CET [31448] LOG:  checkpoint complete: wrote 95 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.095 s, sync=0.026 s, total=0.130 s; sync files=39, longest=0.002 s, average=0.001 s; distance=576 kB, estimate=576 kB; lsn=0/8779668, redo lsn=0/8779668
+2025-03-05 13:58:28.174 CET [8552] LOG:  database system is shut down

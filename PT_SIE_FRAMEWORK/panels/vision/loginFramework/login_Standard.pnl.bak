@@ -1,0 +1,353 @@
+V 14
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+PANEL,-1 -1 682 512 N "_3DFace" 0
+"main()
+{
+  m_ui = new OaAuthUI();
+
+  shared_ptr<LoginFrameworkChildView> view = new LoginFrameworkLoginStd(
+      self, \"txt_username\", \"txt_password\", \"txt_domain\", \"chkBx_userLang\", \"chkBx_monitor\", \"ewo_Progress\");
+
+  m_loginFrameworkController.setLoginFrameworkChildView(view);
+
+  // if there is a system use notification after the login we need to handle the starting of the UI from the Controller
+  m_loginFrameworkController.setOaAuthUI(m_ui);
+
+  setFrameworkView();
+
+  txt_domain.text(m_ui.getDomainFromUser());
+  if (txt_domain.text() != \"\")
+  {
+    txt_domain.visible(TRUE);
+  }
+
+  m_loginFrameworkController.setUseUserLanguage(chkBx_userLang.state(0));
+  m_loginFrameworkController.setOpenMonitorConfiguration(chkBx_monitor.state(0));
+
+  m_isInitialized = TRUE;
+  txt_username.enabled(m_isInitialized);
+
+  if (! isUltralight())
+  {
+    // if SSO is enabled login should start immediately
+    m_loginFrameworkController.handleSSO();
+  }
+  else
+  {
+    int currentUserId = getUserId();
+
+    if (currentUserId > 0 && currentUserId != DEFAULT_USERID)
+    {
+      string currentUserName = getUserName(currentUserId);
+
+      m_ui.setUsername(currentUserName);
+      m_loginFrameworkController.startLogin();
+    }
+  }
+}
+" 0
+ E E E E 1 -1 -1 0  0 0
+""0  1
+E "#uses \"classes/loginFramework/LoginFrameworkLoginStd\"
+
+shared_ptr<OaAuthUI> m_ui;
+//initialize boolean
+bool m_isInitialized = FALSE;
+
+shared_ptr<LoginFrameworkController> m_loginFrameworkController = LoginFrameworkController::getInstance();
+
+public bool authenticate()
+{
+  OaAuthenticationError err = m_ui.login();
+
+  if(err != OaAuthenticationError::None)
+  {
+    string message = getCatStr(\"OaLogin\", OaAuthError::getErrorKeyword(err), m_loginFrameworkController.getLangIndex());
+    OaAuthError::throwAuthError(err);
+    m_loginFrameworkController.displayFailedLogin(message);
+    m_loginFrameworkController.setState(LoginFrameworkState::LOGIN); //rollback state in case of authentication error
+    txt_password.text(\"\");
+
+    return false;
+  }
+
+  return true;
+}
+
+void setFrameworkView()
+{
+  m_loginFrameworkController.setBtnAcceptEnabled(TRUE);
+  m_loginFrameworkController.setBtnAcceptVisible(TRUE);
+  m_loginFrameworkController.setBtnCancelVisible(TRUE);
+
+  m_loginFrameworkController.setTxtPlatformVisible(TRUE);
+  m_loginFrameworkController.setTxtVersionVisible(TRUE);
+  m_loginFrameworkController.setTxtWelcomeVisible(TRUE);
+}
+" 0
+ 5
+"CBRef" "1"
+"EClose" E
+"LangSwitchMode" "1"
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+"login_background.png" -1 -1 682 513
+-1
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+14 3
+"txt_username"
+"login"
+1 305.2919547006574 211.74 E E E 0 E 1 E N {45,55,60} E N "_Window" E E
+ E E
+3 0 0 0 0 0
+E "main()
+{
+  m_ui.setUsername(this.text());
+}
+" 0
+ E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignNone"
+3
+LANG:10000 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+0  348 203 658 246
+3 "1000s" 1000 0 0 0 0 -1  E "main()
+{
+  this.placeholderText(getCatStr(\"general\", \"loginUsername\"));
+  delay(0,250);
+    this.text = \"root\";
+  m_ui.setUsername(this.text());
+  delay(0,100);
+  m_loginFrameworkController.doContinue();
+}
+" 0
+ "main()
+{
+  setInputFocus(myModuleName(), myPanelName(), txt_password.name());
+}
+" 0
+
+14 4
+"txt_password"
+"login"
+1 305.2919547006574 170.34 E E E 1 E 1 E N {45,55,60} E N "_Window" E E
+ E E
+4 0 0 0 0 0
+E "main()
+{
+  //
+}
+" 0
+ E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+2
+"layoutAlignment" "AlignNone"
+"textChangedCB" "main(string newText)
+{
+  m_ui.setPassword(this.text());
+}
+"
+3
+LANG:10000 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+0  348 254 658 297
+3 "1000S" 1000 0 0 0 0 -1  E "main()
+{
+  this.placeholderText(getCatStr(\"general\", \"loginPassword\"));
+}
+" 0
+ "main()
+{
+  m_loginFrameworkController.doContinue();
+}
+" 0
+
+14 6
+"txt_domain"
+"login"
+1 305.2919547006574 143.39 E E E 1 E 0 E N {45,55,60} E N "WF_PanelBackground" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+2
+"hoverbclr" "N \"WF_PanelBackground\""
+"layoutAlignment" "AlignNone"
+3
+LANG:10000 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+0  348 152 658 195
+2 "0s" 0 0 0 0 0 -1  E E E
+20 7
+"chkBx_userLang"
+"login"
+1 305.2919547006574 289.75 E E E 1 E 1 E N {45,55,60} E N "_Transparent" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignCenter"
+3
+LANG:10000 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+0  348 292 661 335
+1
+T 
+3
+LANG:10000 40 Benutzerspezifische Projektsprache laden
+LANG:10001 35 Load user-specific project language
+LANG:10027 75 Загрузить пользовательский язык проекта
+
+1 
+2
+LANG:10000 0 
+LANG:10001 0 
+E E
+0 0 0 0 0
+1
+E E
+E"main(int button, int state)
+{
+  m_loginFrameworkController.setUseUserLanguage(state);
+}
+" 0
+20 15
+"chkBx_monitor"
+"login"
+1 300.8066815476489 313 E E E 1 E 1 E N {45,55,60} E N "_Transparent" E E
+ E E
+15 0 0 0 0 0
+E E E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+1
+"layoutAlignment" "AlignCenter"
+3
+LANG:10000 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,13,5,50,0,0,0,0,0
+0  348 315 692 359
+1
+T 
+3
+LANG:10000 49 Benutzerspezifische Monitor-Konfiguration ändern
+LANG:10001 48 Change user-specific multi-monitor configuration
+LANG:10027 74 Изменить мультимониторную конфигурацию
+
+0 
+2
+LANG:10000 0 
+LANG:10001 0 
+E E
+0 0 0 0 0
+1
+E E
+E"main(int button, int state)
+{
+  m_loginFrameworkController.setOpenMonitorConfiguration(state);
+}
+" 0
+2 16
+"PRIMITIVE_TEXT1"
+""
+1 30 0 E E E 1 E 0 E N "_WindowText" E N "_Window" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+3
+LANG:10000 0 
+LANG:10001 0 
+LANG:10027 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1 0 0.5925925925925926 0 10 0 E 30 0 180 50
+1 2 2 "0s" 0 0 0 64 0 0  30 0 1
+3
+LANG:10000 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,-1,16,5,50,0,0,0,0,0
+0 3
+LANG:10000 18 login_Standard.pnl
+LANG:10001 18 login_Standard.pnl
+LANG:10027 18 login_Standard.pnl
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+0

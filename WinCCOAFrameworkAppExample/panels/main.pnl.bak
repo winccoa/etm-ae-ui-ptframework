@@ -1,0 +1,520 @@
+V 14
+1
+LANG:10001 0 
+PANEL,-1 -1 1430 728 N "_3DFace" 0
+E E E E E 1 -1 -1 0  160 110
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+6 76
+"RECTANGLE4"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-8" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.106585194046138 0 0.820166387505944 180.6106520902558 300.7087962905159 1 E 0 60 1260 -70
+6 75
+"RECTANGLE3"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-component-7--hover" E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.1062761877685632 0 0.3632165430383468 181 221.5041565827989 1 E 0 60 1260 -70
+6 58
+"RECTANGLE2"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-4" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.134126984126984 0 0.4769230769230767 -0.5 33.38461538461539 1 E 0 60 1260 -70
+2 59
+"PRIMITIVE_TEXT1"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.134126984126984 0 1 11.34126984126982 2.000000000000009 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 45 Tahoma,-1,33,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 10 Main Panel
+2 74
+"PRIMITIVE_TEXT2"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.1057754269600921 0 0.7370158781735453 180.9068232857441 197.5530303264616 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 44 Arial,-1,33,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 4 LED1
+6 77
+"RECTANGLE5"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-8" E E
+ E E
+12 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.106585194046138 0 0.820166387505944 399.7773367515667 301.4703793646286 1 E 0 60 1260 -70
+6 78
+"RECTANGLE6"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-component-7--hover" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.1072021279759526 0 0.3632165430383468 399 222.2657396569116 1 E 0 60 1260 -70
+2 85
+"PRIMITIVE_TEXT3"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.1057754269600921 0 0.7370158781735453 400.0735079470548 198.3146134005744 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 44 Arial,-1,33,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 4 LED2
+6 94
+"RECTANGLE7"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-8" E E
+ E E
+16 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.106585194046138 0 0.820166387505944 181.922267384561 489.327537645752 1 E 0 60 1260 -70
+6 95
+"RECTANGLE8"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-component-7--hover" E E
+ E E
+17 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.1065235014942022 0 0.3632165430383468 182 410.1228979380351 1 E 0 60 1260 -70
+2 102
+"PRIMITIVE_TEXT4"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+18 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.1057754269600921 0 0.7370158781735453 182.2184385800493 386.1717716816979 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 44 Arial,-1,33,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 4 LED3
+6 111
+"RECTANGLE9"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-8" E E
+ E E
+20 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.106585194046138 0 0.820166387505944 401.0889520458717 488.5659545716393 1 E 0 60 1260 -70
+6 112
+"RECTANGLE10"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-component-7--hover" E E
+ E E
+21 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.106655790907941 0 0.3632165430383468 401 409.3613148639223 1 E 0 60 1260 -70
+2 119
+"PRIMITIVE_TEXT5"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.1057754269600921 0 0.7370158781735453 401.3851232413601 385.410188607585 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 44 Arial,-1,33,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 4 LED4
+1 291 7 "0" 7
+0
+1 305 8 "1" 7
+0
+1 319 9 "1" 7
+0
+1 333 10 "1" 7
+0
+1 347 11 "1" 7
+0
+1 361 12 "0" 7
+0
+1 375 13 "0" 7
+0
+1 389 14 "0" 7
+0
+6 288
+"RECTANGLE11"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-8" E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.4263634784672292 0 1.818982879221104 575.1895603983901 428.890826093434 1 E 0 60 1260 -70
+6 289
+"RECTANGLE12"
+""
+1 0 60 E E E 1 E 1 E N "_Transparent" E N "color-component-7--hover" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+6
+"shadowOffset" "[2,2]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.4265139232278561 0 0.8055495607979181 575 253.2290509000816 1 E 0 60 1260 -70
+2 290
+"PRIMITIVE_TEXT6"
+""
+1 -10 -2 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+36 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.42655059623224 0 1.634569868424497 576.934548754461 200.1097213810762 0 E -10 -2 1250 60
+0 2 2 "0s" 0 0 0 73 0 0  -10 -2 1
+1
+LANG:10001 44 Arial,-1,58,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+0 1
+LANG:10001 4 FANs
+1 403 15 "0" 7
+0
+1 417 16 "0" 7
+0
+0
+LAYER, 1 
+0
+1 297 7 "1" 1
+0
+1 311 8 "2" 1
+0
+1 325 9 "2" 1
+0
+1 339 10 "2" 1
+0
+1 353 11 "2" 1
+0
+1 367 12 "1" 1
+0
+1 381 13 "1" 1
+0
+1 395 14 "1" 1
+0
+1 409 15 "1" 1
+0
+1 423 16 "1" 1
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+1 298 7 "0" 1
+0
+1 312 8 "1" 1
+0
+1 326 9 "1" 1
+0
+1 340 10 "1" 1
+0
+1 354 11 "1" 1
+0
+1 368 12 "0" 1
+0
+1 382 13 "0" 1
+0
+1 396 14 "0" 1
+0
+1 410 15 "0" 1
+0
+1 424 16 "0" 1
+0
+0
+3 7 "PANEL_REF9" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 26 1.403488808007622 0 1.403882052279969 208.1390853101202 -724.7659303873356
+3
+"$DP""System1:FAN_1"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 8 "PANEL_REF10" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"objects/STDLIB_template/template_bool_m.pnl" 156.6698589839372 281.5000000000001 T 27 1.832053824360556 0 1.799620045588028 -97.43239249251013 -266.6731099160666
+3
+"$DP""LED_1"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 9 "PANEL_REF11" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"objects/STDLIB_template/template_bool_m.pnl" 156.6698589839372 281.5000000000001 T 28 1.832053824360556 0 1.799620045588028 121.7342921688007 -269.2887430900905
+3
+"$DP""LED_2"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 10 "PANEL_REF12" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"objects/STDLIB_template/template_bool_m.pnl" 156.6698589839372 281.5000000000001 T 29 1.832053824360556 0 1.799620045588028 -96.12077719820496 -81.4315848089671
+3
+"$DP""LED_3"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 11 "PANEL_REF13" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"objects/STDLIB_template/template_bool_m.pnl" 156.6698589839372 281.5000000000001 T 30 1.832053824360556 0 1.799620045588028 123.0459074631058 -82.19316788307978
+3
+"$DP""LED_4"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 12 "PANEL_REF14" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 31 1.404036053195227 0 1.404036053195227 207.9981363931387 -620.2049046089815
+3
+"$DP""System1:FAN_4"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 13 "PANEL_REF15" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 32 1.403488808007622 0 1.403882052279969 377.5608541653377 -724.660855047473
+3
+"$DP""System1:FAN_2"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 14 "PANEL_REF16" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 33 1.403488808007622 0 1.403882052279969 377.5608541653377 -619.9233016743242
+3
+"$DP""System1:FAN_5"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 15 "PANEL_REF17" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 37 1.403488808007622 0 1.403882052279969 544.5379431645392 -724.660855047473
+3
+"$DP""System1:FAN_3"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 16 "PANEL_REF18" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_FAN/fan_m.pnl" 269.1452994557516 715 T 38 1.403488808007622 0 1.403882052279969 544.5379431645392 -619.9233016743242
+3
+"$DP""System1:FAN_6"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+0

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel version="14">
+ <properties>
+  <prop name="Name">
+   <prop name="de_AT.utf8"></prop>
+   <prop name="en_US.utf8"></prop>
+   <prop name="es_ES.utf8"></prop>
+   <prop name="fr_FR.utf8"></prop>
+   <prop name="tr_TR.utf8"></prop>
+   <prop name="zh_CN.utf8"></prop>
+  </prop>
+  <prop name="Size">200 31</prop>
+  <prop name="BackColor">color-2</prop>
+  <prop name="RefPoint">0 0</prop>
+  <prop name="InitAndTermRef">True</prop>
+  <prop name="SendClick">False</prop>
+  <prop name="RefFileName"></prop>
+  <prop name="DPI">96</prop>
+  <prop name="PDPI">108.8875329026083</prop>
+  <prop name="layoutType">None</prop>
+ </properties>
+ <events>
+  <script name="Initialize" isEscaped="1"><![CDATA[#uses &quot;classes/ContextMenu/ContextMenuCustom&quot;
+
+main()
+{
+  dyn_string items = stringToDynString($Items, &quot;~&quot;);
+  ContextMenuCustom::BuildPopup(items);
+}
+]]></script>
+ </events>
+</panel>

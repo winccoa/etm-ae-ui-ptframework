@@ -1,0 +1,11 @@
+[general]
+pvss_path = "C:/Siemens/Automation/WinCC_OA/3.20"
+proj_path = "C:/Siemens/Automation/WinCC_OA/3.20/Stdlib_3.20"
+proj_path = "C:/Users/z004u6jf/Desktop/WinCCOAApplicationExamples/PT_SIE_FRAMEWORK"
+proj_path = "C:/Users/z004u6jf/Desktop/WinCCOAApplicationExamples/WinCCOAFrameworkAppExample"
+proj_version = "3.20"
+useNGA = 1
+useSQLite = 1
+langs = "en_US.utf8"
+[ui]
+defaultFont = "Noto Sans"

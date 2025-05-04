@@ -1,0 +1,91 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+PANEL,-1 -1 497 312 N "_3DFace" 1
+"$DP"
+E E E E E 1 -1 -1 0  70 50
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+1 2 0 "" 0
+0
+2 3
+"PRIMITIVE_TEXT1"
+""
+1 150 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E U  0 E 150 80 300 120
+0 2 2 "0s" 0 0 0 73 0 0  150 80 1
+1
+LANG:10001 48 Tahoma,-1,30,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 8 Simulate
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+3 0 "PANEL_REF1" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"objects/symbols_bool/stdlib_boolToggleButton_1.pnl" 205 97 T 3 1 0 1 -22 34
+20
+"$DP""$DP"
+"$DPE""state.running"
+"$_BIT_NUMBER"""
+"$_BOOL_Invert"""
+"$_BOOL_SHOW_ENUMTEXT"""
+"$_COLOR_ButtonBackground"""
+"$_COLOR_ButtonForeground"""
+"$_COLOR_In"""
+"$_COLOR_Out"""
+"$_DPE_Enable"""
+"$_DPE_Highlight"""
+"$_DPE_Visible"""
+"$_FONT_Text"""
+"$_INT_Bit"""
+"$_MSGCAT"""
+"$_MSGTEXT_Button"""
+"$_MSGTOOLTIP"""
+"$_RULE_Enable"""
+"$_RULE_Highlight"""
+"$_RULE_Visible"""
+0

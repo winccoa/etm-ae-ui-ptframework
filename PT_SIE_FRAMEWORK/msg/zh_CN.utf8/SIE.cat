@@ -1,0 +1,124 @@
+buttonNavi_cctv,视频
+buttonNavi_dashboard,仪表板
+buttonNavi_documentation,文档
+buttonNavi_gis,地理資訊系統
+buttonNavi_messages,信息
+buttonNavi_overview,总览
+buttonNavi_settings,设置
+buttonNavi_systemOverview,系统总览
+buttonNavi_trafficProgram,交通程序
+buttonNavi_user,实际用户
+buttonNavi_theme,主题
+buttonNavi_language,语言
+buttonNavi_exit,关闭
+buttonNavi_menu,折叠菜单
+button_ackAll,确认所有警报
+button_acknowledgeAll,确认所有
+button_close,关闭
+button_closeDoor,关门
+button_cmdLast24h,过去 24 小时的命令
+button_dataModel,数据模型
+button_lightHouse2,灯开/关 房 2
+button_lightHouse3,灯开/关 房 3
+button_mapOffline,地图离线
+button_mapOnline,地图在线
+button_openDoor,开门
+button_overview,总览
+button_resetFire,重置火警
+button_showCam1,显示\摄像机 1
+button_showCam2,显示\摄像机 2
+button_showCam3,显示\摄像机 3
+button_showCam4,显示\摄像机 4
+button_showConfig1,启动配置1
+button_showConfig2,启动配置2
+button_deleteCameras,删除摄像头
+button_alarmOnCam4,摄像头 4 报警开启
+button_alarmOffCam4,摄像头 4 报警关闭
+button_cam3WriteProtection,摄像头 3 写保护 +- 10秒
+button_systemOverview,打开系统概述
+button_sidoor,SIDOOR
+button_siemensNbg,纽伦堡 西门子
+button_testSuite,测试套件
+button_tpCarBreakdownActive,汽车故障
+button_tpConstructionActive,建设/维护
+button_tpFireActive,火警
+button_tpNormalActive,正常
+button_tpPersonInTunnelActive,有人受阻隧道
+button_tpTrafficJamActive,堵车
+button_tpTunnelBlockingActive,隧道受阻 
+button_triggerFire,启动火警
+button_tunnel2000,隧道  (2000 m)
+button_tunnel20000,隧道  (20000 m)
+button_tunnel4000,隧道  (4000 m)
+button_siriusEmpty,空
+button_SIM,激活PLC SIM设置
+frame_doorControl,门控
+frame_doorRunTime,门运行时间
+frame_doorStatus,门状态
+frame_fireAlarmSystem,火警系统
+sidoor_closingTime,关闭时间
+sidoor_doorClosed,门已关闭
+sidoor_doorClosing,关门进行中
+sidoor_doorOpened,关门
+sidoor_doorOpening,门打开进行中
+sidoor_error,错误
+sidoor_motorCurrent,电机电流
+sidoor_motorDeenergized,电机断电
+sidoor_openingTime,门开时间
+sidoor_position,位置
+sidoor_readyForOperation,准备运行
+sidoor_speed,速度
+sidoor_stopped,停止
+sidoor_torque,扭矩
+tpCarBreakdownActive,汽车故障
+tpConstructionActive,建设/维护
+tpFireActive,火警
+tpNormalActive,正常
+tpPersonInTunnelActive,有人隧道內
+tpTunnelBlockingActive,隧道受阻 
+tpUndefiened,----
+txtSection_commands24h,过去 24 小时的命令
+txtSection_doorControl,门控
+txtSection_generalInfo,一般信息
+txtSection_opcUaServer,OPC UA服务器
+txtSection_plcSettings,PLC设定
+txtSection_showModuleFooter,显示信息行
+txtSection_siriusAct,Sirius Act
+txtSection_trafficProgram,交通程序
+txtSection_useSirisAct,用Sirius 行为登录
+txtTab_command,指令
+txtTab_manager,管理
+txtTab_time,时间
+txtTab_user,用户
+txtTab_value,数值
+txt_automatic,自动
+txt_manual,手动
+txt_sector1,部门 1
+txt_sector2,部门 2
+txt_sector3,部门 3
+txt_toggle,切换
+video_alarm_txt_1,紧急按钮已启动
+video_alarm_txt_2,火警警报已启动
+video_alarm_txt_3,逃生门开
+video_alarm_txt_4,警报
+video_alarm_txt_5,警报
+video_objectExplorer,对象浏览器
+video_cameraList,摄像头列表
+video_configuration,配置
+video_playback,EWO 播放
+tpTrafficJamActive,堵车
+fpStatus,状态
+fpOperatingData,运行数据
+fpParameter,参数
+tpStop,停止
+sfAll,全部
+sfTraffic,交通
+sfVentilation,通风
+sfFire,消防 
+sfSOS,紧急呼叫
+sfAirquality,空气质量
+sfLighting,照明
+baseOverview,概览
+sectorOverview,行业概览
+tunnelDemo,隧道数字化演示
+tunnelOperation,隧道运营

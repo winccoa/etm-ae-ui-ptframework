@@ -1,0 +1,14 @@
+WCCOAasciiSQLite(0), 2025.02.14 10:11:24.598, SYS,  INFO,        1, Manager Start, PROJ, SiemensFrameworkAppExample, V 3.20 - 3.20 P004 platform Windows AMD64 linked at Jan 28 2025 20:31:10 (f25eb988b8)
+WCCOAasciiSQLite(0), 2025.02.14 10:11:24.598, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ dinm5CG3184V63:4897
+WCCOAasciiSQLite(0), 2025.02.14 10:11:24.613, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCOAasciiSQLite(1), 2025.02.14 10:11:24.625, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCOAasciiSQLite(1), 2025.02.14 10:11:24.625, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ dinm5CG3184V63:4998
+WCCOAasciiSQLite(1), 2025.02.14 10:11:24.646, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCOAasciiSQLite(1), 2025.02.14 10:11:24.657, SYS,  INFO,      102, Waiting for user names/passwords
+WCCOAasciiSQLite(1), 2025.02.14 10:11:24.657, SYS,  INFO,      103, User names/passwords initialized
+doAsciiIn returned error code: -50
+WCCOAasciiSQLite(1), 2025.02.14 10:11:32.766, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCOAasciiSQLite(1), 2025.02.14 10:11:32.766, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCOAasciiSQLite(1), 2025.02.14 10:11:32.767, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCOAasciiSQLite(1), 2025.02.14 10:11:32.767, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCOAasciiSQLite(1), 2025.02.14 10:11:32.767, SYS,  INFO,        2, Manager Stop

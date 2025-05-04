@@ -1,0 +1,97 @@
+V 14
+2
+LANG:10000 0 
+LANG:10001 0 
+PANEL,-1 -1 253 101 N "_3DFace" 1
+"$dpName"
+E E E E E 1 -1 -1 0  0 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+2 1
+"PRIMITIVE_TEXT1"
+""
+1 70 80 E E E 1 E 1 E N "color-primary--active" E N "_Window" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+"
+main()
+{
+  //datasystem1:BLDG_DASHBOARD_IT_LOAD.Status.SCL_VAL
+  dpConnect(\"CB\",$dpName);
+}
+
+CB(string dpname, anytype dpval) {
+
+
+
+
+                this.text = \"\" +dpval;
+
+}" 0
+ E 0 1 3 2 1 E 0.9470588235294116 0 1.066666666666667 -66.29411764705881 -85.33333333333337 0 E 70 80 240 140
+0 2 2 "0s" 0 0 0 72 0 0  70 80 1
+2
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+LANG:10001 38 Siemens Sans,-1,47,5,75,0,0,0,0,0,Bold
+0 2
+LANG:10000 4 1234
+LANG:10001 4 1234
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+0

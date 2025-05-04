@@ -1,0 +1,191 @@
+V 14
+2
+LANG:10000 0 
+LANG:10001 0 
+PANEL,-1 -1 81 70 N "_3DFace" 0
+"main()
+{
+  dpConnect(\"alarmtybeCB\",\"datasystem1:FireAlarmType.\");
+}
+
+alarmtybeCB(string dpname, int dpval)
+{
+if(dpval==1)
+  {
+        AlarmedCamera.visible=false;
+    NormalCamera.visible=true;
+
+  }
+else
+{
+    AlarmedCamera.visible=true;
+  NormalCamera.visible=false;}
+
+}" 0
+ E E E E 1 -1 -1 0  6 6
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+6 3
+"NormalCamera"
+""
+1 870 180 E E E 1 E 1 E N "_Transparent" E N "WF_TableAlternatingRowColor_1" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+6
+"shadowOffset" "[4,4]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"main()
+{
+  dpConnect(\"changeColor\",\"datasystem1:GF_TR18_ASD03.Alarm\");
+}
+
+void changeColor(string dpe, bool val)
+{
+  string color = val ? \"red\" : \"green\";
+  this.backCol(color);
+}" 0
+ "main(mapping event)
+{
+  bool realAlarm;
+  dpGet(\"datasystem1:GF_TR18_ASD03.Alarm\",realAlarm);
+  realAlarm &= checkIfValueHigher(\"datasystem1:GF_TR18_TRH15.Temp.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH15.RH.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH21.Temp.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH21.RH.Status.SCL_VAL\");
+  ChildPanelOn(\"webview.pnl\", \"webtest\", makeDynString(\"$RealAlarm:\"+realAlarm), 0,0);
+}
+
+bool checkIfValueHigher(string dpe)
+{
+  float val;
+  dpGet(dpe, val);
+  return val > getHiLimit(dpe);
+}
+
+
+////TODO move to library as well as this part from simulator.pnl
+float getHiLimit(string dpe)
+{
+  unsigned num;
+  dpGet(dpe+\":_alert_hdl.._num_ranges\", num);
+  float lLimit;
+  dpGet(dpe+\":_alert_hdl.\"+num+\"._l_limit\", lLimit);
+  return lLimit;
+}" 0
+ 0 1 3 2 1 E 0.9166666666666667 0 1.833333333333332 -790.5000000000001 -322.9999999999997 2  1 0  "pictures/SIE_DDX_SVGs/1300-SIE-DDX-DatacenterIcons/icon_camera.svg" 4294967295 E 870 180 930 210
+6 4
+"AlarmedCamera"
+""
+1 870 180 E E E 1 E 1 E N "_Transparent" E N "WF_TableAlternatingRowColor_1" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+6
+"shadowOffset" "[4,4]"
+"shadowColor" "{63,63,63,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"main()
+{
+  dpConnect(\"changeColor\",\"datasystem1:GF_TR18_ASD03.Alarm\");
+}
+
+void changeColor(string dpe, bool val)
+{
+  string color = val ? \"red\" : \"green\";
+  this.backCol(color);
+}" 0
+ "main(mapping event)
+{
+  bool realAlarm;
+  dpGet(\"datasystem1:GF_TR18_ASD03.Alarm\",realAlarm);
+  realAlarm &= checkIfValueHigher(\"datasystem1:GF_TR18_TRH15.Temp.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH15.RH.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH21.Temp.Status.SCL_VAL\")
+               && checkIfValueHigher(\"datasystem1:GF_TR18_TRH21.RH.Status.SCL_VAL\");
+  ChildPanelOn(\"webview.pnl\", \"webtest\", makeDynString(\"$RealAlarm:\"+realAlarm), 0,0);
+}
+
+bool checkIfValueHigher(string dpe)
+{
+  float val;
+  dpGet(dpe, val);
+  return val > getHiLimit(dpe);
+}
+
+
+////TODO move to library as well as this part from simulator.pnl
+float getHiLimit(string dpe)
+{
+  unsigned num;
+  dpGet(dpe+\":_alert_hdl.._num_ranges\", num);
+  float lLimit;
+  dpGet(dpe+\":_alert_hdl.\"+num+\"._l_limit\", lLimit);
+  return lLimit;
+}" 0
+ 0 1 3 2 1 E 0.9166666666666667 0 1.833333333333332 -790.5000000000001 -322.9999999999997 2  1 0  "pictures/SIE_DDX_SVGs/1300-SIE-DDX-DatacenterIcons/icon_cameraAlarm.svg" 4294967295 E 870 180 930 210
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+0

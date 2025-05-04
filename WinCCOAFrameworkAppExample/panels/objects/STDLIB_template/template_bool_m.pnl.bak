@@ -1,0 +1,167 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+PANEL,-1 -1 120 75 N "_3DFace" 3
+"$DP"
+"$_BOOL_ACTION_ENABLE"
+"$_BOOL_DPEDescrAsToolTip"
+"main()
+{
+  stdlib_setGlobalRefNameToInfoArea();
+}
+" 0
+ E E E E 1 -1 -1 0  0 0
+""0  1
+E "public dbgIt()
+{
+  DebugN(\"got it\",this.dollars());
+}
+" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+1 15 1 "" 7
+0
+1 23 2 "" 2
+8 "backCol" 0 0 "STD_led_On"
+7 "rotation" 0 0 0
+0
+1 24 2 "" 5
+7 "rotation" 0 0 0
+0
+1 25 2 "" 7
+7 "rotation" 0 0 0
+0
+2 14
+"dummy"
+""
+1 29 27 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+4
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E U  0 E 29 27 31 39
+0 2 2 "0s" 0 0 0 192 0 0  29 27 1
+3
+LANG:10001 48 MS Shell Dlg 2,-1,11,5,400,0,0,0,0,0,0,0,0,0,0,1
+LANG:10000 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0 3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+0
+LAYER, 1 
+0
+1 27 2 "" 1
+8 "fill" 0 0 "[pattern,[fit,any,Led_square_3d.png]]"
+7 "rotation" 0 0 0
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+1 16 1 "" 1
+0
+1 22 1 "" 6
+1 "confirm" 1 1 "// SimpleCtrlScriptStart {valid}
+main(int iType)
+{
+  dyn_errClass err;
+
+  int          i, iReturnValue = 1, iDpCount = 1;
+  dyn_int      diType = makeDynInt();
+  dyn_string   dsDps;
+
+  dsDps[1] = $DP+\".alarm\" + \":_alert_hdl.._ack\";
+
+  if ( isFunctionDefined(\"isAckable\") )
+  {
+    isAckable( iType, dsDps, iReturnValue );
+    if ( iReturnValue == 0 || dynlen (dsDps ) < 1 ) return;
+  }
+
+  for ( i = 1; i <= dynlen(dsDps); i++ )
+    diType[i] = iType;
+
+  dpSetWait( dsDps, diType );
+
+  err = getLastError();
+  if ( dynlen(err) > 0 )
+    DebugN(err);
+}
+// SimpleCtrlScript {EP_confirm}
+// dpCount {1}
+// dp1 {$DP+\".alarm\"}
+// SimpleCtrlScriptEnd {EP_confirm}
+" 0
+ 
+0
+0
+3 1 "infoArea" -1
+"layoutAlignment" "AlignCenter"
+"" ""
+"objects/symbols_click/info_area_m.pnl" 290 50 T 2 1 0 1 -230 -50
+2
+"$DP""$DP"
+"$_BOOL_ACTION_ENABLE""$_BOOL_ACTION_ENABLE"
+3 2 "PANEL_REF2" -1
+"layoutAlignment" "AlignCenter"
+"" ""
+"objects/symbols_bool/stdlib_boolObject_1.pnl" 99 22 T 4 1.452363090772693 0 0.967741935483871 -134.7839459864966 -3.290322580645162
+21
+"$DP""$DP"
+"$DPE""alarm.error"
+"$_BIT_NUMBER"""
+"$_BOOL_DPEDescrAsToolTip""$_BOOL_DPEDescrAsToolTip"
+"$_BOOL_SHOWALARM"""
+"$_DPE_Enable"""
+"$_DPE_Highlight"""
+"$_DPE_Visible"""
+"$_INT_BIT"""
+"$_MSGCAT"""
+"$_MSGTOOLTIP"""
+"$_RULE_Enable"""
+"$_RULE_Highlight"""
+"$_RULE_Visible"""
+"$__ENUM_ActState""2"
+"$__ENUM_Color""|STD_led_On|STD_led_Off"
+"$__ENUM_Image""Led_square_3d.png"
+"$__ENUM_ImageDef""static"
+"$__ENUM_ImageDirection"""
+"$__ENUM_ShapeDirection"""
+"$__ENUM_ShapeForm""0"
+0

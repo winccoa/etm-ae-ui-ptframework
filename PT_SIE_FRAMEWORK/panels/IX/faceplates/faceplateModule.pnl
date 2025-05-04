@@ -1,0 +1,761 @@
+V 14
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+PANEL,-1 -1 454 526 N "color-2" 6
+"$DP"
+"$TYP"
+"$beamed"
+"$modName"
+"$moduleName"
+"$panel"
+"main()
+{
+  bool visi = !$beamed;
+  closeSel.visible(visi);
+  closeIcon.visible(visi);
+  popSel.visible(visi);
+  popIcon.visible(visi);
+
+
+  initPanel();
+}" 0
+ E E E E 1 -1 -1 0  70 45
+""0  1
+E "#uses \"examples/popupMenu\"
+#uses \"classes/GUI/faceplate\"
+
+int iCurrentTabIndex;
+
+dyn_string dsPanelFile;
+dyn_string dsButtonRef;
+dyn_shape dshButtons;
+dyn_int diHeight;
+dyn_dyn_string ddsParameters;
+dyn_bool dbIsStdlib;
+
+appendTab(string sFile, dyn_string lsTabName = makeDynString(), bool isStdlib = FALSE, dyn_string dsPanelParams = makeDynString())
+{
+  for (int i = 1; i <= SEARCH_PATH_LEN; i++)
+  {
+    string sFilePath = getPath(PANELS_REL_PATH, sFile, -1, i);
+
+    if (!sFilePath.isEmpty())
+    {
+      if (dynContains(dsPanelFile, sFilePath) < 1)
+      {
+        //tab name from msg cat -> \"IX/faceplates/faceplateTabs/\" + $TYP + \"_status.pnl\" -> \"fpStatus\"
+
+
+        string sTabName;
+        dyn_string dsFileSplit;
+
+
+        if (patternMatch(\"*\" + $TYP + \"_*.pnl\", sFile))
+        {
+          dsFileSplit = strsplit(sFile, \"_\");
+        }
+        else
+        {
+          strreplace(sFile, \"\\\\\", \"/\");
+          dsFileSplit = strsplit(sFile, \"/\");
+        }
+
+        sTabName = dsFileSplit.last();
+        strreplace(sTabName, \".pnl\", \"\");
+        strreplace(sTabName, \".xml\", \"\");
+
+        switch (sTabName)
+        {
+          case \"status\": sTabName = \"fpStatus\"; break;
+
+          case \"data\": sTabName = \"fpOperatingData\"; break;
+
+          case \"para\": sTabName = \"fpParameter\"; break;
+        }
+
+        string sTabButtonRef = sTabName + \"_\" + $DP;
+        dynAppend(dsPanelFile, sFilePath);
+        dynAppend(dsButtonRef, sTabButtonRef);
+      //  DebugTN(\"sTabButtonRef\", sTabButtonRef);
+        string sMsgCat;
+        string slText;
+
+        if (lsTabName.isEmpty())
+        {
+          sMsgCat = \"tunnelDemo\";
+        }
+        else //separated text
+        {
+          for (int i = 1; i <= dynlen(lsTabName); i++)
+          {
+            if (i != 1)
+              slText += \"§\";
+
+            slText += lsTabName[i];
+          }
+        }
+
+
+        dyn_string dsParams = makeDynString(\"$MSG_CAT:\" + sMsgCat, \"$MSG:\" + sTabName, \"$TEXT:\" + slText,
+                                            \"$ACTIVE:\" + ((int) dynlen(dsPanelFile) == 1), //first tab active by default
+                                            \"$REFNAME:\" + sTabButtonRef);
+
+        if (dynContains(dsPanelParams, \"$DP:\" + $DP) < 1)
+          dynAppend(dsPanelParams, \"$DP:\" + $DP);
+
+        addSymbol(myModuleName(), myPanelName(), \"IX/faceplates/faceplateTabButton.pnl\", sTabButtonRef, dynlen(dsPanelFile) - 1, \"lTabs\", dsParams);
+        dynAppend(dshButtons, getShape(myModuleName() + \".\" + myPanelName() + \":\" + sTabButtonRef));
+        ddsParameters[dynlen(ddsParameters) + 1] = dsPanelParams;
+        dynAppend(dbIsStdlib, isStdlib);
+      }
+
+      return;
+    }
+  }
+}
+
+selectionChanged(int index)
+{
+  //reset other tab buttons
+  for (int i = 1; i <= dynlen(dsButtonRef); i++)
+  {
+    if (i != index)
+    {
+      invokeMethod(dshButtons[i], \"setActive\", false);
+    }
+  }
+
+  openFaceplate(index);
+}
+
+void initPanel()
+{
+
+  string dp = $DP;
+  string sDPT = dpTypeName(dp);
+
+
+  dyn_string dsTlFiles = makeDynString(\"IX/faceplates/faceplateTabs/\" + $TYP + \"_status.pnl\",
+                                       \"IX/faceplates/faceplateTabs/\" + $TYP + \"_data.pnl\",
+                                       \"IX/faceplates/faceplateTabs/\" + $TYP + \"_para.pnl\");
+
+  string paraPath;
+  string dataPath;
+  string statusPath;
+
+  label.text(dpGetDescription($DP));
+
+  for (int i = 1; i <= dynlen(dsTlFiles); i++)
+  {
+    appendTab(dsTlFiles[i]);
+  }
+
+  mapping mDollars = self.dollars();
+  dyn_string dsKeys = mappingKeys(mDollars);
+
+  dyn_string dsDollars;
+
+  for (int i = 1; i <= dynlen(dsKeys); i++)
+  {
+    dynAppend(dsDollars, dsKeys[i] + \":\" + mDollars[dsKeys[i]]);
+  }
+
+ // DebugTN(\"dsDollars\",dsDollars);
+   // DebugTN(\"dsDollars\",dsDollars.contains(\"*STDLIB:1*\"));
+
+  //Ahmed 22/09/2024 the standard library is no longer working,,, isDollarDefined(\"$STDLIB\") is always false
+ // if (isDollarDefined(\"$STDLIB\"))
+//
+//     string pattern = \"*:STDLIB:1*\";
+//     dyn_string result;
+//     DebugTN(dynlen(result));
+//     result=dynPatternMatch(pattern, dsDollars);
+//     DebugN(\"Matching elements:\", result);
+
+if ( dynContains(dsDollars, \"$STDLIB:1\") > 0)
+  {
+
+
+
+
+     // DebugTN(\"dollardefined?\",isDollarDefined(\"$STDLIB\"));
+// dyn_string dsDollars = makeDynString(\"$DP:\"+$DP);
+    // if (isDollarDefined(\"$CALLING_OBJECT_REF_PATH\"))
+    //    dynAppend(dsDollars, \"$CALLING_OBJECT_REF_PATH:\"+getDollarValue(\"$CALLING_OBJECT_REF_PATH\"));
+    string sLibName = stdlib_dpTypeName($DP);
+    string sMainPanel = \"objects_parts/faceplates/\" + sLibName + \"/main.pnl\";
+
+    if (getPath(PANELS_REL_PATH, sMainPanel) == \"\")
+      sMainPanel = \"objects_parts/faceplates/\" + sLibName + \"/main.xml\";
+
+    // TFS 9606
+    if (getPath(PANELS_REL_PATH, sMainPanel) == \"\")
+      sMainPanel = \"objects_parts/faceplates/\" + sLibName + \"_Generic/main.pnl\";
+
+    if (getPath(PANELS_REL_PATH, sMainPanel) == \"\")
+      sMainPanel = \"objects_parts/faceplates/\" + sLibName + \"_Generic/main.xml\";
+
+    if (getPath(PANELS_REL_PATH, sMainPanel) != \"\")
+    {
+      dyn_string dsText;
+
+      for (int i = 1; i <= getNoOfLangs(); i++)
+      {
+        dsText[i] = \"Main\";
+      }
+
+      appendTab(sMainPanel, dsText, TRUE, dsDollars);
+    }
+
+    //other tabs
+    string dp = $DP;
+    dyn_string dsPanels, dsPath;
+    dyn_langString dlTabName;
+
+    if (dp[strlen(dp) - 1] == \".\")
+      dp = substr(dp, 0, strlen(dp) - 1);
+
+    faceplateTabsForDp(dp, dsPanels, dsPath);
+
+    //filter or add panels
+    hook_faceplateTabsToOpen(dp, dsPanels, dsPath);
+
+    //remove trend panel if no trend is configurated for dpt
+    // IM 115240 - modification for call of function stdlib_hasDptTrendConfiguration to pass the datapoint
+    if (dynContains(dsPanels, \"trend.pnl\") && !stdlib_hasDptTrendConfiguration(stdlib_dpTypeName(dp), dp))
+    {
+      int iRemoveTrend = dynContains(dsPanels, \"trend.pnl\");
+      dynRemove(dsPanels, iRemoveTrend);
+      dynRemove(dsPath, iRemoveTrend);
+    }
+
+    //get langNames for every tab panel
+    hook_namingFaceplateTabs(dp, dlTabName, dsPanels);
+
+
+
+
+    for (int i = 1; i <= dynlen(dsPanels); i++)
+    {
+      appendTab(dsPath[i] + \"/\" + dsPanels[i], dlTabName[i], TRUE, dsDollars);
+    }
+  }
+  else
+  {
+//dyn_string dsDollars = makeDynString(\"$DP:\"+$DP);
+//    if (isDollarDefined(\"$MOV\"))
+    //    dynAppend(dsDollars, \"$MOV:\"+getDollarValue(\"$MOV\"));
+
+
+    dyn_string tempfileNames;
+    dyn_string fileNames;
+    dyn_langString dlTabName;
+
+
+// dyn_string panelNames = makeDynString(\"Home.pnl\", \"DESC.pnl\", \"Notes.pnl\");
+    dyn_string dPTSplit = strsplit(sDPT, \"_\");
+//    DebugTN(dPTSplit);
+
+    //The case for pump  //  CPM_Pump_VFD
+
+
+    //
+    //  dyn_string items;
+    string sRelativePath;
+
+    if (dynlen(dPTSplit) == 3 && dPTSplit[2] == \"Pump\")
+      sRelativePath  = \"@library/\" + dPTSplit[1] + \"_FP/\" + dPTSplit[2] + \"_\" + dPTSplit[3] + \"/FP\";
+    else if (dynlen(dPTSplit) == 2 /*&&dPTSplit[2]==\"Valve\"*/)
+      sRelativePath = \"@library/\" + dPTSplit[1] + \"_FP/\" + dPTSplit[2] + \"/FP\";
+
+  //  DebugTN(\"sRelativePath\", sRelativePath);
+
+    for (int i = 1; i <= SEARCH_PATH_LEN; i++)
+    {
+     // DebugTN(i);
+      string path = getPath(PANELS_REL_PATH, sRelativePath, -1, i);
+
+      if (path == \"\")
+        continue;
+
+      //put continue
+    //  DebugTN(\"path\", path);
+      tempfileNames = getFileNames(path);
+     // DebugTN(\"tempfileNames\", tempfileNames);
+
+
+      for (int j = 1; j <= dynlen(tempfileNames); j++)
+      {
+
+        if (dynContains(fileNames, tempfileNames[j]) < 1 && !patternMatch(\"*_Tab*\", tempfileNames[j]) && !patternMatch(\"*.bak*\", tempfileNames[j]) && !patternMatch(\"*___*\", tempfileNames[j]))
+        {
+          dynAppend(fileNames, tempfileNames[j]);
+          dynAppend(dlTabName, tempfileNames[j]);
+        }
+      }
+    }
+
+    string text;
+
+    for (int i = 1; i <= dynlen(dlTabName); i++)
+    {
+      text = dlTabName[i];
+      strreplace(text, \".pnl\", \"\");
+      strreplace(text, \".xml\", \"\");
+      dyn_string dsText;
+
+      for (int i = 1; i <= getNoOfLangs(); i++)
+      {
+        dsText[i] = text;
+      }
+
+      dlTabName[i] = dsText;
+    }
+
+    for (int i = 1; i <= dynlen(fileNames); i++)
+    {
+     // DebugTN(\"dsDollars\", sRelativePath + \"/\" + fileNames[i], dlTabName[i], false, dsDollars);
+      appendTab(sRelativePath + \"/\" + fileNames[i], dlTabName[i], false, dsDollars);
+    }
+
+  }
+
+  invokeMethod(dshButtons[1], \"setActive\", true);
+  openFaceplate(1);
+
+  // uiConnect to tab selection
+  for (int i = 1; i <= dynlen(dsButtonRef); i++)
+  {
+    uiConnectUserData(\"selectionChanged\", i, dshButtons[i].clicked);
+  }
+}
+
+public void openFaceplate(int tab)
+{
+  if (iCurrentTabIndex != tab)
+  {
+    if (iCurrentTabIndex != 0 && isPanelOpen($DP + \"_\" + dsPanelFile[iCurrentTabIndex], fpMod.ModuleName()))
+      PanelOffModule($DP + \"_\" + dsPanelFile[iCurrentTabIndex], fpMod.ModuleName());
+
+    int width = 450;
+    int height;
+  if (dbIsStdlib[tab])
+    {
+      if (tab == 1) //main tab is 360, others 315
+        height = 360;
+      else
+        height = 315;
+    }
+    else
+    {
+      dyn_int diPanelSize = getPanelSize(dsPanelFile[tab], false);
+      height = diPanelSize.at(1);
+    }
+
+    fpMod.minimumSize(width, height);
+    fpMod.maximumSize(width, height);
+    setPanelSize(myModuleName(), myPanelName(), false, width, height + 88);
+
+    //remove background color for new root panel
+    fpMod.updatesEnabled(false);
+    RootPanelOnModuleWait(dsPanelFile[tab], $DP + \"_\" + dsPanelFile[tab], fpMod.ModuleName(), ddsParameters[tab]);
+    shape shRootPanel = getShape(fpMod.ModuleName() + \".\" + $DP + \"_\" + dsPanelFile[tab] + \":\");
+    shRootPanel.backCol = \"_Transparent\";
+    fpMod.updatesEnabled(true);
+
+
+    fpMod.visible(true);
+  delay(0, 100);
+    iCurrentTabIndex = tab;
+  }
+}
+
+public void removeFaceplate()
+{
+  for (int i = 1; i <= dynlen(dshButtons); i++)
+  {
+   // DebugTN(\"dsButtonRef Removed \", dsButtonRef, dsButtonRef[i]);
+    removeSymbol(myModuleName(), myPanelName(), dsButtonRef[i]);
+
+  }
+
+  Faceplate::triggerOpenFaceplate(self.name(), FALSE);
+}
+" 0
+ 6
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "108.888"
+"sizePolicy" "Fixed Preferred"
+"connectorMargin" "0"
+2 1 0 0 0 0 1 0
+""
+NC
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+29 14
+"fpMod"
+""
+1 122 210 E E E 1 E 0 E N "_3DText" E N "color-2" E E
+ E E
+14 0 0 0 0 0
+E E E
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+14
+"newPanelAnimDuration" "int 0"
+"oldPanelAnimDuration" "int 0"
+"newPanelAnimateOpacity" "bool TRUE"
+"oldPanelAnimateOpacity" "bool TRUE"
+"newPanelAnimateSize" "bool TRUE"
+"oldPanelAnimateSize" "bool TRUE"
+"newPanelAnimType" "string TopLeft"
+"oldPanelAnimType" "string BottomRight"
+"sizeAdjustPolicy" "enum 0"
+"frameShadow" "enum 16"
+"minimumSize" "450 -1"
+"maximumSize" "450 -1"
+"layoutAlignment" "AlignNone"
+"focusPolicy" "NoFocus"
+6
+LANG:10001 52 Siemens Sans,-1,13,5,400,0,0,0,0,0,0,0,0,0,0,1,Roman
+LANG:10000 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10010 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10009 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10007 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+LANG:10004 39 Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman
+0  122 210 682 840
+15 Canvas.Canvas.1
+0
+E6 21
+"openSel"
+""
+1 137 -6.382978723404263 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+21 0 0 0 0 0
+E E "main(bool enter)
+{
+  this.backCol((enter) ? \"color-ghost--hover\" : \"color-ghost\");
+}" 0
+
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+5
+"minimumSize" "-1 48"
+"sizePolicy" "Expanding Fixed"
+"layoutAlignment" "AlignVCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E "main(mapping event)
+{
+  fpMod.visible(!fpMod.visible());
+
+  status.visible(statusExists && fpMod.visible());
+  statusSel.visible(statusExists && fpMod.visible());
+  statusTxt.visible(statusExists && fpMod.visible());
+
+  data.visible(dataExists && fpMod.visible());
+  dataSel.visible(dataExists && fpMod.visible());
+  dataTxt.visible(dataExists && fpMod.visible());
+
+  para.visible(paraExists && fpMod.visible());
+  paraSel.visible(paraExists && fpMod.visible());
+  paraTxt.visible(paraExists && fpMod.visible());
+}
+" 0
+ 0 1 3 2 1 E 4 0 0.9399999999999999 -363 -3.999999999999993 1 E 160 100 215 150
+2 22
+"label"
+""
+1 297 100 E E E 1 E 1 E N "color-std-text" E N "_Transparent" E E
+ E E
+22 0 0 0 0 0
+E E E
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+5
+"transparentForMouse" ""
+"layoutAlignment" "AlignVCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E U  0 E 297 100 373 123
+0 2 2 "0s" 0 0 0 192 0 0  297 100 1
+6
+LANG:10001 51 Siemens Sans,-1,21,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+LANG:10000 38 Siemens Sans,-1,21,5,75,0,0,0,0,0,Bold
+LANG:10010 38 Siemens Sans,-1,21,5,75,0,0,0,0,0,Bold
+LANG:10009 38 Siemens Sans,-1,21,5,75,0,0,0,0,0,Bold
+LANG:10007 38 Siemens Sans,-1,21,5,75,0,0,0,0,0,Bold
+LANG:10004 38 Siemens Sans,-1,21,5,75,0,0,0,0,0,Bold
+0 6
+LANG:10001 7 Pop Up 
+LANG:10000 7 Pop Up 
+LANG:10010 7 Pop Up 
+LANG:10009 7 Pop Up 
+LANG:10007 7 Pop Up 
+LANG:10004 7 Pop Up 
+6 23
+"popIcon"
+""
+1 20 15 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+23 0 0 0 0 0
+E E E
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+5
+"transparentForMouse" ""
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.9148936170212766 0 0.9148936170212766 210.7021276595745 78.27659574468085 2  1 0  "pictures/white/chevron-left.svg" 4294967295 E 20 15 67 62
+6 24
+"popSel"
+""
+1 54.68085106382978 -6.382978723404261 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+24 0 0 0 0 0
+E E "main(bool enter)
+{
+  this.backCol((enter) ? \"color-ghost--hover\" : \"color-ghost\");
+}" 0
+
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+6
+"minimumSize" "48 48"
+"maximumSize" "48 48"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E "main(mapping event)
+{
+  mapping mDollars = self.dollars();
+  dyn_string dsKeys = mappingKeys(mDollars);
+
+  dyn_string dsDollars;
+
+  for (int i = 1; i <= dynlen(dsKeys); i++)
+  {
+    if (dsKeys[i] == \"$panel\")
+      dynAppend(dsDollars, dsKeys[i] + \":\" + true);
+
+    if (dsKeys[i] == \"$beamed\")
+      dynAppend(dsDollars, dsKeys[i] + \":\" + true);
+    else
+      dynAppend(dsDollars, dsKeys[i] + \":\" + mDollars[dsKeys[i]]);
+  }
+
+  ChildPanelOnModule(\"IX/faceplates/faceplateModule\", dpGetDescription($DP), $moduleName, dsDollars, 150, 150);
+  removeFaceplate();
+  removeSymbol($modName, \"menu\", this.refName());
+}
+" 0
+ 0 1 3 2 1 E 0.8545454545454545 0 0.9399999999999999 90.27272727272728 -3.999999999999993 1 E 160 100 215 150
+6 25
+"closeIcon"
+""
+1 20 15 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+7
+"transparentForMouse" ""
+"minimumSize" "44 44"
+"maximumSize" "44 44"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.9148936170212766 0 0.9148936170212766 485.7021276595744 78.27659574468085 2  1 0  "pictures/white/close.svg" 4294967295 E 20 15 67 62
+6 26
+"closeSel"
+""
+1 144.7872340425531 -6.382978723404261 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+26 0 0 0 0 0
+E E "main(bool enter)
+{
+  this.backCol((enter) ? \"color-ghost--hover\" : \"color-ghost\");
+}" 0
+
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+6
+"minimumSize" "48 48"
+"maximumSize" "48 48"
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignLeft|AlignLeading"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E "main(mapping event)
+{
+  if ($panel == true)
+  {
+    PanelOff();
+    return;
+  }
+
+  removeFaceplate();
+  removeSymbol(myModuleName(), \"menu\", this.refName());
+}" 0
+ 0 1 3 2 1 E 0.8545454545454545 0 0.9399999999999999 365.2727272727273 -4 1 E 160 100 215 150
+7 27
+"ELLIPSE1"
+""
+1 190 130 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+6
+LANG:10001 0 
+LANG:10000 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+5
+"minimumSize" "1 1"
+"maximumSize" "1 1"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "1"
+E E 0 1 3 2 1 E U  1 E 190 130 20 20
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+4 5 "lTabs" 6
+1 0 
+27 
+
+"S 27" "0 0 1 1"
+"" ""
+0 4 0 1 0
+4 6 "LAYOUT_GROUP7" 7
+0 1 
+
+5 
+"G 5" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 7 "LAYOUT_GROUP8" -1
+1 1 
+14 
+6 
+"S 14" "1 0 1 1"
+"G 6" "0 0 1 1"
+"" ""
+0 2 0 1 0
+4 8 "LAYOUT_GROUP11" 11
+2 0 
+24 23 
+
+"S 23" "0 0 1 1"
+"" ""
+1 3 1 0 0 0 0 1 0
+4 9 "LAYOUT_GROUP12" 11
+2 0 
+26 25 
+
+"S 25" "0 0 1 1"
+"" ""
+1 3 1 0 0 0 0 1 0
+4 10 "LAYOUT_GROUP13" 11
+2 0 
+21 22 
+
+"S 22" "0 0 1 1"
+"" ""
+1 2 1 15 0 0 0 1 0
+4 11 "LAYOUT_GROUP14" -1
+0 3 
+
+10 8 9 
+"G 10" "1 0 1 1"
+"G 8" "0 0 1 1"
+"G 9" "2 0 1 1"
+"" ""
+0 1 0 1 0
+0

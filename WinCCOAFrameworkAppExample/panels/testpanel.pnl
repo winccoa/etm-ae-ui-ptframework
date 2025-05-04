@@ -1,0 +1,333 @@
+V 14
+1
+LANG:10001 0 
+PANEL,-1 -1 400 400 N "_3DFace" 0
+E E E E E 1 -1 -1 0  -52.06054324319439 79.35847213018195
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+6 20
+"RECTANGLE720"
+""
+1 1200 60 E E E 1 E 1 E N "_Transparent" E N "color-2" E E
+ E E
+24 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 0.5735294117647056 0 1.161110354967443 -707.6797385620912 -13.02089332357619 1 E 1200 60 1880 290
+2 21
+"PRIMITIVE_TEXT928"
+""
+1 180 160 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+25 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.08116217947738 0 1.463317159684995 -185.3392308094002 -174.7412979007194 0 E 180 160 420 180
+0 2 2 "0s" 0 0 0 72 0 0  180 160 1
+3
+LANG:10001 53 MS Shell Dlg 2,-1,19,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+LANG:10000 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+LANG:0 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+0 3
+LANG:10001 12 Sections OEE
+LANG:10000 15 Batterieraum H2
+LANG:0 10 Title Name
+6 22
+"RECTANGLE721"
+""
+1 30 70 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+26 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.21875 0 1.252355602497077 -43.81944444444423 5.563764791799924 1 E 30 70 330 100
+6 23
+"RECTANGLE722"
+""
+1 30 70 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+27 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.21875 0 1.252355602497077 -43.81944444444423 49.23565246862105 1 E 30 70 330 100
+6 24
+"RECTANGLE716"
+""
+1 30 70 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+28 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.21875 0 1.252355602497077 -43.81944444444423 93.54977378774832 1 E 30 70 330 100
+6 25
+"RECTANGLE717"
+""
+1 30 70 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+29 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.21875 0 1.252355602497077 -43.81944444444423 139.2446974378341 1 E 30 70 330 100
+6 26
+"RECTANGLE723"
+""
+1 30 70 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+30 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.21875 0 1.252355602497077 -43.81944444444423 184.746950995228 1 E 30 70 330 100
+2 27
+"PRIMITIVE_TEXT929"
+""
+1 40 70 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+31 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.8549851315570149 0 0.9145732248031235 -27.09176812470707 35.64712673299064 0 E 40 70 180 97
+0 2 2 "0s" 0 0 0 72 0 0  40 70 1
+2
+LANG:10001 66 Siemens TIA Portal Basic,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+0 2
+LANG:10001 9 Section 1
+LANG:10000 6 Floor1
+2 28
+"PRIMITIVE_TEXT930"
+""
+1 40 70 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+32 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.8549851315570149 0 0.9145732248031235 -27.09176812470707 79.3190144098117 0 E 40 70 180 97
+0 2 2 "0s" 0 0 0 72 0 0  40 70 1
+2
+LANG:10001 66 Siemens TIA Portal Basic,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+0 2
+LANG:10001 9 Section 2
+LANG:10000 6 Floor1
+2 29
+"PRIMITIVE_TEXT931"
+""
+1 40 70 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+33 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.8549851315570149 0 0.9145732248031235 -27.09176812470707 123.6331357289392 0 E 40 70 180 97
+0 2 2 "0s" 0 0 0 72 0 0  40 70 1
+2
+LANG:10001 66 Siemens TIA Portal Basic,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+0 2
+LANG:10001 9 Section 3
+LANG:10000 6 Floor1
+2 30
+"PRIMITIVE_TEXT13"
+""
+1 40 70 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+34 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.8549851315570149 0 0.9145732248031235 -27.09176812470707 169.3280593790246 0 E 40 70 180 97
+0 2 2 "0s" 0 0 0 72 0 0  40 70 1
+2
+LANG:10001 66 Siemens TIA Portal Basic,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+0 2
+LANG:10001 9 Section 4
+LANG:10000 6 Floor1
+2 31
+"PRIMITIVE_TEXT14"
+""
+1 40 70 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+35 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.8549851315570149 0 0.9145732248031235 -27.09176812470707 214.8303129364187 0 E 40 70 180 97
+0 2 2 "0s" 0 0 0 72 0 0  40 70 1
+2
+LANG:10001 66 Siemens TIA Portal Basic,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 35 MS Shell Dlg 2,-1,13,5,50,0,0,0,0,0
+0 2
+LANG:10001 9 Section 5
+LANG:10000 6 Floor1
+1 32 0 "" 1
+0
+1 37 1 "" 1
+0
+1 42 2 "" 1
+0
+1 47 3 "" 1
+0
+1 52 4 "" 1
+0
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+3 0 "PANEL_REF2" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Dashboard/Objects/BatteryValueObject.pnl" 170.25 57.00000000000001 T 19 1.21875 0 0.9145732248031235 26.86805555555543 60.79789041507655
+1
+"$sDPName""Section1_OEE.OEE"
+3 1 "PANEL_REF3" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Dashboard/Objects/BatteryValueObject.pnl" 170.25 57.00000000000001 T 20 1.21875 0 0.9145732248031235 26.86805555555543 104.4697780918977
+1
+"$sDPName""Section2_OEE.OEE"
+3 2 "PANEL_REF4" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Dashboard/Objects/BatteryValueObject.pnl" 170.25 57.00000000000001 T 21 1.21875 0 0.9145732248031235 26.86805555555543 148.7838994110249
+1
+"$sDPName""Section3_OEE.OEE"
+3 3 "PANEL_REF5" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Dashboard/Objects/BatteryValueObject.pnl" 170.25 57.00000000000001 T 22 1.21875 0 0.9145732248031235 26.86805555555543 194.478823061111
+1
+"$sDPName""Section4_OEE.OEE"
+3 4 "PANEL_REF6" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"Dashboard/Objects/BatteryValueObject.pnl" 170.25 57.00000000000001 T 23 1.21875 0 0.9145732248031235 26.86805555555543 239.9810766185046
+1
+"$sDPName""Section5_OEE.OEE"
+0

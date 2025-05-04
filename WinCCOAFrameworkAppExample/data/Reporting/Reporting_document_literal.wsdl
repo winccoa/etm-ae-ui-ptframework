@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Reporting"
+  targetNamespace="urn:Siemens.OA"
+  xmlns:tns="urn:Siemens.OA"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="urn:Siemens.OA"
+  xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:HTTP="http://schemas.xmlsoap.org/wsdl/http/"
+  xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+  xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+  xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+  <schema targetNamespace="urn:Siemens.OA"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="urn:Siemens.OA"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
+    attributeFormDefault="unqualified">
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    <complexType name="dateValue"><!-- ns__dateValue -->
+          <sequence>
+            <element name="date" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__dateValue::date -->
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__dateValue::value -->
+            <element name="status" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/><!-- ns__dateValue::status -->
+          </sequence>
+    </complexType>
+    <complexType name="alertAttribute"><!-- ns__alertAttribute -->
+          <sequence>
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__alertAttribute::value -->
+            <element name="date" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::date -->
+            <element name="state" type="xsd:positiveInteger" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::state -->
+            <element name="abbr" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::abbr -->
+            <element name="prior" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::prior -->
+            <element name="text" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::text -->
+            <element name="direction" type="xsd:boolean" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::direction -->
+            <element name="ack-state" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_state -->
+            <element name="ack-time" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_time -->
+            <element name="ack-user" type="xsd:unsignedInt" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::ack_user -->
+            <element name="comment" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertAttribute::comment -->
+          </sequence>
+    </complexType>
+    <complexType name="QueryValue"><!-- ns__QueryValue -->
+          <sequence>
+            <element name="column1" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column1 -->
+            <element name="column2" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column2 -->
+            <element name="column3" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column3 -->
+            <element name="column4" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column4 -->
+            <element name="column5" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column5 -->
+            <element name="column6" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column6 -->
+            <element name="column7" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__QueryValue::column7 -->
+          </sequence>
+    </complexType>
+    <complexType name="dpNameValue"><!-- ns__dpNameValue -->
+          <sequence>
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpNameValue::dpName -->
+          </sequence>
+    </complexType>
+    <complexType name="dpInfoValue"><!-- ns__dpInfoValue -->
+          <sequence>
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::dpName -->
+            <element name="description" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::description -->
+            <element name="alias" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::alias -->
+            <element name="unit" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::unit -->
+            <element name="lang" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpInfoValue::lang -->
+          </sequence>
+    </complexType>
+    <complexType name="returnValue"><!-- ns__returnValue -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnValue::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnValue::errorText -->
+            <element name="value" type="xsd:anyType" minOccurs="0" maxOccurs="1"/><!-- ns__returnValue::value -->
+          </sequence>
+    </complexType>
+    <complexType name="returnDateValueList"><!-- ns__returnDateValueList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnDateValueList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnDateValueList::errorText -->
+            <element name="table" type="ns:dateValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnDateValueList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnAlertAttributeList"><!-- ns__returnAlertAttributeList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnAlertAttributeList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnAlertAttributeList::errorText -->
+            <element name="table" type="ns:alertAttribute" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnAlertAttributeList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnQueryValueList"><!-- ns__returnQueryValueList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnQueryValueList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnQueryValueList::errorText -->
+            <element name="table" type="ns:QueryValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnQueryValueList::table -->
+          </sequence>
+    </complexType>
+    <complexType name="returnDpInfoList"><!-- ns__returnDpInfoList -->
+          <sequence>
+            <element name="errorCode" type="xsd:integer" minOccurs="1" maxOccurs="1"/><!-- ns__returnDpInfoList::errorCode -->
+            <element name="errorText" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__returnDpInfoList::errorText -->
+            <element name="table" type="ns:dpInfoValue" minOccurs="0" maxOccurs="unbounded"/><!-- ns__returnDpInfoList::table -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="dpGet">
+      <complexType>
+          <sequence>
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpGet::dpName -->
+            <element name="lang" type="xsd:string" minOccurs="1" maxOccurs="1" default="default"/><!-- ns__dpGet::lang -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element and type -->
+    <element name="getReturnValueResponse" type="ns:getReturnValueResponse"/>
+    <complexType name="getReturnValueResponse">
+          <sequence>
+            <element name="return" type="ns:returnValue" minOccurs="1" maxOccurs="1"/><!-- ns__getReturnValueResponse::return_ -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="dpGetPeriod">
+      <complexType>
+          <sequence>
+            <element name="startTime" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__dpGetPeriod::startTime -->
+            <element name="endTime" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__dpGetPeriod::endTime -->
+            <element name="bonus" type="xsd:int" minOccurs="0" maxOccurs="1"/><!-- ns__dpGetPeriod::bonus -->
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpGetPeriod::dpName -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element and type -->
+    <element name="getDateValueListResponse" type="ns:getDateValueListResponse"/>
+    <complexType name="getDateValueListResponse">
+          <sequence>
+            <element name="return" type="ns:returnDateValueList" minOccurs="1" maxOccurs="1"/><!-- ns__getDateValueListResponse::return_ -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="dpGetAsynch">
+      <complexType>
+          <sequence>
+            <element name="time" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__dpGetAsynch::time -->
+            <element name="dpName" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpGetAsynch::dpName -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation request element -->
+    <element name="alertGetPeriod">
+      <complexType>
+          <sequence>
+            <element name="startTime" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertGetPeriod::startTime -->
+            <element name="endTime" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/><!-- ns__alertGetPeriod::endTime -->
+            <element name="alertAttribute" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__alertGetPeriod::alertAttribute -->
+            <element name="lang" type="xsd:string" minOccurs="1" maxOccurs="1" default="default"/><!-- ns__alertGetPeriod::lang -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element and type -->
+    <element name="getAlertAttributeListResponse" type="ns:getAlertAttributeListResponse"/>
+    <complexType name="getAlertAttributeListResponse">
+          <sequence>
+            <element name="return" type="ns:returnAlertAttributeList" minOccurs="1" maxOccurs="1"/><!-- ns__getAlertAttributeListResponse::return_ -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="dpQuery">
+      <complexType>
+          <sequence>
+            <element name="query" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpQuery::query -->
+            <element name="lang" type="xsd:string" minOccurs="1" maxOccurs="1" default="default"/><!-- ns__dpQuery::lang -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element and type -->
+    <element name="getQueryValueListResponse" type="ns:getQueryValueListResponse"/>
+    <complexType name="getQueryValueListResponse">
+          <sequence>
+            <element name="return" type="ns:returnQueryValueList" minOccurs="1" maxOccurs="1"/><!-- ns__getQueryValueListResponse::return_ -->
+          </sequence>
+    </complexType>
+    <!-- operation request element -->
+    <element name="dpNames">
+      <complexType>
+          <sequence>
+            <element name="dpPattern" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpNames::dpPattern -->
+            <element name="dpType" type="xsd:string" minOccurs="1" maxOccurs="1"/><!-- ns__dpNames::dpType -->
+            <element name="lang" type="xsd:string" minOccurs="0" maxOccurs="1" default="default"/><!-- ns__dpNames::lang -->
+            <element name="descriptionMode" type="xsd:int" minOccurs="0" maxOccurs="1" default="1"/><!-- ns__dpNames::descriptionMode -->
+          </sequence>
+      </complexType>
+    </element>
+    <!-- operation response element and type -->
+    <element name="getDpInfoListResponse" type="ns:getDpInfoListResponse"/>
+    <complexType name="getDpInfoListResponse">
+          <sequence>
+            <element name="return" type="ns:returnDpInfoList" minOccurs="1" maxOccurs="1"/><!-- ns__getDpInfoListResponse::return_ -->
+          </sequence>
+    </complexType>
+  </schema>
+
+</types>
+
+<message name="dpGet">
+  <part name="Body" element="ns:dpGet"/><!-- ns__dpGet::ns__dpGet -->
+</message>
+
+<message name="getReturnValueResponse">
+  <part name="Body" element="ns:getReturnValueResponse"/><!-- ns__dpGet::result -->
+</message>
+
+<message name="dpGetPeriod">
+  <part name="Body" element="ns:dpGetPeriod"/><!-- ns__dpGetPeriod::ns__dpGetPeriod -->
+</message>
+
+<message name="getDateValueListResponse">
+  <part name="Body" element="ns:getDateValueListResponse"/><!-- ns__dpGetPeriod::result -->
+</message>
+
+<message name="dpGetAsynch">
+  <part name="Body" element="ns:dpGetAsynch"/><!-- ns__dpGetAsynch::ns__dpGetAsynch -->
+</message>
+
+<message name="alertGetPeriod">
+  <part name="Body" element="ns:alertGetPeriod"/><!-- ns__alertGetPeriod::ns__alertGetPeriod -->
+</message>
+
+<message name="getAlertAttributeListResponse">
+  <part name="Body" element="ns:getAlertAttributeListResponse"/><!-- ns__alertGetPeriod::result -->
+</message>
+
+<message name="dpQuery">
+  <part name="Body" element="ns:dpQuery"/><!-- ns__dpQuery::ns__dpQuery -->
+</message>
+
+<message name="getQueryValueListResponse">
+  <part name="Body" element="ns:getQueryValueListResponse"/><!-- ns__dpQuery::result -->
+</message>
+
+<message name="dpNames">
+  <part name="Body" element="ns:dpNames"/><!-- ns__dpNames::ns__dpNames -->
+</message>
+
+<message name="getDpInfoListResponse">
+  <part name="Body" element="ns:getDpInfoListResponse"/><!-- ns__dpNames::result -->
+</message>
+
+<portType name="ReportingPortType">
+  <operation name="dpGet">
+    <documentation>
+      Returns values of data point attributes in variables
+    </documentation>
+    <input message="tns:dpGet"/>
+    <output message="tns:getReturnValueResponse"/>
+  </operation>
+  <operation name="dpGetPeriod">
+    <documentation>
+      Returns the values of data point attributes over a specific period
+    </documentation>
+    <input message="tns:dpGetPeriod"/>
+    <output message="tns:getDateValueListResponse"/>
+  </operation>
+  <operation name="dpGetAsynch">
+    <documentation>
+      Returns values of data point attributes at a particular source time
+    </documentation>
+    <input message="tns:dpGetAsynch"/>
+    <output message="tns:getDateValueListResponse"/>
+  </operation>
+  <operation name="alertGetPeriod">
+    <documentation>
+      Returns values for the alert attributes of the data point elements for which alerts were added to the database
+    </documentation>
+    <input message="tns:alertGetPeriod"/>
+    <output message="tns:getAlertAttributeListResponse"/>
+  </operation>
+  <operation name="dpQuery">
+    <documentation>
+      Retrieves attribute values with the help of SQL statements
+    </documentation>
+    <input message="tns:dpQuery"/>
+    <output message="tns:getQueryValueListResponse"/>
+  </operation>
+  <operation name="dpNames">
+    <documentation>
+      Returns all the data point names or data point element names that match a pattern
+    </documentation>
+    <input message="tns:dpNames"/>
+    <output message="tns:getDpInfoListResponse"/>
+  </operation>
+</portType>
+
+<binding name="Reporting" type="tns:ReportingPortType">
+  <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="dpGet">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="dpGetPeriod">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="dpGetAsynch">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="alertGetPeriod">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="dpQuery">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+  <operation name="dpNames">
+    <SOAP:operation soapAction=""/>
+    <input>
+          <SOAP:body use="literal" parts="Body"/>
+    </input>
+    <output>
+          <SOAP:body use="literal" parts="Body"/>
+    </output>
+  </operation>
+</binding>
+
+<service name="Reporting">
+  <documentation>
+    WinCC OA Reporting WSDL file
+  </documentation>
+  <port name="Reporting" binding="tns:Reporting">
+    <SOAP:address location="http://localhost:8080/"/>
+  </port>
+</service>
+
+</definitions>

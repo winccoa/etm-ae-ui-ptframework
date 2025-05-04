@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <Description>Shows tag data in chart format over a certain time period.</Description>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="WinCCOA">
+      <DataSourceReference>/Datasources/WinCC OA</DataSourceReference>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>7261b98e-86e0-459e-8228-1466ecfc5007</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataPointNames">
+      <Query>
+        <DataSourceName>WinCCOA</DataSourceName>
+        <CommandText>&lt;Query&gt;
+  &lt;Method Namespace="urn:Siemens.OA" Name="dpNames"&gt;
+  &lt;Parameters&gt;
+     &lt;Parameter Name="dpPattern" Type="string"&gt;
+        &lt;DefaultValue&gt;*.**&lt;/DefaultValue&gt;
+     &lt;/Parameter&gt;
+     &lt;Parameter Name="dpType" Type="string"&gt; 
+        &lt;DefaultValue&gt;ExampleDP_Float&lt;/DefaultValue&gt;
+     &lt;/Parameter&gt;
+  &lt;/Parameters&gt;
+  &lt;/Method&gt;
+&lt;/Query&gt;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="errorCode">
+          <DataField>errorCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="errorText">
+          <DataField>errorText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dpName">
+          <DataField>dpName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DataPoints">
+      <Query>
+        <DataSourceName>WinCCOA</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="startTime">
+            <Value>=Parameters!TimeBegin.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="endTime">
+            <Value>=Parameters!TimeEnd.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="dpName">
+            <Value>=Parameters!DataPointName.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>&lt;Query&gt;
+  &lt;Method Namespace="urn:Siemens.OA" Name="dpGetPeriod"&gt;
+  &lt;Parameters&gt;
+     &lt;Parameter Name="startTime" Type="date"&gt;&lt;/Parameter&gt;
+     &lt;Parameter Name="endTime" Type="date"&gt;&lt;/Parameter&gt;
+     &lt;Parameter Name="bonus" Type="integer"&gt;
+       &lt;DefaultValue&gt;0&lt;/DefaultValue&gt;
+     &lt;/Parameter&gt;
+     &lt;Parameter Name="dpName" Type="string"&gt;&lt;/Parameter&gt;
+  &lt;/Parameters&gt;
+  &lt;/Method&gt;
+&lt;/Query&gt;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="errorCode">
+          <DataField>errorCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="errorText">
+          <DataField>errorText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date">
+          <DataField>date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="value">
+          <DataField>value</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Chart Name="Chart">
+            <ChartCategoryHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart_CategoryGroup" />
+                  <Label>=Fields!date.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartCategoryHierarchy>
+            <ChartSeriesHierarchy>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Parameters!DataPointName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!date.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Parameters!DataPointName.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+            </ChartSeriesHierarchy>
+            <ChartData>
+              <ChartSeriesCollection>
+                <ChartSeries Name="value">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <X>=TimeZone.CurrentTimeZone.ToLocalTime(Code.ToDateTime(Fields!date.Value))</X>
+                        <Y>=Double.Parse(Fields!value.Value, System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Type>Line</Type>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+              </ChartSeriesCollection>
+            </ChartData>
+            <ChartAreas>
+              <ChartArea Name="Default">
+                <ChartCategoryAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Format>dd.MM.yyyy
+HH:mm:ss</Format>
+                      <Color>#000053</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption />
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Color>#000053</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                      <IntervalType>Auto</IntervalType>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Enabled>False</Enabled>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartCategoryAxes>
+                <ChartValueAxes>
+                  <ChartAxis Name="Primary">
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                      <Color>#000053</Color>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Value</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                        <Color>#000053</Color>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                  <ChartAxis Name="Secondary">
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                      </Border>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                    <ChartAxisTitle>
+                      <Caption>Axis Title</Caption>
+                      <Style>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </ChartAxisTitle>
+                    <ChartMajorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorGridLines>
+                    <ChartMinorGridLines>
+                      <Style>
+                        <Border>
+                          <Color>Gainsboro</Color>
+                          <Style>Dotted</Style>
+                        </Border>
+                      </Style>
+                    </ChartMinorGridLines>
+                    <ChartMajorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                    </ChartMajorTickMarks>
+                    <ChartMinorTickMarks>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                        </Border>
+                      </Style>
+                      <Length>0.5</Length>
+                    </ChartMinorTickMarks>
+                    <CrossAt>NaN</CrossAt>
+                    <Location>Opposite</Location>
+                    <Minimum>NaN</Minimum>
+                    <Maximum>NaN</Maximum>
+                    <ChartAxisScaleBreak>
+                      <Style />
+                    </ChartAxisScaleBreak>
+                  </ChartAxis>
+                </ChartValueAxes>
+                <Style>
+                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                </Style>
+              </ChartArea>
+            </ChartAreas>
+            <ChartLegends>
+              <ChartLegend Name="Default">
+                <Style>
+                  <Border>
+                    <Color>#728586</Color>
+                  </Border>
+                  <BackgroundColor>White</BackgroundColor>
+                  <BackgroundGradientType>TopBottom</BackgroundGradientType>
+                  <BackgroundGradientEndColor>WhiteSmoke</BackgroundGradientEndColor>
+                  <FontSize>8pt</FontSize>
+                  <Color>#000053</Color>
+                </Style>
+                <Position>BottomCenter</Position>
+                <Layout>Column</Layout>
+                <DockToChartArea>Default</DockToChartArea>
+                <DockOutsideChartArea>true</DockOutsideChartArea>
+                <ChartLegendTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </ChartLegendTitle>
+                <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+                <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+                <MaxAutoSize>90</MaxAutoSize>
+                <TextWrapThreshold>80</TextWrapThreshold>
+              </ChartLegend>
+            </ChartLegends>
+            <ChartTitles>
+              <ChartTitle Name="Title1">
+                <Caption>WinCC OA Reporting</Caption>
+                <Style>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>General</TextAlign>
+                  <VerticalAlign>Top</VerticalAlign>
+                  <Color>#000053</Color>
+                </Style>
+              </ChartTitle>
+            </ChartTitles>
+            <Palette>Custom</Palette>
+            <ChartCustomPaletteColors>
+              <ChartCustomPaletteColor>#000053</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#c4bcbc</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#ebc47f</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#384c70</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#949a7e</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#b8c09e</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#7c8692</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#949a7e</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#95b0d3</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#9f9dad</ChartCustomPaletteColor>
+              <ChartCustomPaletteColor>#728586</ChartCustomPaletteColor>
+            </ChartCustomPaletteColors>
+            <ChartBorderSkin>
+              <Style>
+                <BackgroundColor>Gray</BackgroundColor>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <Color>White</Color>
+              </Style>
+            </ChartBorderSkin>
+            <ChartNoDataMessage Name="NoDataMessage">
+              <Caption>No Data Available</Caption>
+              <Style>
+                <BackgroundGradientType>None</BackgroundGradientType>
+                <FontSize>8pt</FontSize>
+                <TextAlign>General</TextAlign>
+                <VerticalAlign>Top</VerticalAlign>
+              </Style>
+            </ChartNoDataMessage>
+            <DataSetName>DataPoints</DataSetName>
+            <Top>3mm</Top>
+            <Left>3mm</Left>
+            <Height>172mm</Height>
+            <Width>265mm</Width>
+            <Style>
+              <Border>
+                <Color>#728586</Color>
+                <Style>Solid</Style>
+                <Width>2pt</Width>
+              </Border>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <BackgroundGradientType>TopBottom</BackgroundGradientType>
+            </Style>
+          </Chart>
+        </ReportItems>
+        <Height>179.97293mm</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>272.52082mm</Width>
+      <Page>
+        <PageFooter>
+          <Height>10mm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="ExecutionTime">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style>
+                        <Color>#000053</Color>
+                        <Language>=User!Language</Language>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ExecutionTime</rd:DefaultName>
+              <Top>0mm</Top>
+              <Left>6mm</Left>
+              <Height>6mm</Height>
+              <Width>50mm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <InteractiveHeight>380pt</InteractiveHeight>
+        <InteractiveWidth>460pt</InteractiveWidth>
+        <LeftMargin>0.3937in</LeftMargin>
+        <RightMargin>0.3937in</RightMargin>
+        <TopMargin>0.3937in</TopMargin>
+        <BottomMargin>0.19685in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Localization">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>= "Name_" + Code.GetString("Tlg_Chart_Begin_Ende_ValueIds_LocalName",User!Language)</Value>
+          <Value>= "Project_" + Code.GetString("Project",User!Language)</Value>
+          <Value>= "TimeBegin_" + Code.GetString("TimeBegin",User!Language)</Value>
+          <Value>= "TimeEnd_" + Code.GetString("TimeEnd",User!Language)</Value>
+          <Value>= "Desc_" + Code.GetString("Tlg_Chart_Begin_Ende_ValueIds_LocalDesc",User!Language)</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Localization</Prompt>
+      <Hidden>true</Hidden>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DataPointName">
+      <DataType>String</DataType>
+      <Prompt>Data point</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DataPointNames</DataSetName>
+          <ValueField>dpName</ValueField>
+          <LabelField>dpName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="TimeBegin">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd("n",-2,Now())</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start time</Prompt>
+      <UsedInQuery>False</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="TimeEnd">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd("n",0,Now())</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End time</Prompt>
+      <UsedInQuery>False</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="Icon">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>InformationServer/graph.png</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Icon</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function ToDateTime(timestamp as Object) as DateTime
+  If(IsNumeric(timestamp))
+    Return new DateTime(1899,12,30).AddDays(timestamp)
+  else
+    Return Convert.ToDateTime(timestamp)
+  End If
+End Function
+
+Public Function GetString(name as String, cultureName as String) as String
+  Try
+    Return Siemens.InformationServer.Common.ExternalResources.Localization.GetString(name,cultureName)
+  Catch ex as Exception
+    Return ex.Message
+  End Try
+End Function
+
+
+Public Function GetProjectCatalog(project as String) as String
+  Try
+    Return Siemens.InformationServer.Common.ExternalResources.Helper.GetProjectCatalog(project)
+  Catch ex as Exception
+    Return ex.Message
+  End Try
+End Function
+
+Public Function GetDateTimeFromPI(pi as String) as DateTime
+Try
+	Dim dt() As DateTime
+	dt = Siemens.InformationServer.Office.TimeDefintionParser.Parse(pi)
+	If Not dt Is Nothing and dt.Length &gt; 0 Then
+		return dt(0)
+	End If
+	return DateTime.MinValue
+Catch ex as Exception
+	return DateTime.MaxValue
+End Try
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <CodeModules>
+    <CodeModule>Siemens.InformationServer.Common.ExternalResources</CodeModule>
+  </CodeModules>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportServerUrl>http://localhost/ReportServer_HISTORIAN</rd:ReportServerUrl>
+  <rd:ReportID>e1e67717-4827-442a-a13e-45adcc57705b</rd:ReportID>
+</Report>

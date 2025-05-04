@@ -1,0 +1,13 @@
+version 1
+
+auth "" ""
+#Manager         | Start  | SecKill | Restart# | ResetMin | Options
+WCCILpmon        | manual |      30 |        3 |        1 |
+WCCILdataSQLite  | always |      30 |        3 |        1 |
+WCCOAnextgenarch | always |      30 |        2 |        2 |
+WCCILevent       | always |      30 |        3 |        1 |
+WCCILproxy       | always |      30 |        2 |        2 |
+WCCOActrl        | always |      30 |        3 |        1 |-num 1 -f pvss_scripts.lst
+WCCILsim         | always |      30 |        3 |        1 |
+WCCOAui          |   once |      30 |        3 |        1 |-m gedi
+WCCOAui          | always |      30 |       10 |        2 |-p vision/login.pnl -dbg UI_INFO

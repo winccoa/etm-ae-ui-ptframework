@@ -1,0 +1,193 @@
+V 14
+2
+LANG:10001 0 
+LANG:10000 0 
+PANEL,-1 -1 698 313 N "_Transparent" 0
+E E E E E 1 -1 -1 0  -8.544201388886904 -6
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+6 1
+"RECTANGLE710"
+""
+1 1200 60 E E E 1 E 1 E N "_Transparent" E N "color-2" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E 1.000670292075167 0 1.280434782608696 -1196.8043504902 -69.82608695652175 1 E 1200 60 1880 290
+2 4
+"PRIMITIVE_TEXT9"
+""
+1 180 160 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.9583333333333333 0 1.249999999999999 -122.5 -184.6666666666667 0 E 180 160 420 180
+0 2 2 "0s" 0 0 0 72 0 0  180 160 1
+3
+LANG:10001 53 MS Shell Dlg 2,-1,19,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+LANG:10000 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+LANG:0 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+0 3
+LANG:10001 20 Sections Performance
+LANG:10000 2 DG
+LANG:0 10 Title Name
+2 6
+"PRIMITIVE_TEXT11"
+""
+1 180 160 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.3944444444444441 0 0.9500000000000001 494.0000000000001 -133.6666666666669 0 E 180 160 420 180
+0 2 2 "0s" 0 0 0 74 0 0  180 160 1
+3
+LANG:10001 56 MS Shell Dlg 2,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+LANG:10000 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+LANG:0 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+0 3
+LANG:10001 1 %
+LANG:10000 9 Last (KW)
+LANG:0 10 Title Name
+29 8
+"Chart_ewo1"
+""
+1 5.99999999999994 57.27210300429179 E E E 1 E 1 E N "color-std-text" E N "color-2" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+11
+"chartType" "enum 3"
+"legendPosition" "enum 0"
+"showGrid" "bool FALSE"
+"shownValueText" "enum 0"
+"axesFont" "font Noto Sans,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"
+"segmentSpacing" "int 40"
+"axesColor" "color {85,97,108}"
+"gridColor" "color {85,97,108}"
+"bubbleMaxSize" "uint 60"
+"seriesSpacing" "int 30"
+"layoutAlignment" "AlignNone"
+4
+LANG:10001 43 Noto Sans,-1,20,5,400,0,0,0,0,0,0,0,0,0,0,1
+LANG:10000 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+LANG:10027 30 Noto Sans,10,-1,5,50,0,0,0,0,0
+LANG:0 30 Noto Sans,-1,20,5,50,0,0,0,0,0
+0  6 42 665 297.9999999999999
+9 Chart.ewo
+0
+"dyn_float  dy1;
+bool FirstTimeOnly = true;
+main()
+{
+ // this.gridColor(\"TrendBorderColor\");
+  string query = \"SELECT '_online.._value' FROM 'Section?_OEE.performance' \";
+  dpQueryConnectAll(\"setColumn\", true, \"anything\", query);
+}
+
+setColumn(string userdata, dyn_dyn_anytype tab)
+{
+
+
+
+
+  for (int i = 1; i <= 9; i++)
+  {
+    dy1[i] = tab[i + 1][2];
+
+  }
+
+
+  if (FirstTimeOnly&&this.seriesCount!=1)
+  {
+
+
+
+    dyn_string xAxis = makeDynString(\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\");
+    this.addSeries(dy1, xAxis);
+    this.setSeriesFillColor(0, \"chart-1\");
+    this.itemsSelectable(0);
+    this.animateValueChange(true);
+
+    FirstTimeOnly = false;
+  }
+
+
+  for (int i = 1; i <= 9; i++)
+  {
+    this.setItemValue(0, (i - 1), dy1[i]);
+
+  }
+
+}
+
+
+
+
+
+" 0
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+0

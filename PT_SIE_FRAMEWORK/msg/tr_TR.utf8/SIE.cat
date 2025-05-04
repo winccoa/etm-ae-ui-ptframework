@@ -1,0 +1,125 @@
+buttonNavi_cctv,CCTV
+buttonNavi_dashboard,Grafik Tabloları
+buttonNavi_documentation,Dokümantasyon
+buttonNavi_gis,CBS
+buttonNavi_messages,Alarm
+buttonNavi_overview,Genel Görünüm
+buttonNavi_settings,Ayarlar
+buttonNavi_systemOverview,Sistem Genel Görünüm
+buttonNavi_trafficProgram,Trafik
+buttonNavi_user,Gerçek Kullanıcı
+buttonNavi_theme,Tema
+buttonNavi_language,Dil
+buttonNavi_exit,Kapat
+buttonNavi_menu,Menüyü daralt
+button_ackAll,Tüm Alarmları Onayla
+button_acknowledgeAll,Tümünü Onayla
+button_close,Kapat
+button_closeDoor,Kapıyı Kapat
+button_cmdLast24h,Komutlar / Son 24 saat
+button_dataModel,Data tipi
+button_lightHouse2,Işık Aç/Kapat Ev 2
+button_lightHouse3,Işık Aç/Kapat Ev 3
+button_mapOffline,Çevrimdışı Harita 
+button_mapOnline,Çevrimiçi Harita 
+button_openDoor,Kapıyı Aç
+button_overview,Genel Görünüm
+button_resetFire,Yangın Alarm Reset
+button_showCam1,Kamera 1\nGöster
+button_showCam2,Kamera 2\nGöster
+button_showCam3,Kamera 3\nGöster
+button_showCam4,Kamera 4\nGöster
+button_showConfig1,Konfigürasyon 1'i etkinleştir
+button_showConfig2,Konfigürasyon 2'yi etkinleştir
+button_deleteCameras,Kameraları sil
+button_alarmOnCam4,Kamera 4 Alarmı Açık
+button_alarmOffCam4,Kamera 4 Alarmı Kapalı
+button_cam3WriteProtection,Kamera 3 Yazma Koruması +- 10s
+button_systemOverview,Sistem genel bakışını aç
+button_sidoor,SIDOOR
+button_siemensNbg,Siemens Nürnberg
+button_testSuite,Test Odası
+button_tpCarBreakdownActive,Araç Arızası
+button_tpConstructionActive,İnşaat
+button_tpFireActive,Yangın
+button_tpNormalActive,Normal
+button_tpPersonInTunnelActive,Tünelde İnsan Var
+button_tpTrafficJamActive,Yoğun Trafik
+button_tpTunnelBlockingActive,Tünel Kapalı
+button_triggerFire,Yangın
+button_tunnel2000,Tünel (2000 m)
+button_tunnel20000,Tünel (20000 m)
+button_tunnel4000,Tünel (4000 m)
+button_siriusEmpty,Boş
+button_SIM,PLC SIM Ayarını Etkinleştir
+button_RH,RH Ayarını Etkinleştir
+frame_doorControl,Kapı Kontrol
+frame_doorRunTime,Kapı Açılma Süresi
+frame_doorStatus,Kapı Durumu
+frame_fireAlarmSystem,Yangın Alarm Sistemi
+sidoor_closingTime,Kapanma Süresi
+sidoor_doorClosed,Kapı Kapalı
+sidoor_doorClosing,Kapı Kapanıyor
+sidoor_doorOpened,Kapı Açık
+sidoor_doorOpening,Kapı Açılıyor
+sidoor_error,Hata
+sidoor_motorCurrent,Motor Akımı
+sidoor_motorDeenergized,Motor Enerjisiz
+sidoor_openingTime,Açılma Zamanı
+sidoor_position,Pozisyon
+sidoor_readyForOperation,Operasyona Hazır
+sidoor_speed,Hız
+sidoor_stopped,Durdu
+sidoor_torque,Tork
+tpCarBreakdownActive,Araç Arızası
+tpConstructionActive,İnşaat
+tpFireActive,Yangın
+tpNormalActive,Normal
+tpPersonInTunnelActive,Tünelde İnsan Var
+tpTunnelBlockingActive,Tünel Kapalı
+tpUndefiened,----
+txtSection_commands24h,Komutlar / Son 24 saat
+txtSection_doorControl,Kapı Kontrol
+txtSection_generalInfo,Genel Bilgi
+txtSection_opcUaServer,OPC UA Server
+txtSection_plcSettings,PLC Ayarları
+txtSection_showModuleFooter,Bilgi satırını göster
+txtSection_siriusAct,Sirius Act
+txtSection_trafficProgram,Trafik
+txtSection_useSirisAct,
+txtTab_command,Komut 
+txtTab_manager,Yönetici
+txtTab_time,Zaman
+txtTab_user,Kullanıcı
+txtTab_value,Değer
+txt_automatic,Otomatik
+txt_manual,Manuel
+txt_sector1,Kısım 1
+txt_sector2,Kısım 2
+txt_sector3,Kısım 3
+txt_toggle,değiştir
+video_alarm_txt_1,Acil Durum Butonu Aktif Edildi
+video_alarm_txt_2,Yangın Alarmı Aktif edildi
+video_alarm_txt_3,Acil Çıkış Kapısı Açık
+video_alarm_txt_4,Alarm
+video_alarm_txt_5,Alarm
+video_objectExplorer,Nesne Gezgini
+video_cameraList,Kamera listesi
+video_configuration,Yapılandırma
+video_playback,EWO Oynatma
+tpTrafficJamActive,Yoğun Trafik
+fpStatus,Durum
+fpOperatingData,İşletme verileri
+fpParameter,Parametre
+tpStop,Dur
+sfAll,Tümü
+sfTraffic,Trafik
+sfVentilation,Havalandırma
+sfFire,Yangın Koruma
+sfSOS,Acil Çağrı
+sfAirquality,Hava Kalitesi
+sfLighting,Aydınlatma
+baseOverview,Genel Bakış
+sectorOverview,Sektör Genel Bakış
+tunnelDemo,Tünel Dijitalleştirme Demosu
+tunnelOperation,Tünel İşletimi

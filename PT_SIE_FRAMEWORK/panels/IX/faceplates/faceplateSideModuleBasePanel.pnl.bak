@@ -1,0 +1,158 @@
+V 14
+6
+LANG:10000 0 
+LANG:10001 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+PANEL,-1 -1 318 783 N "color-4" 1
+"$moduleName"
+"main()
+{
+//   string myUiFaceplateDp = \"_Ui_\"+myUiNumber()+\"_faceplateMonitor\";
+//   if(!dpExists(myUiFaceplateDp)){
+//     DebugTN(__FUNCTION__, \"UI DP does not exist: \", myUiFaceplateDp);
+//   }
+
+//   dpConnect(\"faceplateMonitoring\",myUiFaceplateDp+\".sideModule.newFaceplateToOpenInMenu\");
+
+  shape emb = self.parentShape(), basePanel = emb.panel();
+//   uiConnect(\"faceplateMonitoringCB\", basePanel.faceplateToOpen);
+  DebugTN(\"uiConnect\", basePanel);
+  uiConnect(\"faceplateMonitoringCB\", basePanel.faceplateToOpen);
+}
+" 0
+ E E E E 1 -1 -1 0  25 20
+""0  1
+E "dyn_string dsOpenFaceplaces;
+
+private void faceplateMonitoring(string dp, string faceplate)
+{
+//   string myUiFaceplateDp = \"_Ui_\" + myUiNumber() + \"_faceplateMonitor.sideModule\";
+  dyn_string faceplates;
+  dyn_string shapes;
+DebugTN(\"________________\");
+  if (!faceplate.isEmpty())
+  {
+
+
+    shapes = getShapes(myModuleName(), myPanelName(), \"\", true);
+
+    dyn_string dpInfo = stringToDynString(faceplate, \"§\");
+
+    if (!shapes.contains(dpInfo.at(0) + \".fpMod\") && dynContains(dsOpenFaceplaces, dpInfo.at(0))<1)
+    {
+//       dpGet(myUiFaceplateDp + \".faceplates\", faceplates);
+//       if(!shapeExists(myModuleName() + \".\" +  myPanelName() + \":\" + dpInfo.at(0)))){
+//       if(!faceplates.contains(dpInfo.at(0))){
+//       faceplates.append(dpInfo.at(0));
+//       dpSet(myUiFaceplateDp + \".faceplates\", faceplates);
+      dyn_string dsParams = makeDynString(\"$moduleName:\" + $moduleName, \"$modName:\" + myModuleName(), \"$beamed:\" + false, \"$panel:\" + dpInfo.at(2), \"$DP:\" + dpInfo.at(1), \"$TYP:\" + dpInfo.at(3));
+      for(int i =5;i<=dynlen(dpInfo);i++)
+      {
+        dynAppend(dsParams, dpInfo[i]);
+      }
+
+      addSymbol(myModuleName(), myPanelName(), \"IX/faceplates/faceplateModule.pnl\", dpInfo.at(0), 0, 0, \"PopUp\", 1, 1,
+                dsParams);
+
+      dynAppend(dsOpenFaceplaces, dpInfo.at(0));
+    }
+
+//     dpSet(myUiFaceplateDp + \".newFaceplateToOpenInMenu\", \"\");
+  }
+
+}
+
+private void faceplateMonitoringCB(string sFaceplate, bool bOpen)
+{
+  if (bOpen)
+    faceplateMonitoring(\"\", sFaceplate);
+  else
+  {
+    int iPos = dynContains(dsOpenFaceplaces, sFaceplate);
+    if (iPos > 0)
+      dynRemove(dsOpenFaceplaces, iPos);
+    else if (sFaceplate == \"\") //close all
+      dynClear(dsOpenFaceplaces);
+  }
+}
+" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "108.888"
+1 1 0 0 0 0 1 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+32 2
+"SPACER1"
+""
+1 0 0 E E E 1 E 1 E N {0,0,0} E N {255,255,255} E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+6
+LANG:10000 0 
+LANG:10001 0 
+LANG:10010 0 
+LANG:10009 0 
+LANG:10007 0 
+LANG:10004 0 
+
+3
+"transparentForMouse" ""
+"sizePolicy" "Preferred Expanding"
+"layoutAlignment" "AlignNone"
+ 0 0 317.0000000000145 1053 2
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+4 3 "PopUp" -1
+1 0 
+2 
+
+"S 2" "0 0 1 1"
+"" ""
+0 2 0 1 0
+0

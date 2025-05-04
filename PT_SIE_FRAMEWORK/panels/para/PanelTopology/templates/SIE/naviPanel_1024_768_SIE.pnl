@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel version="14">
+ <properties>
+  <prop name="Name">
+   <prop name="de_AT.utf8">navi</prop>
+   <prop name="en_US.utf8"></prop>
+   <prop name="es_ES.utf8"></prop>
+   <prop name="fr_FR.utf8"></prop>
+   <prop name="tr_TR.utf8"></prop>
+   <prop name="zh_CN.utf8"></prop>
+  </prop>
+  <prop name="Size">267 1032</prop>
+  <prop name="BackColor">color-2</prop>
+  <prop name="RefPoint">0 0</prop>
+  <prop name="InitAndTermRef">True</prop>
+  <prop name="SendClick">False</prop>
+  <prop name="RefFileName"></prop>
+  <prop name="DPI">96</prop>
+  <prop name="PDPI">108.888</prop>
+  <prop name="layoutType">VBox</prop>
+  <prop name="layoutLeftMargin">0</prop>
+  <prop name="layoutRightMargin">0</prop>
+  <prop name="layoutTopMargin">0</prop>
+  <prop name="layoutBottomMargin">0</prop>
+  <prop name="layoutSpacing">0</prop>
+  <prop name="connectorMargin">0</prop>
+ </properties>
+ <events>
+  <script isEscaped="1" name="ScopeLib"><![CDATA[#uses &quot;classes/GUI/GUINaviButtonCollection&quot;
+
+shared_ptr&lt;GUINaviButtonCollection&gt; ButtonCollection = new GUINaviButtonCollection();
+
+public shared_ptr&lt;GUINaviButtonCollection&gt; GetGuiNaviButtonCollection()
+{
+  return ButtonCollection;
+}
+
+string actualPanelName;
+
+void initButtons()
+{
+//   pt_moduleNumber(sModuleName, ModuleNumber);
+
+  string strServerName = getSystemName();
+  int error = pt_checkPanelTopologyCache();
+
+  bool bFreeNodeFound = FALSE;
+
+  for (int i = dynlen(g_PanelTopologyCache[strServerName + &quot;_PanelTopology.nodeName:_online.._value&quot;]); i &gt; 0; i--) //1 because ignore start/root node
+  {
+    if (g_PanelTopologyCache[strServerName + &quot;_PanelTopology.nodeName:_online.._value&quot;][i] == &quot;. . .&quot;)
+    {
+      bFreeNodeFound = TRUE;
+      continue;
+    }
+
+    if (g_PanelTopologyCache[strServerName + &quot;_PanelTopology.parentNumber:_online.._value&quot;][i] &gt; 1) //only start node and first level
+      continue;
+
+    int iPos = i; //pt pos
+    if (g_PanelTopologyCache[strServerName + &quot;_PanelTopology.fileName:_online.._value&quot;][i] == &quot;main.pnl&quot; &amp;&amp; i!=1)
+    {
+      iPos *= -1;
+    }
+    addSymbol(myModuleName(), myPanelName(), &quot;objects/side_menu_buttons/generic.pnl&quot;, &quot;navi_btn_&quot;+i, 1, &quot;LAYOUT_GROUP1&quot;,
+              makeDynString(&quot;$nodeId:&quot;+iPos));
+  }
+
+  delay(0,50);
+
+
+  ButtonCollection.Clear();
+  dyn_string shapes = getShapes(myModuleName(), myPanelName(), &quot;&quot;, true);
+
+  dyn_string buttons;
+
+  for (int i = 0; i &lt; shapes.count(); i++)
+  {
+    if (!buttons.contains(shapes.at(i).split(&quot;.&quot;).at(0)) &amp;&amp; shapes.at(i).split(&quot;.&quot;).at(0).contains(&quot;btn&quot;))
+    {
+      buttons.append(shapes.at(i).split(&quot;.&quot;).at(0));
+    }
+  }
+
+  for (int i = 0; i &lt; buttons.count(); i++)
+  {
+    shape tmp = getShape(myModuleName(), myPanelName(), buttons.at(i));
+    ButtonCollection.Append(tmp.GetGUINaviButton());
+  }
+}
+]]></script>
+  <script isEscaped="1" name="Initialize"><![CDATA[main()
+{
+  initButtons();
+}]]></script>
+ </events>
+ <shapes>
+  <reference Name="btn_exit" parentSerial="13" referenceId="9">
+   <properties>
+    <prop name="FileName">IX/objects/side_menu_buttons/exit.pnl</prop>
+    <prop name="Location">45 875</prop>
+    <prop name="Geometry">1 0 0 1 -5 105</prop>
+    <prop name="TabOrder">45</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Expanding" vertical="Preferred"/>
+    </prop>
+    <prop name="layoutAlignment">AlignLeft|AlignLeading</prop>
+   </properties>
+  </reference>
+  <reference Name="btn_theme" parentSerial="13" referenceId="10">
+   <properties>
+    <prop name="FileName">IX/objects/side_menu_buttons/theme.pnl</prop>
+    <prop name="Location">30 720</prop>
+    <prop name="Geometry">1 0 0 1 5 -90</prop>
+    <prop name="TabOrder">46</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Expanding" vertical="Preferred"/>
+    </prop>
+    <prop name="layoutAlignment">AlignLeft|AlignLeading</prop>
+   </properties>
+  </reference>
+  <reference Name="btn_lang" parentSerial="13" referenceId="11">
+   <properties>
+    <prop name="FileName">IX/objects/side_menu_buttons/language.pnl</prop>
+    <prop name="Location">40 825</prop>
+    <prop name="Geometry">1 0 0 1 5 -125</prop>
+    <prop name="TabOrder">47</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Expanding" vertical="Preferred"/>
+    </prop>
+    <prop name="layoutAlignment">AlignLeft|AlignLeading</prop>
+   </properties>
+  </reference>
+  <shape Name="SPACER3" layerId="0" shapeType="SPACER">
+   <properties>
+    <prop name="serialId">145</prop>
+    <prop name="Type"></prop>
+    <prop name="RefPoint">205 790</prop>
+    <prop name="Enable">True</prop>
+    <prop name="Visible">True</prop>
+    <prop name="ForeColor">{0,0,0}</prop>
+    <prop name="BackColor">{255,255,255}</prop>
+    <prop name="TabOrder">49</prop>
+    <prop name="ToolTipText">
+     <prop name="de_AT.utf8"></prop>
+     <prop name="en_US.utf8"></prop>
+     <prop name="es_ES.utf8"></prop>
+     <prop name="fr_FR.utf8"></prop>
+     <prop name="tr_TR.utf8"></prop>
+     <prop name="zh_CN.utf8"></prop>
+    </prop>
+    <prop name="TransparentForMouse">True</prop>
+    <prop name="maximumSize">-1 30</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Ignored" vertical="Expanding"/>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+    <prop name="snapMode">Point</prop>
+    <prop name="Location">205 790</prop>
+    <prop name="Size">11 52</prop>
+    <prop name="Orientation">vertical</prop>
+   </properties>
+  </shape>
+  <reference Name="btn_menu" parentSerial="13" referenceId="16">
+   <properties>
+    <prop name="FileName">IX/objects/side_menu_buttons/menu.pnl</prop>
+    <prop name="Location">25 40</prop>
+    <prop name="Geometry">0.1298342541436464 0 0 1 36.75414364640885 -35</prop>
+    <prop name="TabOrder">50</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Expanding" vertical="Preferred"/>
+    </prop>
+    <prop name="layoutAlignment">AlignLeft|AlignLeading</prop>
+   </properties>
+  </reference>
+  <reference Name="PANEL_REF1" parentSerial="13" referenceId="17">
+   <properties>
+    <prop name="FileName">objects/side_menu_buttons/generic.pnl</prop>
+    <prop name="Location">27.50000000000574 841.5</prop>
+    <prop name="TabOrder">50</prop>
+    <prop name="dollarParameters">
+     <prop name="dollarParameter">
+      <prop name="Dollar">$nodeId</prop>
+      <prop name="Value">-1</prop>
+     </prop>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+   </properties>
+  </reference>
+  <shape Name="SPACER2" layerId="0" shapeType="SPACER">
+   <properties>
+    <prop name="serialId">39</prop>
+    <prop name="Type"></prop>
+    <prop name="RefPoint">185 570</prop>
+    <prop name="Enable">True</prop>
+    <prop name="Visible">True</prop>
+    <prop name="ForeColor">{0,0,0}</prop>
+    <prop name="BackColor">{255,255,255}</prop>
+    <prop name="TabOrder">27</prop>
+    <prop name="ToolTipText">
+     <prop name="de_AT.utf8"></prop>
+     <prop name="en_US.utf8"></prop>
+     <prop name="es_ES.utf8"></prop>
+     <prop name="fr_FR.utf8"></prop>
+     <prop name="tr_TR.utf8"></prop>
+     <prop name="zh_CN.utf8"></prop>
+    </prop>
+    <prop name="TransparentForMouse">True</prop>
+    <prop name="sizePolicy">
+     <sizePolicy horizontal="Ignored" vertical="Expanding"/>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+    <prop name="snapMode">Point</prop>
+    <prop name="Location">185 570</prop>
+    <prop name="Size">11 52</prop>
+    <prop name="Orientation">vertical</prop>
+   </properties>
+  </shape>
+ </shapes>
+ <groups>
+  <layout Name="LAYOUT_GROUP1" parentSerial="15" serial="13">
+   <properties>
+    <prop idx="1" name="shapeSerial">39</prop>
+    <prop idx="6" name="shapeSerial">145</prop>
+    <prop idx="2" name="groupSerial">17</prop>
+    <prop idx="0" name="groupSerial">16</prop>
+    <prop idx="3" name="groupSerial">11</prop>
+    <prop idx="4" name="groupSerial">10</prop>
+    <prop idx="5" name="groupSerial">9</prop>
+    <prop name="isContainerShape">False</prop>
+    <prop name="layoutType">VBox</prop>
+    <prop name="layoutSpacing">0</prop>
+   </properties>
+  </layout>
+  <layout Name="LAYOUT_GROUP3" parentSerial="-1" serial="15">
+   <properties>
+    <prop idx="0" name="groupSerial">13</prop>
+    <prop name="isContainerShape">False</prop>
+    <prop name="layoutType">VBox</prop>
+    <prop name="layoutSpacing">0</prop>
+   </properties>
+  </layout>
+ </groups>
+</panel>

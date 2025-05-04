@@ -1,0 +1,324 @@
+V 14
+1
+LANG:10001 0 
+PANEL,-1 -1 221 243 N "_3DFace" 2
+"$fDP"
+"$iMNum"
+"main()
+{
+  title.text=\"Machine\"+$iMNum;
+  dpConnect(\"CBAvail\",$fDP+\".Availability\");
+  dpConnect(\"CBPerf\",$fDP+\".performance\");
+    dpConnect(\"CBQuality\",$fDP+\".Quality\");
+        dpConnect(\"CBOEE\",$fDP+\".OEE\");
+}
+
+CBAvail(string dpname,float dpval)
+{
+
+ValueAv.text=(int)dpval;
+
+}
+CBPerf(string dpname,float dpval)
+{
+
+ValuePerf.text=(int)dpval;
+
+
+}
+
+CBQuality(string dpname,float dpval)
+{
+
+ValueQuality.text=(int)dpval;
+
+
+}
+
+CBOEE(string dpname,float dpval)
+{
+
+ValueOEE.text=(int)dpval;
+
+
+}" 0
+ E E E E 1 -1 -1 0  -3.29305339924862 6.670719887706355
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "120"
+"pdpi" "141.767"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+6 1
+"RECTANGLE725"
+""
+1 130 190 E E E 1 E 1 E N "_Transparent" E N "color-3" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+7
+"shadowOffset" "[3,3]"
+"shadowColor" "{34,34,34,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E -1 0 2 1 1 E 0.9910160705223611 0 1.145393789766846 -117.1251425671555 -195.9541001679944 1 E 130 190 320 360
+6 7
+"RECTANGLE726"
+""
+1 130 190 E E E 1 E 1 E N "_Transparent" E N "color-4" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+7
+"shadowOffset" "[3,3]"
+"shadowColor" "{34,34,34,131}"
+"shadowRadius" "18"
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E -1 0 2 1 1 E 0.9910160705223611 0 0.2431134124252569 -117.1251425671555 -24.52082847309247 1 E 130 190 320 360
+2 2
+"title"
+""
+1 180 160 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+1 0 0 0 0 0
+E E E
+0
+2
+LANG:10001 0 
+LANG:10000 0 
+
+4
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 0.2534718655559822 0 1.162877610449766 -20.97549704394385 -155.2827372217937 0 E 180 160 420 180
+0 2 2 "0s" 0 0 0 72 0 0  180 160 1
+3
+LANG:10001 53 MS Shell Dlg 2,-1,13,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
+LANG:10000 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+LANG:0 43 MS Shell Dlg 2,-1,17,5,50,0,0,0,0,0,Regular
+0 3
+LANG:10001 7 Machine
+LANG:10000 7 IT-Last
+LANG:0 10 Title Name
+2 4
+"PRIMITIVE_TEXT1"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+3 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.45 0 0.566666666666667 -23.50000000000001 35.91666666666664 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 13 Availability:
+2 5
+"PRIMITIVE_TEXT2"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.55595841624965 0 0.566666666666667 -26.67875248748952 68.32085868455486 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 12 Performance:
+2 6
+"PRIMITIVE_TEXT3"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+5 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.55595841624965 0 0.566666666666667 -26.67875248748952 100.1958586845549 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 8 Quality:
+2 8
+"ValueAv"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+7 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.182500000000001 0 0.566666666666667 93.57499999999996 34.7833333333333 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 5 Value
+2 9
+"ValuePerf"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.182500000000001 0 0.566666666666667 93.57499999999996 68.32085868455485 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 5 Value
+2 10
+"ValueQuality"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+9 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.182500000000001 0 0.566666666666667 91.20999999999995 100.1958586845548 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 5 Value
+2 11
+"PRIMITIVE_TEXT4"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.55595841624965 0 0.566666666666667 -26.67875248748951 135.8208586845549 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 4 OEE:
+2 12
+"ValueOEE"
+""
+1 30 80 E E E 1 E 1 E N "color-std-text" E N "_Window" E E
+ E E
+11 0 0 0 0 0
+E E E
+0
+1
+LANG:10001 0 
+
+4
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+"transformable" "0"
+E E 0 1 3 2 1 E 1.182500000000001 0 0.566666666666667 91.20999999999997 135.8208586845549 0 E 30 80 90 110
+0 2 2 "0s" 0 0 0 72 0 0  30 80 1
+1
+LANG:10001 48 Tahoma,-1,15,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular
+0 1
+LANG:10001 5 Value
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+0

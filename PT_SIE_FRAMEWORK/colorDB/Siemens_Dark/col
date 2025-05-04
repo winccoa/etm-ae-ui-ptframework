@@ -1,0 +1,13 @@
+12
+"tl_button_back" N {15,74,141}
+"btnBackGround" N {33,33,33}
+"btnHover" N {60,60,60}
+"HomeText" N {80,90,100}
+"tl_template_back" N {80,90,100}
+"tl_panel_back" N {233,233,233}
+"HeaderText" N {255,255,255}
+"darkWorkingArea" N {217,218,220}
+"tableRectangleColor" N {80,90,100}
+"panelHeader" N {80,90,100}
+"TrendBorderColor" N {149,171,189}
+"TextGrey" N {73,82,91}

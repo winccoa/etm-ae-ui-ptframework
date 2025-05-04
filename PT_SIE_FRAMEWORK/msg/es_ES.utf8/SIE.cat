@@ -1,0 +1,125 @@
+buttonNavi_cctv,Cámaras de Seguridad
+buttonNavi_dashboard,Dashboard
+buttonNavi_documentation,Documentación
+buttonNavi_gis,SIG
+buttonNavi_messages,Mensajes
+buttonNavi_overview,Visión General
+buttonNavi_settings,Ajustes
+buttonNavi_systemOverview,Visión General del Sistema
+buttonNavi_trafficProgram,Programa de tráfico
+buttonNavi_user,Usuario Actual
+buttonNavi_theme,Tema
+buttonNavi_language,Idioma
+buttonNavi_exit,Cerrar
+buttonNavi_menu,Contraer menú
+button_ackAll,Reconocimiento de todas las alarmas
+button_acknowledgeAll,Reconocimiento de todo
+button_close,Cerrando
+button_closeDoor,Bajar barrera
+button_cmdLast24h,Comandos de las últimas 24h
+button_dataModel,Modelo de Datos
+button_lightHouse2,Encender/apagar caseta 2
+button_lightHouse3,Encender/apagar caseta 3
+button_mapOffline,Mapa offline
+button_mapOnline,Mapa online
+button_openDoor,Subir barrera
+button_overview,Visión General
+button_resetFire,Reiniciar fuego
+button_showCam1,Mostrar\ncámara 1
+button_showCam2,Mostrar\ncámara 2
+button_showCam3,Mostrar\ncámara 3
+button_showCam4,Mostrar\ncámara 4
+button_showConfig1,Activar configuración 1
+button_showConfig2,Activar configuración 2
+button_deleteCameras,Borrar cámaras
+button_alarmOnCam4,Activar alarma de cámara 4
+button_alarmOffCam4,Desactivar alarma de cámara 4
+button_cam3WriteProtection,Protección de escritura de cámara 3 +- 10s
+button_systemOverview,Abrir visión general del sistema
+button_sidoor,SIDOOR
+button_siemensNbg,Siemens Nuremberg
+button_testSuite,Conjunto de pruebas
+button_tpCarBreakdownActive,Avería de coche
+button_tpConstructionActive,Construcción
+button_tpFireActive,Fuego
+button_tpNormalActive,Normal
+button_tpPersonInTunnelActive,Persona en el túnel
+button_tpTrafficJamActive,Tráfico
+button_tpTunnelBlockingActive,Bloqueo en el túnel
+button_triggerFire,Avistar fuego
+button_tunnel2000,Tunel (2000 m)
+button_tunnel20000,Tunel (20000 m)
+button_tunnel4000,Tunel (4000 m)
+button_siriusEmpty,Vacío
+button_SIM,Activar configuración de PLC SIM
+button_RH,Activar configuración de RH
+frame_doorControl,Control de barreras
+frame_doorRunTime,Tiempo en ejecución de la puerta
+frame_doorStatus,Estado de la puerta
+frame_fireAlarmSystem,Sistema de alarma de incendios
+sidoor_closingTime,Tiempo de cierre
+sidoor_doorClosed,Puerta Cerrada
+sidoor_doorClosing,Cerrando Puerta
+sidoor_doorOpened,Puerta abierta
+sidoor_doorOpening,Abriendo puerta
+sidoor_error,Error
+sidoor_motorCurrent,Corriente de Motor
+sidoor_motorDeenergized,Motor sin energía
+sidoor_openingTime,Tiempo de apertura
+sidoor_position,Posición
+sidoor_readyForOperation,Lista para usar
+sidoor_speed,Velocidad
+sidoor_stopped,Parado
+sidoor_torque,Torque
+tpCarBreakdownActive,Coche averiado
+tpConstructionActive,Construcción
+tpFireActive,Fuego
+tpNormalActive,Normal
+tpPersonInTunnelActive,Persona en el túnel
+tpTunnelBlockingActive,Tunel bloqueado
+tpUndefiened,----
+txtSection_commands24h,Comandos (últimas 24h)
+txtSection_doorControl,Control de barreras
+txtSection_generalInfo,Información General
+txtSection_opcUaServer,Servidor OPC UA
+txtSection_plcSettings,Ajustes PLC
+txtSection_showModuleFooter,Mostrar línea de información
+txtSection_siriusAct,Sirius Act
+txtSection_trafficProgram,Programa de tráfico
+txtSection_useSirisAct,Usar Sirius Act para iniciar sesión
+txtTab_command,Comando
+txtTab_manager,Manager
+txtTab_time,Tiempo
+txtTab_user,Usuario
+txtTab_value,Valor
+txt_automatic,automático
+txt_manual,manual
+txt_sector1,Sector 1
+txt_sector2,Sector 2
+txt_sector3,Sector 3
+txt_toggle,alternar
+video_alarm_txt_1,Botón de Emergencia Activado
+video_alarm_txt_2,Alarma de Incendios Activada
+video_alarm_txt_3,Puerta de Emergencia abierta
+video_alarm_txt_4,Alarma
+video_alarm_txt_5,Alarma
+video_objectExplorer,Explorador de objetos
+video_cameraList,Lista de cámaras
+video_configuration,Configuración
+video_playback,Reproducción EWO
+tpTrafficJamActive,Tráfico
+fpStatus,Estado
+fpOperatingData,Datos de funcionamiento
+fpParameter,Parámetro
+tpStop,Parar
+sfAll,Todos
+sfTraffic,Tráfico
+sfVentilation,Ventilación
+sfFire,Protección contra incendios
+sfSOS,Llamada de emergencia
+sfAirquality,Calidad del aire
+sfLighting,Iluminación
+baseOverview,Visión general
+sectorOverview,Resumen del sector
+tunnelDemo,Demostración de digitalización de túneles
+tunnelOperation,Operación del túnel

@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.1.v201408290142 Build &lt;4.4.1.v20140916-1320></property>
+    <simple-property-list name="includeResource">
+        <value>localization</value>
+        <value>localization_de_AT</value>
+    </simple-property-list>
+    <property name="units">in</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="dpPattern" id="454">
+            <text-property name="promptText" key="dpQuery_Value_Pie_2D_ReportParameter1">Please enter the pattern of the data points which should be compared</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ExampleDP_Rpt*</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="From" id="473">
+            <text-property name="helpText" key="dpQuery_Value_Pie_2D_HelpTextKey">To enter more than one DPT please enter the DPT like the following example: DPT1" OR _DPT="DPT2</text-property>
+            <text-property name="promptText" key="dpQuery_Value_Pie_2D_ReportParameter2">Enter a data point type [optional]</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ExampleDP_Float</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.ws" name="Data Source" id="208">
+            <property name="soapEndPoint">http://127.0.0.1:80</property>
+            <property name="wsdlURI">http://127.0.0.1:80/?wsdl</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="DPQuery" id="209">
+ 
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">DPE Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">DPE Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Value</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Value</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">query</property>
+                    <property name="nativeName">query</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">1</property>
+                   <expression name="defaultValue" type="javascript">vars["Pattern"]</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">DPE Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Value</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">DPE Name</property>
+                    <property name="nativeName">DPE Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Value</property>
+                    <property name="nativeName">Value</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Body>
+		<m:dpQuery xmlns:m="urn:Siemens.OA">
+			<query xsi:type="xsd:string">&amp;?query?&amp;</query>
+		</m:dpQuery>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name>query</design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+          <design:precision>-1</design:precision>
+          <design:scale>-1</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:defaultValues>
+             <design:values></design:values>
+            </design:defaultValues>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>table</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>table</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>xmlQueryText</name>
+                    <value>table0#-TNAME-#table0#:#[//table]#:#{DPE Name;STRING;//column1},{Value;DOUBLE;//column2}#:#&lt;"SOAP-ENV","http:%%schemas.xmlsoap.org%soap%envelope%";"xsd","http:%%www.w3.org%2001%XMLSchema";"m","urn:Siemens.OA";"SOAP-ENC","http:%%schemas.xmlsoap.org%soap%encoding%";"xsi","http:%%www.w3.org%2001%XMLSchema-instance"></value>
+                </ex-property>
+                <ex-property>
+                    <name>operationTrace</name>
+                 
+                </ex-property>
+                <ex-property>
+                    <name>xmlFileURI</name>
+                </ex-property>
+                <ex-property>
+                    <name>xsdFileURI</name>
+                </ex-property>
+                <ex-property>
+                    <name>ResponseSchema</name>
+                    <value>FromWSDL</value>
+                </ex-property>
+                <ex-property>
+                    <name>useSoapEndPoint</name>
+                    <value>true</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-header>
+                <grid name="HeaderGrid" id="7">
+                    <property name="backgroundColor">#ADBECB</property>
+                    <column id="8">
+                        <property name="width">5.21875in</property>
+                    </column>
+                    <column id="9"/>
+                    <row id="10">
+                        <property name="height">132px</property>
+                        <cell id="11">
+                            <text id="514">
+                                <property name="fontSize">35pt</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="color">#333333</property>
+                                <property name="paddingTop">25pt</property>
+                                <property name="paddingLeft">10pt</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[WinCC OA Reporting]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="12">
+                            <property name="fontSize">larger</property>
+                            <property name="textAlign">right</property>
+                            <image id="13">
+                                <property name="marginLeft">0pt</property>
+                                <property name="marginRight">0px</property>
+                                <property name="paddingRight">60pt</property>
+                                <property name="height">94px</property>
+                                <property name="width">152px</property>
+                                <property name="source">embed</property>
+                                <property name="imageName">sie_logo_layer.png</property>
+                            </image>
+                        </cell>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <grid id="517">
+                    <column id="518"/>
+                    <column id="519"/>
+                    <row id="520">
+                        <cell id="521">
+                            <property name="backgroundColor">#ADBECB</property>
+                            <text id="523">
+                                <property name="paddingLeft">10pt</property>
+                                <property name="contentType">auto</property>
+                                <text-property name="content"><![CDATA[WinCC OA Reporting]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="522">
+                            <property name="backgroundColor">#ADBECB</property>
+                            <text id="3">
+                                <property name="paddingRight">10pt</property>
+                                <property name="textAlign">right</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<value-of>Formatter.format(new Date(),"dd. MMMM YYYY - HH:mm")</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="524">
+            <column id="502"/>
+            <row id="503">
+                <cell id="504">
+                    <property name="backgroundColor">#DFE6ED</property>
+                    <property name="paddingBottom">0pt</property>
+                    <text id="525">
+                        <property name="backgroundColor">#DFE6ED</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="color">#333333</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="paddingTop">10pt</property>
+                        <property name="paddingLeft">10pt</property>
+                        <property name="paddingBottom">5pt</property>
+                        <property name="paddingRight">0pt</property>
+                        <property name="textAlign">left</property>
+                        <property name="display">block</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content" key="dpQuery_Value_Pie_2D_ReportTitle"><![CDATA[Pie chart report of current online values]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="505">
+                <cell id="506">
+                    <property name="backgroundColor">#DFE6ED</property>
+                    <property name="paddingBottom">0pt</property>
+                    <text id="526">
+                        <property name="backgroundColor">#DFE6ED</property>
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#333333</property>
+                        <property name="marginLeft">0px</property>
+                        <property name="paddingTop">2pt</property>
+                        <property name="paddingLeft">10pt</property>
+                        <property name="paddingBottom">2pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content" key="dpQuery_Value_Pie_2D_Title2"><![CDATA[The data set "dpQuery" with the following pattern is used for comparing the online values of the defined data point elements. The result is displayed in a pie chart]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="507">
+                <property name="newHandlerOnEachEvent">true</property>
+                <property name="marginBottom">5pt</property>
+                <property name="paddingBottom">5pt</property>
+                <cell id="508">
+                    <property name="backgroundColor">#DFE6ED</property>
+                    <property name="paddingBottom">0pt</property>
+                    <data id="471">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingLeft">10pt</property>
+                        <property name="paddingBottom">10pt</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Pattern</property>
+                                <text-property name="displayName">Pattern</text-property>
+                                <expression name="expression" type="javascript">vars["Pattern"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Pattern</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <grid id="474">
+            <column id="475"/>
+            <column id="476"/>
+            <row id="477">
+                <cell id="478">
+                    <table id="455">
+                        <property name="marginTop">15pt</property>
+                        <property name="marginBottom">15pt</property>
+                        <property name="width">4.895833333333333in</property>
+                        <property name="dataSet">DPQuery</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DPE Name</property>
+                                <text-property name="displayName">DPE Name</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DPE Name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value</property>
+                                <text-property name="displayName">Value</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Value"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                        <column id="469"/>
+                        <column id="470">
+                            <property name="width">0.9270833333333334in</property>
+                        </column>
+                        <header>
+                            <row id="456">
+                                <property name="backgroundColor">#ADBECB</property>
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">14pt</property>
+                                <property name="color">#333333</property>
+                                <cell id="457">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="458">
+                                        <text-property name="text" key="dpQuery_Value_Pie_2D_Column1">Data point element</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="459">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <label id="460">
+                                        <text-property name="text" key="dpQuery_Value_Pie_2D_Column2">Value</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </header>
+                        <detail>
+                            <row id="461">
+                                <list-property name="highlightRules">
+                                    <structure>
+                                        <property name="operator">eq</property>
+                                        <property name="backgroundColor">#EBF0F5</property>
+                                        <expression name="testExpr" type="javascript">row.__rownum%2</expression>
+                                        <simple-property-list name="value1">
+                                            <value type="javascript">1</value>
+                                        </simple-property-list>
+                                    </structure>
+                                </list-property>
+                                <cell id="462">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="463">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="color">#333333</property>
+                                        <property name="resultSetColumn">DPE Name</property>
+                                    </data>
+                                </cell>
+                                <cell id="464">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                    <data id="465">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="color">#333333</property>
+                                        <structure name="numberFormat">
+                                            <property name="category">Fixed</property>
+                                            <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                                        </structure>
+                                        <property name="resultSetColumn">Value</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </detail>
+                        <footer>
+                            <row id="466">
+                                <cell id="467">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                                <cell id="468">
+                                    <property name="borderBottomColor">#FFFFFF</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderBottomWidth">thin</property>
+                                    <property name="borderLeftColor">#FFFFFF</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderLeftWidth">thin</property>
+                                    <property name="borderRightColor">#FFFFFF</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">thin</property>
+                                    <property name="borderTopColor">#FFFFFF</property>
+                                    <property name="borderTopStyle">solid</property>
+                                    <property name="borderTopWidth">thin</property>
+                                </cell>
+                            </row>
+                        </footer>
+                    </table>
+                </cell>
+                <cell id="479">
+                    <extended-item extensionName="Chart" id="472">
+                        <xml-property name="xmlRepresentation"><![CDATA[<model:ChartWithoutAxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:attribute="http://www.birt.eclipse.org/ChartModelAttribute" xmlns:layout="http://www.birt.eclipse.org/ChartModelLayout" xmlns:model="http://www.birt.eclipse.org/ChartModel" xmlns:type="http://www.birt.eclipse.org/ChartModelType">
+  <Version>2.6.1</Version>
+  <Type>Pie Chart</Type>
+  <SubType>Standard</SubType>
+  <Block>
+    <Children xsi:type="layout:TitleBlock">
+      <Bounds>
+        <Left>0.0</Left>
+        <Top>0.0</Top>
+        <Width>0.0</Width>
+        <Height>0.0</Height>
+      </Bounds>
+      <Insets>
+        <Top>3.0</Top>
+        <Left>3.0</Left>
+        <Bottom>3.0</Bottom>
+        <Right>3.0</Right>
+      </Insets>
+      <Row>-1</Row>
+      <Column>-1</Column>
+      <Rowspan>-1</Rowspan>
+      <Columnspan>-1</Columnspan>
+      <Outline>
+        <Style>Solid</Style>
+        <Thickness>1</Thickness>
+        <Color>
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Color>
+        <Visible>false</Visible>
+      </Outline>
+      <Visible>true</Visible>
+      <Label>
+        <Caption>
+          <Value>dpQuery_Value_Pie_2D_Title3=Comparison of online values of the selected data point elements</Value>
+          <Font>
+            <Size>16.0</Size>
+            <Bold>true</Bold>
+            <Alignment>
+              <horizontalAlignment>Center</horizontalAlignment>
+              <verticalAlignment>Center</verticalAlignment>
+            </Alignment>
+          </Font>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>51</Red>
+            <Green>51</Green>
+            <Blue>51</Blue>
+          </Color>
+        </Caption>
+        <Background xsi:type="attribute:ColorDefinition">
+          <Transparency>0</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Background>
+        <Outline>
+          <Style>Solid</Style>
+          <Thickness>1</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>0</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+          </Color>
+        </Outline>
+        <Insets>
+          <Top>0.0</Top>
+          <Left>2.0</Left>
+          <Bottom>0.0</Bottom>
+          <Right>3.0</Right>
+        </Insets>
+        <Visible>true</Visible>
+      </Label>
+    </Children>
+    <Children xsi:type="layout:Plot">
+      <Bounds>
+        <Left>0.0</Left>
+        <Top>0.0</Top>
+        <Width>0.0</Width>
+        <Height>0.0</Height>
+      </Bounds>
+      <Insets>
+        <Top>3.0</Top>
+        <Left>3.0</Left>
+        <Bottom>3.0</Bottom>
+        <Right>3.0</Right>
+      </Insets>
+      <Row>-1</Row>
+      <Column>-1</Column>
+      <Rowspan>-1</Rowspan>
+      <Columnspan>-1</Columnspan>
+      <Outline>
+        <Style>Solid</Style>
+        <Thickness>1</Thickness>
+        <Color>
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Color>
+        <Visible>false</Visible>
+      </Outline>
+      <Visible>true</Visible>
+      <HorizontalSpacing>5</HorizontalSpacing>
+      <VerticalSpacing>5</VerticalSpacing>
+      <ClientArea>
+        <Outline>
+          <Style>Solid</Style>
+          <Thickness>0</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>0</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+          </Color>
+          <Visible>false</Visible>
+        </Outline>
+        <Insets>
+          <Top>0.0</Top>
+          <Left>0.0</Left>
+          <Bottom>0.0</Bottom>
+          <Right>0.0</Right>
+        </Insets>
+      </ClientArea>
+    </Children>
+    <Children xsi:type="layout:Legend">
+      <Bounds>
+        <Left>0.0</Left>
+        <Top>0.0</Top>
+        <Width>0.0</Width>
+        <Height>0.0</Height>
+      </Bounds>
+      <Insets>
+        <Top>3.0</Top>
+        <Left>3.0</Left>
+        <Bottom>3.0</Bottom>
+        <Right>3.0</Right>
+      </Insets>
+      <Row>-1</Row>
+      <Column>-1</Column>
+      <Rowspan>-1</Rowspan>
+      <Columnspan>-1</Columnspan>
+      <Outline>
+        <Style>Solid</Style>
+        <Thickness>1</Thickness>
+        <Color>
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Color>
+        <Visible>false</Visible>
+      </Outline>
+      <Visible>true</Visible>
+      <ClientArea>
+        <Outline>
+          <Style>Solid</Style>
+          <Thickness>0</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>0</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+          </Color>
+          <Visible>false</Visible>
+        </Outline>
+        <Insets>
+          <Top>2.0</Top>
+          <Left>2.0</Left>
+          <Bottom>2.0</Bottom>
+          <Right>2.0</Right>
+        </Insets>
+      </ClientArea>
+      <Text>
+        <Value></Value>
+        <Font>
+          <Alignment/>
+        </Font>
+      </Text>
+      <Orientation>Vertical</Orientation>
+      <Direction>Top_Bottom</Direction>
+      <Separator>
+        <Style>Solid</Style>
+        <Thickness>1</Thickness>
+        <Color>
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Color>
+        <Visible>true</Visible>
+      </Separator>
+      <Position>Right</Position>
+      <ItemType>Categories</ItemType>
+      <Title>
+        <Caption>
+          <Value></Value>
+          <Font>
+            <Alignment/>
+          </Font>
+        </Caption>
+        <Background xsi:type="attribute:ColorDefinition">
+          <Transparency>0</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Background>
+        <Outline>
+          <Style>Solid</Style>
+          <Thickness>1</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>0</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+          </Color>
+          <Visible>false</Visible>
+        </Outline>
+        <Insets>
+          <Top>0.0</Top>
+          <Left>2.0</Left>
+          <Bottom>0.0</Bottom>
+          <Right>3.0</Right>
+        </Insets>
+        <Visible>false</Visible>
+      </Title>
+      <TitlePosition>Above</TitlePosition>
+      <MaxPercent>0.45</MaxPercent>
+    </Children>
+    <Bounds>
+      <Left>0.0</Left>
+      <Top>0.0</Top>
+      <Width>212.0</Width>
+      <Height>130.0</Height>
+    </Bounds>
+    <Insets>
+      <Top>3.0</Top>
+      <Left>3.0</Left>
+      <Bottom>3.0</Bottom>
+      <Right>3.0</Right>
+    </Insets>
+    <Row>-1</Row>
+    <Column>-1</Column>
+    <Rowspan>-1</Rowspan>
+    <Columnspan>-1</Columnspan>
+    <Outline>
+      <Style>Solid</Style>
+      <Thickness>1</Thickness>
+      <Color>
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>0</Green>
+        <Blue>0</Blue>
+      </Color>
+      <Visible>false</Visible>
+    </Outline>
+    <Visible>true</Visible>
+  </Block>
+  <Dimension>Two_Dimensional</Dimension>
+  <Units>Pixels</Units>
+  <SeriesThickness>13.5</SeriesThickness>
+  <GridColumnCount>0</GridColumnCount>
+  <ExtendedProperties>
+    <Name>enable.area.alt</Name>
+    <Value>false</Value>
+  </ExtendedProperties>
+  <SampleData>
+    <BaseSampleData>
+      <DataSetRepresentation>'A','B','C','D','E'</DataSetRepresentation>
+    </BaseSampleData>
+    <OrthogonalSampleData>
+      <DataSetRepresentation>6,4,12,8,10</DataSetRepresentation>
+      <SeriesDefinitionIndex>0</SeriesDefinitionIndex>
+    </OrthogonalSampleData>
+  </SampleData>
+  <Interactivity>
+    <LegendBehavior>None</LegendBehavior>
+  </Interactivity>
+  <EmptyMessage>
+    <Caption>
+      <Value>This chart contains no data.</Value>
+      <Font>
+        <Alignment>
+          <horizontalAlignment>Center</horizontalAlignment>
+          <verticalAlignment>Center</verticalAlignment>
+        </Alignment>
+      </Font>
+    </Caption>
+    <Background xsi:type="attribute:ColorDefinition">
+      <Transparency>64</Transparency>
+      <Red>127</Red>
+      <Green>127</Green>
+      <Blue>127</Blue>
+    </Background>
+    <Outline>
+      <Color>
+        <Transparency>128</Transparency>
+        <Red>127</Red>
+        <Green>127</Green>
+        <Blue>127</Blue>
+      </Color>
+      <Visible>true</Visible>
+    </Outline>
+    <Insets>
+      <Top>10.0</Top>
+      <Left>10.0</Left>
+      <Bottom>10.0</Bottom>
+      <Right>10.0</Right>
+    </Insets>
+    <Visible>false</Visible>
+  </EmptyMessage>
+  <SeriesDefinitions>
+    <Query>
+      <Definition></Definition>
+    </Query>
+    <SeriesPalette>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>175</Red>
+        <Green>35</Green>
+        <Blue>95</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>85</Red>
+        <Green>160</Green>
+        <Blue>185</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>185</Green>
+        <Blue>0</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>170</Red>
+        <Green>180</Green>
+        <Blue>20</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>192</Red>
+        <Green>192</Green>
+        <Blue>192</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>128</Green>
+        <Blue>192</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>170</Red>
+        <Green>85</Green>
+        <Blue>85</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>128</Green>
+        <Blue>0</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>192</Red>
+        <Green>192</Green>
+        <Blue>192</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>255</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>192</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>7</Red>
+        <Green>146</Green>
+        <Blue>94</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>128</Green>
+        <Blue>255</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>128</Green>
+        <Blue>192</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>255</Green>
+        <Blue>255</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>128</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>128</Green>
+        <Blue>192</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>0</Green>
+        <Blue>255</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>64</Green>
+        <Blue>64</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>128</Green>
+        <Blue>64</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>80</Red>
+        <Green>240</Green>
+        <Blue>120</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>64</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>0</Green>
+        <Blue>64</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>0</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>128</Green>
+        <Blue>64</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>128</Red>
+        <Green>128</Green>
+        <Blue>128</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>128</Green>
+        <Blue>255</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>64</Green>
+        <Blue>0</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>0</Green>
+        <Blue>0</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>255</Green>
+        <Blue>255</Blue>
+      </Entries>
+      <Entries xsi:type="attribute:ColorDefinition">
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>128</Green>
+        <Blue>0</Blue>
+      </Entries>
+    </SeriesPalette>
+    <SeriesDefinitions>
+      <Query>
+        <Definition></Definition>
+      </Query>
+      <SeriesPalette>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>175</Red>
+          <Green>35</Green>
+          <Blue>95</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>85</Red>
+          <Green>160</Green>
+          <Blue>185</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>185</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>170</Red>
+          <Green>180</Green>
+          <Blue>20</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>192</Red>
+          <Green>192</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>170</Red>
+          <Green>85</Green>
+          <Blue>85</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>192</Red>
+          <Green>192</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>192</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>7</Red>
+          <Green>146</Green>
+          <Blue>94</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>128</Green>
+          <Blue>192</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>64</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>80</Red>
+          <Green>240</Green>
+          <Blue>120</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>64</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>0</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>0</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>64</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>128</Red>
+          <Green>128</Green>
+          <Blue>128</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>64</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>0</Red>
+          <Green>0</Green>
+          <Blue>0</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Entries>
+        <Entries xsi:type="attribute:ColorDefinition">
+          <Transparency>255</Transparency>
+          <Red>255</Red>
+          <Green>128</Green>
+          <Blue>0</Blue>
+        </Entries>
+      </SeriesPalette>
+      <Series xsi:type="type:PieSeries">
+        <Visible>true</Visible>
+        <Label>
+          <Caption>
+            <Value></Value>
+            <Font>
+              <Alignment/>
+            </Font>
+          </Caption>
+          <Background xsi:type="attribute:ColorDefinition">
+            <Transparency>0</Transparency>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
+          </Background>
+          <Outline>
+            <Style>Solid</Style>
+            <Thickness>1</Thickness>
+            <Color>
+              <Transparency>255</Transparency>
+              <Red>0</Red>
+              <Green>0</Green>
+              <Blue>0</Blue>
+            </Color>
+            <Visible>false</Visible>
+          </Outline>
+          <Insets>
+            <Top>0.0</Top>
+            <Left>2.0</Left>
+            <Bottom>0.0</Bottom>
+            <Right>3.0</Right>
+          </Insets>
+          <Visible>true</Visible>
+        </Label>
+        <DataDefinition>
+          <Definition>row[&quot;Value&quot;]</Definition>
+          <Grouping>
+            <GroupType>Text</GroupType>
+            <AggregateExpression>Sum</AggregateExpression>
+          </Grouping>
+        </DataDefinition>
+        <SeriesIdentifier></SeriesIdentifier>
+        <DataPoint>
+          <Components>
+            <Type>Orthogonal_Value</Type>
+          </Components>
+          <Separator>, </Separator>
+        </DataPoint>
+        <LabelPosition>Outside</LabelPosition>
+        <Stacked>false</Stacked>
+        <Triggers>
+          <Condition>onmouseover</Condition>
+          <Action>
+            <Type>Show_Tooltip</Type>
+            <Value xsi:type="attribute:TooltipValue">
+              <Text></Text>
+              <Delay>200</Delay>
+            </Value>
+          </Action>
+        </Triggers>
+        <Explosion>0</Explosion>
+        <ExplosionExpression></ExplosionExpression>
+        <Title>
+          <Caption>
+            <Value></Value>
+            <Font>
+              <Size>16.0</Size>
+              <Bold>true</Bold>
+              <Alignment/>
+            </Font>
+          </Caption>
+          <Background xsi:type="attribute:ColorDefinition">
+            <Transparency>0</Transparency>
+            <Red>255</Red>
+            <Green>255</Green>
+            <Blue>255</Blue>
+          </Background>
+          <Outline>
+            <Style>Solid</Style>
+            <Thickness>1</Thickness>
+            <Color>
+              <Transparency>255</Transparency>
+              <Red>0</Red>
+              <Green>0</Green>
+              <Blue>0</Blue>
+            </Color>
+          </Outline>
+          <Insets>
+            <Top>0.0</Top>
+            <Left>2.0</Left>
+            <Bottom>0.0</Bottom>
+            <Right>3.0</Right>
+          </Insets>
+          <Visible>true</Visible>
+        </Title>
+        <TitlePosition>Below</TitlePosition>
+        <LeaderLineAttributes>
+          <Style>Dotted</Style>
+          <Thickness>1</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>80</Red>
+            <Green>90</Green>
+            <Blue>100</Blue>
+          </Color>
+          <Visible>true</Visible>
+        </LeaderLineAttributes>
+        <LeaderLineStyle>Fixed_Length</LeaderLineStyle>
+        <LeaderLineLength>15.0</LeaderLineLength>
+        <SliceOutline>
+          <Transparency>0</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </SliceOutline>
+        <Ratio>1.0</Ratio>
+        <Rotation>319.0</Rotation>
+        <Clockwise>true</Clockwise>
+        <InnerRadius>50.0</InnerRadius>
+        <InnerRadiusPercent>true</InnerRadiusPercent>
+      </Series>
+      <Grouping>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </SeriesDefinitions>
+    <Series>
+      <Visible>true</Visible>
+      <Label>
+        <Caption>
+          <Value></Value>
+          <Font>
+            <Alignment/>
+          </Font>
+        </Caption>
+        <Background xsi:type="attribute:ColorDefinition">
+          <Transparency>0</Transparency>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
+        </Background>
+        <Outline>
+          <Style>Solid</Style>
+          <Thickness>1</Thickness>
+          <Color>
+            <Transparency>255</Transparency>
+            <Red>0</Red>
+            <Green>0</Green>
+            <Blue>0</Blue>
+          </Color>
+          <Visible>false</Visible>
+        </Outline>
+        <Insets>
+          <Top>0.0</Top>
+          <Left>2.0</Left>
+          <Bottom>0.0</Bottom>
+          <Right>3.0</Right>
+        </Insets>
+        <Visible>false</Visible>
+      </Label>
+      <DataDefinition>
+        <Definition>row[&quot;DPE Name&quot;]</Definition>
+      </DataDefinition>
+      <SeriesIdentifier></SeriesIdentifier>
+      <DataPoint>
+        <Components>
+          <Type>Orthogonal_Value</Type>
+        </Components>
+        <Separator>, </Separator>
+      </DataPoint>
+      <LabelPosition>Outside</LabelPosition>
+      <Stacked>false</Stacked>
+    </Series>
+    <Grouping>
+      <Enabled>true</Enabled>
+      <GroupType>Text</GroupType>
+      <AggregateExpression>Sum</AggregateExpression>
+    </Grouping>
+  </SeriesDefinitions>
+  <Coverage>0.5</Coverage>
+</model:ChartWithoutAxes>
+]]></xml-property>
+                        <property name="outputFormat">SVG</property>
+                        <property name="inheritColumns">true</property>
+                        <property name="marginTop">15pt</property>
+                        <property name="marginBottom">15pt</property>
+                        <property name="height">4.947916666666667in</property>
+                        <property name="width">7.864583333333333in</property>
+                        <property name="dataSet">DPQuery</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DPE Name</property>
+                                <expression name="expression" type="javascript">dataSetRow["DPE Name"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure>
+                                <property name="name">Value</property>
+                                <expression name="expression" type="javascript">dataSetRow["Value"]</expression>
+                                <property name="dataType">float</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="Pattern">
+            <expression name="value" type="javascript">//"SELECT '_online.._value' FROM '"+params["dpPattern"].value+"' WHERE _DPT = \""+params["From"].value+"\""&#13;
+if (params["From"].value==null)&#13;
+{&#13;
+   "SELECT '_online.._value' FROM '"+params["dpPattern"].value+"'"&#13;
+}&#13;
+else&#13;
+{&#13;
+   "SELECT '_online.._value' FROM '"+params["dpPattern"].value+"' WHERE _DPT = \""+params["From"].value+"\""&#13;
+}</expression>
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+    <list-property name="images">
+        <structure>
+            <property name="name">sie_logo_layer.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAAJgAAABeCAYAAADfc92IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFn
+                ZVJlYWR5ccllPAAADeRJREFUeNrsXGlwVeUZfs5dkpt9IQTZAkLCKiBrBVGqrAWLirZqqzguf1qt1qX1
+                R2c6/eOPMtNaxZl2OtWxda1bRQsFIihpwWIBCVtICEsgCWtWsufec/p83zn33nOSG7CtmUrmffDMufee
+                873fe97v+d7l+040LMtqBJAFgeCrx3af2EDQnxCCCYRgAiGYQCAEEwjBBEIwgUAIJhCCCYRgAoEQTCAE
+                EwjBBAIhmEAIJhAIwQRCMIEQTCAQggmEYAIhmEAgBBMIwQRCMIFACCYQggkEQjCBEEwgBBMIhGACIZhA
+                CCYQCMEEQjCBEEwgEIIJhGACIZhAIAQTCMEEAiGYQAgmEIIJBF8Gga9KUEt7B2o72lHb2ISA349h2VnI
+                9QeQlZwEIxDvJhyJoL2zK/bd4pEWSobfZ3Pdsiy0dHTYFwznhihc39XJ5zOQlpwMwzC03DbKNVy3W/yX
+                zus+6tMXLra3e/pQH0NJQSQ5Oit9Wjs7YZqWR7ZHN0PdxxPP6aGQ1idimrqd4dI3QH1Ted0NU8mPPq+y
+                RUoIPsPopWdTWxtqqevZ5ovUzY+hWbRvQNmX8vy+gUuwk/UNeGHvXhTX1OBgWysNa2mD+0iYMcFkjE5P
+                xTPTZ2BR4Vh9f+mZM1hdvEUPgrrPJDHeXbkSkwbl6ut1NPaS999HZzhi3xMbeWcEnbNqNz4zE6+vWK4H
+                7fPqGjy8datNJsse0kgkjEenTMUjs2cl1H1b1Uk8yjYmdY32ZJIYz19/PRaPK9Lf1WS4b8MGlDc385n8
+                cbbECGbFCJbEvovvWIW8lBScamjE3es34KJl2mqbQDKJ8NayZRg3OC+mw5nWViz7yweakErkhlW3oyAj
+                I3a99PRpvLj/AEpqa3Gks4Ny7P4C1LmQk6coMxtr5s3FhCH5A49ge2tq8Z3izai8eBEIBm0rd4ftgaIR
+                Kru6UNnciNtHX41FTpsOEucQiegaUbQp6zvopowvOFvR3c17fM5AWvbhmfomwppM9u8tJFOZkuv2ViTh
+                ixUVeGjqFIQ4GD3xxuEyHGih7oFg3B1RbovqO0ZsExVt7bZsX5y8vfRR3+lRup3fw5SjJlwLz3RJzsN1
+                Y23pPqxddHOsWRfv369km7YNOl1yPyovx0PbtuE87ahkq+fR9/EWZeXD/P3wxRY83dIy8AimQtITO3ag
+                kjMQavD4fVbuIFw3fJj2MN38fvJCPT47d8bjifRHt0u3vKFHfU7mTZ0qZPJQQz8mKRlBfrY8/DIxPi3d
+                Eegkk06beIbpw5HGBpScOoUlhYUe/WvoYdbR62py6TZRt4ReISpJXTeih0V9Qkglka14Ex1Kk/lb0Glr
+                xNo53/QPSXj9+FE8fn4qCh0vpmzjo1w1IdWzRHu+QOL8aPsOnA+HdTvGUtww5CpMG3qVTUyS9fC5cyit
+                b0SP4D0wCFZ+4QK219fbHoNkGp2Sii3LlyMzI93jQY4yJ4PLQ8VCTIxtfcGOK7n+INYtXcKcLtsTntSA
+                qjCcksAzubgCznm8XF7Ri2DvHT2Ks8pTBpO8SZWFxPIQ91y/ZQidN3KEx4lZiOdgfT+SgQbmZS/sK8UL
+                Cxd6Z5W3I+w8ewZV7W12ZKAd5+XkouTWlfb36CQnycqZouReqs8rtYq80NqGcDQv4tEU7sbWU9W2G4+C
+                5BvL3GpsXp4nkkTzltjsthKQyzmrT9mpachgXqOPVPucmZoaS6g9bVQuZCAewhjWNjKPqW5o9Hjft49W
+                6msGGwR6KtCL+JZHfhZ1SI/q4hyZjl7evNGVp5kOeekxXz12DBVnz/XdB9Ha1e1h7jkS8zOmJB7vQLJN
+                ZmgcmpU58Ag2gg8VioYjnhuYW636ZCuWMmF9+9AhdHV1XXIme7hkJHAZsdzLnqnMgm3yuo9EoNebk5mF
+                a0Ipdr5C3ZpYfb13pDJ2SwmT+x119bqPaekZmJGVraqNeCjrxXhXyWgofcK27J769MzLtCwT2cyfijgh
+                tCdnPtZIsjy7e/cl7Ts4LTVuCz5DJb3Zwr9txC0ffohiel8zHB7YyxRjcnNxx/DheE15AhWmSBqLhtzM
+                nGszK8WZ+/bjsUmTcM+kiQi6likMo0cVliiBj1WNJK5F4rLSC1GGGb2PA1XA8vz3ixchLRYe4kn6EA7m
+                kmHDcGD/PoYUTgKW9S9Tzx/MuFYvP7zC5NlSg20ZeGDMGGy6cB6or0Pi+Ohii+OtH9n5T2Tv/cKumJ2w
+                GaK3/sOCb2JUbk6PYsRCXloaHi8swqM7d9p5HD3P2yer8DPmUDmshBM9/7yrhuIbg/KwU+mmwjhJ1s77
+                1jOfXF9djRvzBuOpaVOxcty4y6QaV6gHU6Hg1wtuxLdGFjDj7LI9gFr0Yc6EpCB2c8DuL9mGFR+sQ/m5
+                c73Dn9Vj4BINKG/q5H2fs31JTTX+UVtjH0zOt5LEYY8Xi8sIs83dRUXIUeRzvNiBhgbsrj2NOlZc6ylD
+                9TmY1+8cPw6dTgUXE5HIgcUW4CyU1tVhW3VUn1p9fMww3Nqd2Gu30/veM3ECpuWQfKx2Vd8d9EDPlZZq
+                /WJh1WWG5OQkvHzTTbiWuZe2b8TxsCoHI5lLSLxbP96ChzduRJ2q4gfiOtjg9HR8eMsKvHGoDGsPHMAu
+                VmyaLMpjOV6rmIb/3uZifLzqduTQs1iWM+uNHqumfUBVlDNZnao1JAvxim0EQ2BfC6idHMQi5iZLWXW9
+                VXVC5z0mPdY79GJjz2ag3lnYXDlyJIZx0LuiRLUu88COp5mZnYMs5VEdl2yRJMqDpQaCCYuDCCdfLr3Y
+                T6ZMwb2cdFoOifLmiRNYVjCK3jmI1gQhdhKf4ZPbbsWfaN/flZWhrLnZrnjVc/tt+75UWYlmhuw3Vyzn
+                z/6Bt9CqEs3VdNV3TZiAvzJ5feXwYWxiBdRt1/u6xN5D77Hh2HF8/5rJCQpqq0/vpf7LpkHfXLIII3Jy
+                PE0stZjrMajl/cR2940fjz9zENWKviL860ePISUY0AMUYOh6YMJ4myCW1UeR4Q7X8c/PzZuH6wtGekO9
+                csQ+X28xjnfqJgnvohd7vuwQ/sUKXBGkiV7sN6woTcerJUI2ifnY7FlYPXEi3ieZXq2owKe6vc9uQ/u+
+                Q0/6JAuA65ROAyVE9vI0dOl30IAfsZRev2gxPYwKT/FeTjU1u8bO8B5GHzmPqiK1QwxoMsUO5lRqthqJ
+                SOFawL25oACT1fKGCoGqEuNAVqmtIX6fycp2LnPI3gumfZDeFdL9Lj3cZyMhSeyGEfajnuOnU6baFaVT
+                ZX/KcNseC/V951LZ6Wl48NppKGYk+OP8+cjyRReZDR0+y+rqBlYOpvbm2lkN9Zbow+LCsZjPJFTnDYYu
+                pPQ+nGeZIlopxmt5F1fi1/TCq+9LqGn1XhYIkfTfvXp0vOKMehQqcT911B5Q51/GZQfY3VGS7z8wm+WV
+                eVtRIebk0zbRKtAwEnphFba73DsK0YhBkq6eOgVj1Xqjfi473chMShpYOViED/fgpk16Y3tO/hC9Mh3i
+                Q3aHu1FyvAofMfdS1ZsuzWmAWazq4vY0vINqGYm9BQeymQR4uuTvSKdsdyhTYS+DYeaZeXN1bhcTadky
+                o9HrHobJXx08iCbXXubwUCruLCpKvNB5OY5Rxi937cJQyjR7RFG1+f7krJm4Oje3b4OTIM/OmIGlmzY7
+                jsyIL8m4Olcr+as3b8b47CxMy8vH6MG5CPJ5wyTmuvIKHFQRQeW5tE8Gq8yZzgr/gCGYckhqD3LXhTq8
+                xjwnFmqiBNIPr/Ymu/DE5MlYMHKEizuOqzHtJYeeASnihDhFsFbKfeXEcddMdwaC17Np2B/PmgWk2oSL
+                LnmYru2nwkGDsIQl/zsnTzqr4mF8e1wRBrs2lE0r3lYdPfUxe+w9vqu2mKL0sjwMw73MlaIEizgFTaRH
+                GF44ZgwWkxCb9CQMxJdrPD1b2FVfjy3MZ3HkiHc3wbCXXvTaIBP8n8+ZjtGXIPUVm4NlRjebo2W+Dh3O
+                qwV07wWhZKyZPQdrFiyIJ8BqiyccgY/G8akSXb9F4B2AIL2juuaLntlWH4brYA6S4ffFUy8llzKNiC3b
+                cnmce+nFdEjq6tTj85BaO3LBr9uZTp9mr9d3/I6eWmd1QO0f+h09bF1UuA2wL79rbzKg2oVNBE3vVpmy
+                xdNTpyFZcVLr6zynGe9bzaecnvaNhni1JERijaLnfumG+Xiqj7dFvg7guFhqDyXrv2l8kDOwtLERlU1N
+                uMh8rK6tHUEaOz8tFdcwib6JszQ/yyu6oa0Ne9XMdZihvMccercMZ09R5R6fVZ3UywqXilfKzwQ5wLPZ
+                NkTPVNfaitLTZ/T4qPWv6cOHxZLutq4urN29Bw08D6duP2SIcr9/toceqbGjU29yq++T8/MxJDMjtq20
+                m9fVGxa+S8ZP27POGDYUWSkpaKE9dlfX6O00tUg8d1SBZxNdyd156hQ6eTZcclUlmMLnUS8L7GNleLCl
+                BSeam2i3djR0dCCNqcIQJvzTcwdhPp8xh1Xm1xjb/yeCCQSXI5i8Mi24MtbBBAIhmEAIJhCCCQRCMIEQ
+                TCAEEwiEYAIhmEAIJhAIwQRXIsEyxQyCfkK6epviF/wQElsI+sF5HTMsyxJTCPoNQjCBEEwgBBMIhGCC
+                /w/B1kD/4RdMMYfgK4T6K54yRTD158MBsYegH7BHrVW0ih0E/YR22SoS9CuEYAIhmEAIJhAIwQRCMIEQ
+                TCAQggm+RgST/3WToL+g32jdqD6ILQT9gP3/FmAA0kzCBo6cU+YAAAAASUVORK5CYII=
+</property>
+        </structure>
+    </list-property>
+</report>

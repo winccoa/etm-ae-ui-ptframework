@@ -1,0 +1,51 @@
+WCCILdataSQLite(0), 2025.02.12 11:51:01.142, SYS,  INFO,        1, Manager Start, PROJ, SiemensFrameworkApplicationExample, V 3.20 - 3.20 P004 platform Windows AMD64 linked at Jan 28 2025 20:31:10 (f25eb988b8)
+WCCILdataSQLite(0), 2025.02.12 11:51:01.194, SYS,  INFO,        0, Initialize archive smoothing
+WCCILdataSQLite(0), 2025.02.12 11:51:01.194, SYS,  INFO,        0, Loading DpIdentification
+WCCILdataSQLite(0), 2025.02.12 11:51:01.199, SYS,  INFO,        0, Initializing last value cache
+WCCILdataSQLite(0), 2025.02.12 11:51:01.199, SYS,  INFO,        0, Loading internal datapoints
+WCCILdataSQLite(0), 2025.02.12 11:51:01.199, SYS,  INFO,        0, Initializing Alert Class cache
+WCCILdataSQLite(0), 2025.02.12 11:51:01.201, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCILdataSQLite(0), 2025.02.12 11:51:01.201, SYS,  INFO,        0, NextGen Archiver will be used...
+WCCILdataSQLite(0), 2025.02.12 11:51:02.184, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:02.185, SYS,  INFO,        0, Manager (SYS: 1 Data -num 0 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:02.199, SYS,  INFO,        0, Manager (SYS: 1 Event -num 0 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:02.350, PARAM,WARNING,     7, Datapoint does not exist, UserTable, UserTable, _Users.UserId
+WCCILdataSQLite(0), 2025.02.12 11:51:02.350, PARAM,WARNING,     7, Datapoint does not exist, ManagerTable, ManagerTable, _Managers.Auth.ManType
+WCCILdataSQLite(0), 2025.02.12 11:51:02.566, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 2 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:02.572, SYS,  INFO,        0, Manager (SYS: 1 Driver -num 2 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:02.870, SYS,  INFO,        4, Connected to (SYS: 1 Driver -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:02.875, SYS,  INFO,        0, Manager (SYS: 1 Driver -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:03.162, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:03.163, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:03.188, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:03.518, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:03.708, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:03.710, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:03.759, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:04.490, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:04.658, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:04.660, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:04.702, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:10.126, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:10.281, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:10.290, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:10.305, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:10.464, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:10.632, SYS,  INFO,        4, Connected to (SYS: 1 Ctrl -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:10.648, SYS,  INFO,        0, Manager (SYS: 1 Ctrl -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:10.695, SYS,  INFO,        0, Manager (SYS: 1 Ctrl -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:10.883, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ctrl -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:11.065, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:11.073, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:11.088, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:11.104, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:11.243, SYS,  INFO,        4, Connected to (SYS: 1 Ascii -num 1 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILdataSQLite(0), 2025.02.12 11:51:11.244, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:11.275, SYS,  INFO,        0, Manager (SYS: 1 Ascii -num 1 CONN: 1) initialised
+WCCILdataSQLite(0), 2025.02.12 11:51:11.309, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Ascii -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:11.336, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Driver -num 2 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:11.368, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Driver -num 1 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:11.481, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCILdataSQLite(0), 2025.02.12 11:51:12.495, SYS,  INFO,        2, Manager Stop, received signal 15, exiting
+WCCILdataSQLite(0), 2025.02.12 11:51:13.498, SYS,  INFO,        0, Closing databases
+WCCILdataSQLite(0), 2025.02.12 11:51:13.499, SYS,  INFO,        2, Manager Stop

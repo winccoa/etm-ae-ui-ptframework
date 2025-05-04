@@ -1,0 +1,44 @@
+WCCILsim     (1), 2025.02.12 11:51:02.789, SYS,  INFO,        1, Manager Start, PROJ, SiemensFrameworkApplicationExample, V 3.20 - 3.20 P004 platform Windows AMD64 linked at Jan 28 2025 20:31:10 (f25eb988b8)
+WCCILsim     (1), 2025.02.12 11:51:02.850, SYS,  INFO,        3, Trying to connect to (SYS: 0 Data -num 0 CONN: 1) @ localhost:4897
+WCCILsim     (1), 2025.02.12 11:51:02.862, SYS,  INFO,        4, Connected to (SYS: 0 Data -num 0 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILsim     (1), 2025.02.12 11:51:02.872, PARAM,SEVERE,     71, DP does not exist, _Stat_Configs_driver_1._address:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.873, PARAM,SEVERE,     71, DP does not exist, _Stat_Configs_driver_1._cmd_conv:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.873, PARAM,SEVERE,     71, DP does not exist, _Stat_Configs_driver_1._msg_conv:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.873, PARAM,SEVERE,     71, DP does not exist, _Stat_Configs_driver_1._smooth:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.873, PARAM,SEVERE,     71, DP does not exist, _Stat_Connections_Refresh.SecsToRefresh:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.873, PARAM,SEVERE,     71, DP does not exist, _Stat_Configs_Refresh.SecsToRefresh:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.875, SYS,  INFO,        6, Initialization by Data Manager finished
+WCCILsim     (1), 2025.02.12 11:51:02.876, SYS,  INFO,        3, Trying to connect to (SYS: 1 Event -num 0 CONN: 1) @ localhost:4998
+WCCILsim     (1), 2025.02.12 11:51:02.898, SYS,  INFO,        4, Connected to (SYS: 1 Event -num 0 CONN: 1) @ dinm5CG3184V63 (127.0.0.1)
+WCCILsim     (1), 2025.02.12 11:51:02.981, SYS,  SEVERE,    105, Invalid license, Driver will shutdown after the demo period of 2592000 seconds
+WCCILsim     (1), 2025.02.12 11:51:02.981, SYS,  INFO,      156, Driver initialization finished.
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.GQ:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.SQ:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.SM:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.EM:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.PM:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.PE:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.MS:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.DC:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.AD.HWMask:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.HW.HWMask:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.IGQ:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.RPC.Request:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.AD.DPMatch:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.HW.HWMatch:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.DT:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.OV:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.State.ConnDps:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.State.Addresses:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.RPC.Response:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.AL.AClasses:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.AL.AckDps:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.983, PARAM,WARNING,    54, Unexpected state, Cannot get DPID for _Driver1.AL.AckData:_original.._value
+WCCILsim     (1), 2025.02.12 11:51:02.999, PARAM,WARNING,    90, DP attribute was connected twice, DP: (Type: 0 Sys: 1 Dp: 0 El: 0 : ..)
+WCCILsim     (1), 2025.02.12 11:51:02.999, PARAM,WARNING,    54, Unexpected state, AlertDrvIntDp, dpReady, dpConnect failed to Ack DPs
+WCCILsim     (1), 2025.02.12 11:51:11.352, SYS,  INFO,      170, Signal SIGTERM received - exiting ...
+WCCILsim     (1), 2025.02.12 11:51:11.368, SYS,  INFO,      181, Closing connection to (SYS: 1 Data -num 0 CONN: 1)
+WCCILsim     (1), 2025.02.12 11:51:11.368, SYS,  INFO,      181, Closing connection to (SYS: 1 Event -num 0 CONN: 1)
+WCCILsim     (1), 2025.02.12 11:51:11.369, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Event -num 0 CONN: 1), Connection closed
+WCCILsim     (1), 2025.02.12 11:51:11.369, SYS,  INFO,       39, Connection lost, MAN: (SYS: 1 Data -num 0 CONN: 1), Connection closed
+WCCILsim     (1), 2025.02.12 11:51:11.369, SYS,  INFO,        2, Manager Stop

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel version="14">
+ <properties>
+  <prop name="Name">
+   <prop name="de_AT.utf8"></prop>
+   <prop name="en_US.utf8"></prop>
+   <prop name="es_ES.utf8"></prop>
+   <prop name="fr_FR.utf8"></prop>
+   <prop name="tr_TR.utf8"></prop>
+   <prop name="zh_CN.utf8"></prop>
+  </prop>
+  <prop name="Size">200 31</prop>
+  <prop name="BackColor">color-2</prop>
+  <prop name="RefPoint">0 0</prop>
+  <prop name="InitAndTermRef">True</prop>
+  <prop name="SendClick">False</prop>
+  <prop name="RefFileName"></prop>
+  <prop name="DPI">96</prop>
+  <prop name="PDPI">108.8875329026083</prop>
+  <prop name="layoutType">None</prop>
+  <prop name="layoutLeftMargin">0</prop>
+  <prop name="layoutRightMargin">0</prop>
+  <prop name="layoutTopMargin">0</prop>
+  <prop name="layoutBottomMargin">0</prop>
+ </properties>
+ <events>
+  <script name="ScopeLib" isEscaped="1"><![CDATA[int g_answer;]]></script>
+  <script name="Initialize" isEscaped="1"><![CDATA[main()
+{
+  string text = $Text;
+  g_answer = $Answer;
+  int active = $Active;
+
+  txtText.text = text;
+  txtText.foreCol = (active==1)?&quot;color-soft-text&quot;:&quot;color-soft-bdr&quot;;
+  clickBox.transparentForMouse = (active!=1);
+}
+]]></script>
+ </events>
+ <shapes>
+  <shape Name="rectBackground" shapeType="RECTANGLE" layerId="0">
+   <properties>
+    <prop name="serialId">5</prop>
+    <prop name="Type"></prop>
+    <prop name="RefPoint">65 35</prop>
+    <prop name="Enable">True</prop>
+    <prop name="Visible">True</prop>
+    <prop name="ForeColor">_Transparent</prop>
+    <prop name="BackColor">color-2</prop>
+    <prop name="TabOrder">3</prop>
+    <prop name="ToolTipText">
+     <prop name="de_AT.utf8"></prop>
+     <prop name="en_US.utf8"></prop>
+     <prop name="es_ES.utf8"></prop>
+     <prop name="fr_FR.utf8"></prop>
+     <prop name="tr_TR.utf8"></prop>
+     <prop name="zh_CN.utf8"></prop>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+    <prop name="snapMode">Point</prop>
+    <prop name="DashBackColor">_Transparent</prop>
+    <prop name="AntiAliased">False</prop>
+    <prop name="LineType">[solid,oneColor,JoinBevel,CapProjecting,1]</prop>
+    <prop name="BorderZoomable">False</prop>
+    <prop name="BorderScalable">False</prop>
+    <prop name="FillType">[solid]</prop>
+    <prop name="Geometry">0.7991967871485943 0 0 1.476190476190476 -51.94779116465863 -51.66666666666666</prop>
+    <prop name="BorderStyle">Normal</prop>
+    <prop name="Location">65 35</prop>
+    <prop name="Size">250 21</prop>
+    <prop name="CornerRadius">0</prop>
+    <prop name="Transformable">True</prop>
+   </properties>
+  </shape>
+  <shape Name="txtText" shapeType="PRIMITIVE_TEXT" layerId="0">
+   <properties>
+    <prop name="serialId">1</prop>
+    <prop name="Type"></prop>
+    <prop name="RefPoint">10.00000000000001 7.105427357601002e-15</prop>
+    <prop name="Enable">True</prop>
+    <prop name="Visible">True</prop>
+    <prop name="ForeColor">color-soft-text</prop>
+    <prop name="BackColor">color-secondary</prop>
+    <prop name="TabOrder">0</prop>
+    <prop name="ToolTipText">
+     <prop name="de_AT.utf8"></prop>
+     <prop name="en_US.utf8"></prop>
+     <prop name="es_ES.utf8"></prop>
+     <prop name="fr_FR.utf8"></prop>
+     <prop name="tr_TR.utf8"></prop>
+     <prop name="zh_CN.utf8"></prop>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+    <prop name="snapMode">Point</prop>
+    <prop name="DashBackColor">_Transparent</prop>
+    <prop name="AntiAliased">False</prop>
+    <prop name="LineType">[solid,oneColor,JoinBevel,CapProjecting,1]</prop>
+    <prop name="BorderZoomable">False</prop>
+    <prop name="BorderScalable">False</prop>
+    <prop name="FillType">[outline]</prop>
+    <prop name="Location">10.00000000000001 15.00000000000001</prop>
+    <prop name="Font">
+     <prop name="de_AT.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+     <prop name="en_US.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+     <prop name="es_ES.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+     <prop name="fr_FR.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+     <prop name="tr_TR.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+     <prop name="zh_CN.utf8">Siemens Sans,-1,13,5,50,0,0,0,0,0,Roman</prop>
+    </prop>
+    <prop name="Text">
+     <prop name="de_AT.utf8">XXX</prop>
+     <prop name="en_US.utf8">XXX</prop>
+     <prop name="es_ES.utf8">XXX</prop>
+     <prop name="fr_FR.utf8">XXX</prop>
+     <prop name="tr_TR.utf8">XXX</prop>
+     <prop name="zh_CN.utf8">XXX</prop>
+    </prop>
+    <prop name="Distance">2</prop>
+    <prop name="BorderOffset">2</prop>
+    <prop name="Bordered">False</prop>
+    <prop name="Fit">True</prop>
+    <prop name="Transformable">False</prop>
+    <prop name="TextFormat">[0s,,,AlignLeft|AlignVCenter]</prop>
+   </properties>
+  </shape>
+  <shape Name="clickBox" shapeType="RECTANGLE" layerId="0">
+   <properties>
+    <prop name="serialId">4</prop>
+    <prop name="Type"></prop>
+    <prop name="RefPoint">65 40</prop>
+    <prop name="Enable">True</prop>
+    <prop name="Visible">True</prop>
+    <prop name="ForeColor">_Transparent</prop>
+    <prop name="BackColor">_Transparent</prop>
+    <prop name="TabOrder">2</prop>
+    <prop name="ToolTipText">
+     <prop name="de_AT.utf8"></prop>
+     <prop name="en_US.utf8"></prop>
+     <prop name="es_ES.utf8"></prop>
+     <prop name="fr_FR.utf8"></prop>
+     <prop name="tr_TR.utf8"></prop>
+     <prop name="zh_CN.utf8"></prop>
+    </prop>
+    <prop name="layoutAlignment">AlignNone</prop>
+    <prop name="snapMode">Point</prop>
+    <prop name="DashBackColor">_Transparent</prop>
+    <prop name="AntiAliased">False</prop>
+    <prop name="LineType">[none,oneColor,JoinBevel,CapProjecting,1]</prop>
+    <prop name="BorderZoomable">False</prop>
+    <prop name="BorderScalable">False</prop>
+    <prop name="FillType">[solid]</prop>
+    <prop name="Geometry">3.618181818181818 0 0 1.968253968253968 -235.1818181818182 -78.73015873015871</prop>
+    <prop name="BorderStyle">Normal</prop>
+    <prop name="Location">65 40</prop>
+    <prop name="Size">56 16</prop>
+    <prop name="CornerRadius">0</prop>
+    <prop name="Transformable">True</prop>
+   </properties>
+   <events>
+    <script name="Clicked" isEscaped="1"><![CDATA[main(mapping event)
+{
+   dyn_anytype da, daa;
+
+   da[1]  = myModuleName();
+   da[2]  = myPanelName();
+   daa[1] = g_answer;
+   da[3] = daa;
+
+   panelOff(da);
+}]]></script>
+    <script name="MouseOver" isEscaped="1"><![CDATA[main(bool enter)
+{
+  rectBackground.backCol = (enter)?&quot;color-2&quot;:&quot;color-2&quot;;
+  txtText.foreCol = (enter)?&quot;color-std-text&quot;:&quot;color-soft-text&quot;;
+}
+]]></script>
+   </events>
+  </shape>
+ </shapes>
+</panel>

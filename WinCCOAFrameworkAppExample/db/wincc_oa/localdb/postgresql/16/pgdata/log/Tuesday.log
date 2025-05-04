@@ -1,0 +1,272 @@
+2025-02-18 08:47:36.901 CET [13844] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-18 08:47:36.903 CET [13844] LOG:  listening on IPv6 address "::", port 15432
+2025-02-18 08:47:36.904 CET [13844] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-18 08:47:36.910 CET [13844] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-18 08:47:37.011 CET [21520] LOG:  database system was shut down at 2025-02-17 16:50:25 CET
+2025-02-18 08:47:37.183 CET [13844] LOG:  database system is ready to accept connections
+2025-02-18 08:52:36.992 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 08:52:50.845 CET [6452] LOG:  checkpoint complete: wrote 129 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=13.809 s, sync=0.032 s, total=13.854 s; sync files=71, longest=0.002 s, average=0.001 s; distance=653 kB, estimate=653 kB; lsn=0/606C718, redo lsn=0/6025050
+2025-02-18 08:57:36.855 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 08:57:41.360 CET [6452] LOG:  checkpoint complete: wrote 42 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.484 s, sync=0.009 s, total=4.505 s; sync files=15, longest=0.002 s, average=0.001 s; distance=363 kB, estimate=624 kB; lsn=0/60C1B38, redo lsn=0/607FF20
+2025-02-18 09:02:36.361 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:02:41.562 CET [6452] LOG:  checkpoint complete: wrote 48 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.171 s, sync=0.020 s, total=5.202 s; sync files=30, longest=0.005 s, average=0.001 s; distance=323 kB, estimate=594 kB; lsn=0/6112410, redo lsn=0/60D0C78
+2025-02-18 09:07:29.229 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 00000000000013DC: error code 487
+2025-02-18 09:07:36.565 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:07:41.632 CET [6452] LOG:  checkpoint complete: wrote 47 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.043 s, sync=0.013 s, total=5.068 s; sync files=28, longest=0.001 s, average=0.001 s; distance=310 kB, estimate=565 kB; lsn=0/6162A40, redo lsn=0/611E500
+2025-02-18 09:12:36.646 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:12:45.194 CET [6452] LOG:  checkpoint complete: wrote 79 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.520 s, sync=0.014 s, total=8.549 s; sync files=32, longest=0.002 s, average=0.001 s; distance=384 kB, estimate=547 kB; lsn=0/61C0510, redo lsn=0/617E790
+2025-02-18 09:17:36.210 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:17:40.950 CET [6452] LOG:  checkpoint complete: wrote 44 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.709 s, sync=0.017 s, total=4.740 s; sync files=25, longest=0.005 s, average=0.001 s; distance=306 kB, estimate=523 kB; lsn=0/61CBE18, redo lsn=0/61CB120
+2025-02-18 09:17:41.752 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 000000000000146C: error code 487
+2025-02-18 09:22:36.963 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:22:43.011 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.019 s, sync=0.019 s, total=6.049 s; sync files=31, longest=0.005 s, average=0.001 s; distance=333 kB, estimate=504 kB; lsn=0/621E788, redo lsn=0/621E750
+2025-02-18 09:27:17.644 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA46020000) for child 0000000000001464: error code 487
+2025-02-18 09:27:36.027 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:27:41.964 CET [6452] LOG:  checkpoint complete: wrote 55 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.909 s, sync=0.020 s, total=5.937 s; sync files=30, longest=0.005 s, average=0.001 s; distance=326 kB, estimate=486 kB; lsn=0/6270798, redo lsn=0/6270168
+2025-02-18 09:28:37.644 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 00000000000013B8: error code 487
+2025-02-18 09:32:36.967 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:32:47.367 CET [6452] LOG:  checkpoint complete: wrote 96 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=10.366 s, sync=0.021 s, total=10.400 s; sync files=34, longest=0.005 s, average=0.001 s; distance=431 kB, estimate=481 kB; lsn=0/63277F0, redo lsn=0/62DBED0
+2025-02-18 09:37:36.370 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:37:43.839 CET [6452] LOG:  checkpoint complete: wrote 69 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.436 s, sync=0.019 s, total=7.470 s; sync files=30, longest=0.005 s, average=0.001 s; distance=364 kB, estimate=469 kB; lsn=0/6337C18, redo lsn=0/6336FA8
+2025-02-18 09:38:54.421 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 00000000000013FC: error code 487
+2025-02-18 09:42:36.854 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:42:44.354 CET [6452] LOG:  checkpoint complete: wrote 69 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.466 s, sync=0.020 s, total=7.503 s; sync files=30, longest=0.005 s, average=0.001 s; distance=426 kB, estimate=465 kB; lsn=0/63A1B68, redo lsn=0/63A1B30
+2025-02-18 09:47:36.360 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:47:42.601 CET [6452] LOG:  checkpoint complete: wrote 58 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.207 s, sync=0.025 s, total=6.242 s; sync files=33, longest=0.002 s, average=0.001 s; distance=334 kB, estimate=452 kB; lsn=0/63F59F0, redo lsn=0/63F5438
+2025-02-18 09:49:45.725 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 000000000000133C: error code 487
+2025-02-18 09:52:36.607 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:52:44.104 CET [6452] LOG:  checkpoint complete: wrote 70 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.456 s, sync=0.026 s, total=7.497 s; sync files=35, longest=0.005 s, average=0.001 s; distance=355 kB, estimate=442 kB; lsn=0/644E2E8, redo lsn=0/644E2B0
+2025-02-18 09:57:36.117 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 09:57:42.224 CET [6452] LOG:  checkpoint complete: wrote 57 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.083 s, sync=0.014 s, total=6.107 s; sync files=30, longest=0.002 s, average=0.001 s; distance=340 kB, estimate=432 kB; lsn=0/64A3530, redo lsn=0/64A34F8
+2025-02-18 10:02:36.235 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:02:43.828 CET [6452] LOG:  checkpoint complete: wrote 71 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.565 s, sync=0.017 s, total=7.593 s; sync files=31, longest=0.002 s, average=0.001 s; distance=349 kB, estimate=424 kB; lsn=0/64FABA0, redo lsn=0/64FAB68
+2025-02-18 10:07:36.843 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:07:43.588 CET [6452] LOG:  checkpoint complete: wrote 64 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.714 s, sync=0.019 s, total=6.745 s; sync files=31, longest=0.002 s, average=0.001 s; distance=399 kB, estimate=421 kB; lsn=0/655F090, redo lsn=0/655EB28
+2025-02-18 10:12:36.594 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:12:44.324 CET [6452] LOG:  checkpoint complete: wrote 72 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.705 s, sync=0.017 s, total=7.731 s; sync files=33, longest=0.001 s, average=0.001 s; distance=377 kB, estimate=417 kB; lsn=0/65BCFE8, redo lsn=0/65BCFB0
+2025-02-18 10:17:36.326 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:17:41.901 CET [6452] LOG:  checkpoint complete: wrote 52 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.549 s, sync=0.013 s, total=5.575 s; sync files=30, longest=0.001 s, average=0.001 s; distance=300 kB, estimate=405 kB; lsn=0/6608050, redo lsn=0/6608018
+2025-02-18 10:22:36.906 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:22:43.113 CET [6452] LOG:  checkpoint complete: wrote 58 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.183 s, sync=0.018 s, total=6.208 s; sync files=33, longest=0.001 s, average=0.001 s; distance=344 kB, estimate=399 kB; lsn=0/665E178, redo lsn=0/665E140
+2025-02-18 10:27:36.125 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:27:43.706 CET [6452] LOG:  checkpoint complete: wrote 70 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.556 s, sync=0.013 s, total=7.581 s; sync files=31, longest=0.002 s, average=0.001 s; distance=368 kB, estimate=396 kB; lsn=0/66BA7A8, redo lsn=0/66BA2F0
+2025-02-18 10:32:36.721 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:32:44.123 CET [6452] LOG:  checkpoint complete: wrote 69 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.377 s, sync=0.017 s, total=7.402 s; sync files=34, longest=0.002 s, average=0.001 s; distance=348 kB, estimate=391 kB; lsn=0/6711480, redo lsn=0/6711410
+2025-02-18 10:35:27.667 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000001140: error code 487
+2025-02-18 10:37:36.130 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:37:41.849 CET [6452] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.690 s, sync=0.019 s, total=5.719 s; sync files=30, longest=0.005 s, average=0.001 s; distance=315 kB, estimate=383 kB; lsn=0/6760110, redo lsn=0/67600D8
+2025-02-18 10:42:36.855 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:42:47.297 CET [6452] LOG:  checkpoint complete: wrote 96 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=10.415 s, sync=0.016 s, total=10.442 s; sync files=34, longest=0.002 s, average=0.001 s; distance=473 kB, estimate=473 kB; lsn=0/67D9108, redo lsn=0/67D6820
+2025-02-18 10:47:36.304 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:47:42.464 CET [6452] LOG:  checkpoint complete: wrote 57 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.135 s, sync=0.016 s, total=6.160 s; sync files=31, longest=0.001 s, average=0.001 s; distance=324 kB, estimate=458 kB; lsn=0/6827EA8, redo lsn=0/6827A80
+2025-02-18 10:52:36.478 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:52:44.923 CET [6452] LOG:  checkpoint complete: wrote 78 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.415 s, sync=0.016 s, total=8.445 s; sync files=33, longest=0.005 s, average=0.001 s; distance=368 kB, estimate=449 kB; lsn=0/68843F8, redo lsn=0/6883C40
+2025-02-18 10:57:36.936 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 10:57:43.412 CET [6452] LOG:  checkpoint complete: wrote 60 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.457 s, sync=0.015 s, total=6.477 s; sync files=30, longest=0.002 s, average=0.001 s; distance=348 kB, estimate=439 kB; lsn=0/68DAE00, redo lsn=0/68DADC8
+2025-02-18 11:02:36.418 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:02:42.483 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.035 s, sync=0.020 s, total=6.065 s; sync files=31, longest=0.005 s, average=0.001 s; distance=325 kB, estimate=428 kB; lsn=0/692C2E0, redo lsn=0/692C2A8
+2025-02-18 11:03:51.282 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 00000000000011B8: error code 487
+2025-02-18 11:07:36.487 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:07:43.412 CET [6452] LOG:  checkpoint complete: wrote 64 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.894 s, sync=0.019 s, total=6.926 s; sync files=31, longest=0.005 s, average=0.001 s; distance=403 kB, estimate=425 kB; lsn=0/6990FE8, redo lsn=0/6990FB0
+2025-02-18 11:09:58.912 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 00000000000014B8: error code 487
+2025-02-18 11:12:36.418 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:12:38.984 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000001334: error code 487
+2025-02-18 11:12:45.442 CET [6452] LOG:  checkpoint complete: wrote 83 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.995 s, sync=0.018 s, total=9.025 s; sync files=37, longest=0.005 s, average=0.001 s; distance=420 kB, estimate=425 kB; lsn=0/69FA330, redo lsn=0/69FA2F8
+2025-02-18 11:17:36.445 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:17:43.803 CET [6452] LOG:  checkpoint complete: wrote 68 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.334 s, sync=0.015 s, total=7.359 s; sync files=31, longest=0.002 s, average=0.001 s; distance=336 kB, estimate=416 kB; lsn=0/6A4E360, redo lsn=0/6A4E328
+2025-02-18 11:22:36.817 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:22:43.737 CET [6452] LOG:  checkpoint complete: wrote 64 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.901 s, sync=0.013 s, total=6.921 s; sync files=31, longest=0.002 s, average=0.001 s; distance=386 kB, estimate=413 kB; lsn=0/6AAEDE8, redo lsn=0/6AAEDB0
+2025-02-18 11:27:36.745 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:27:42.804 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.032 s, sync=0.019 s, total=6.059 s; sync files=30, longest=0.005 s, average=0.001 s; distance=332 kB, estimate=405 kB; lsn=0/6B02058, redo lsn=0/6B02020
+2025-02-18 11:30:59.069 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000001304: error code 487
+2025-02-18 11:32:36.807 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:32:44.032 CET [6452] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.194 s, sync=0.022 s, total=7.225 s; sync files=34, longest=0.005 s, average=0.001 s; distance=342 kB, estimate=399 kB; lsn=0/6B57AC8, redo lsn=0/6B57A90
+2025-02-18 11:37:36.042 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:37:41.653 CET [6452] LOG:  checkpoint complete: wrote 52 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.578 s, sync=0.020 s, total=5.612 s; sync files=30, longest=0.005 s, average=0.001 s; distance=314 kB, estimate=390 kB; lsn=0/6BA62E0, redo lsn=0/6BA62A8
+2025-02-18 11:42:36.658 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:42:44.987 CET [6452] LOG:  checkpoint complete: wrote 77 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.295 s, sync=0.017 s, total=8.329 s; sync files=32, longest=0.002 s, average=0.001 s; distance=369 kB, estimate=388 kB; lsn=0/6C02968, redo lsn=0/6C02930
+2025-02-18 11:43:18.766 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000001240: error code 487
+2025-02-18 11:47:36.999 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:47:42.613 CET [6452] LOG:  checkpoint complete: wrote 52 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.581 s, sync=0.019 s, total=5.615 s; sync files=29, longest=0.005 s, average=0.001 s; distance=311 kB, estimate=380 kB; lsn=0/6C50718, redo lsn=0/6C506E0
+2025-02-18 11:52:36.626 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:52:48.200 CET [6452] LOG:  checkpoint complete: wrote 107 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=11.539 s, sync=0.024 s, total=11.574 s; sync files=40, longest=0.005 s, average=0.001 s; distance=486 kB, estimate=486 kB; lsn=0/6CCA040, redo lsn=0/6CC9FF0
+2025-02-18 11:57:36.216 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 11:57:42.589 CET [6452] LOG:  checkpoint complete: wrote 59 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.343 s, sync=0.020 s, total=6.374 s; sync files=31, longest=0.005 s, average=0.001 s; distance=338 kB, estimate=471 kB; lsn=0/6D1EB48, redo lsn=0/6D1EB10
+2025-02-18 12:02:36.597 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:02:42.336 CET [6452] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.715 s, sync=0.015 s, total=5.740 s; sync files=30, longest=0.001 s, average=0.001 s; distance=316 kB, estimate=456 kB; lsn=0/6D6DF18, redo lsn=0/6D6DEE0
+2025-02-18 12:07:36.339 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:07:43.567 CET [6452] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.202 s, sync=0.013 s, total=7.229 s; sync files=30, longest=0.001 s, average=0.001 s; distance=352 kB, estimate=445 kB; lsn=0/6DC60F8, redo lsn=0/6DC60C0
+2025-02-18 12:12:36.569 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:12:44.466 CET [6452] LOG:  checkpoint complete: wrote 73 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.867 s, sync=0.021 s, total=7.897 s; sync files=35, longest=0.005 s, average=0.001 s; distance=381 kB, estimate=439 kB; lsn=0/6E257B8, redo lsn=0/6E25780
+2025-02-18 12:17:36.476 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:17:42.229 CET [6452] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.720 s, sync=0.020 s, total=5.753 s; sync files=30, longest=0.002 s, average=0.001 s; distance=307 kB, estimate=426 kB; lsn=0/6E72648, redo lsn=0/6E725D8
+2025-02-18 12:22:36.239 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:22:42.410 CET [6452] LOG:  checkpoint complete: wrote 57 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.152 s, sync=0.012 s, total=6.172 s; sync files=31, longest=0.001 s, average=0.001 s; distance=336 kB, estimate=417 kB; lsn=0/6EC6908, redo lsn=0/6EC6898
+2025-02-18 12:27:36.420 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:27:44.546 CET [6452] LOG:  checkpoint complete: wrote 75 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.096 s, sync=0.018 s, total=8.126 s; sync files=34, longest=0.004 s, average=0.001 s; distance=430 kB, estimate=430 kB; lsn=0/6F34BB8, redo lsn=0/6F32390
+2025-02-18 12:32:36.558 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:32:46.551 CET [6452] LOG:  checkpoint complete: wrote 92 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.959 s, sync=0.020 s, total=9.993 s; sync files=36, longest=0.005 s, average=0.001 s; distance=428 kB, estimate=430 kB; lsn=0/6F9DB20, redo lsn=0/6F9D778
+2025-02-18 12:37:36.561 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:37:43.374 CET [6452] LOG:  checkpoint complete: wrote 63 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.790 s, sync=0.013 s, total=6.813 s; sync files=31, longest=0.001 s, average=0.001 s; distance=378 kB, estimate=425 kB; lsn=0/6FFC6A0, redo lsn=0/6FFBFE0
+2025-02-18 12:42:36.378 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:42:42.657 CET [6452] LOG:  checkpoint complete: wrote 58 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=6.243 s, sync=0.022 s, total=6.279 s; sync files=32, longest=0.005 s, average=0.001 s; distance=354 kB, estimate=418 kB; lsn=0/70548C0, redo lsn=0/7054888
+2025-02-18 12:47:36.672 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:47:42.361 CET [6452] LOG:  checkpoint complete: wrote 52 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.665 s, sync=0.016 s, total=5.690 s; sync files=31, longest=0.001 s, average=0.001 s; distance=292 kB, estimate=405 kB; lsn=0/709DC30, redo lsn=0/709DBF8
+2025-02-18 12:52:36.364 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:52:44.039 CET [6452] LOG:  checkpoint complete: wrote 71 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.652 s, sync=0.015 s, total=7.676 s; sync files=35, longest=0.001 s, average=0.001 s; distance=368 kB, estimate=401 kB; lsn=0/70F9FE8, redo lsn=0/70F9FB0
+2025-02-18 12:53:00.051 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000001224: error code 487
+2025-02-18 12:56:42.775 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000000F84: error code 487
+2025-02-18 12:57:36.051 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 12:57:43.507 CET [6452] LOG:  checkpoint complete: wrote 69 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.433 s, sync=0.014 s, total=7.457 s; sync files=31, longest=0.001 s, average=0.001 s; distance=340 kB, estimate=395 kB; lsn=0/714F270, redo lsn=0/714F238
+2025-02-18 13:02:36.515 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:02:45.851 CET [6452] LOG:  checkpoint complete: wrote 86 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.313 s, sync=0.014 s, total=9.337 s; sync files=34, longest=0.001 s, average=0.001 s; distance=416 kB, estimate=416 kB; lsn=0/71B7310, redo lsn=0/71B72D8
+2025-02-18 13:07:36.865 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:07:42.791 CET [6452] LOG:  checkpoint complete: wrote 55 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.898 s, sync=0.015 s, total=5.927 s; sync files=32, longest=0.002 s, average=0.001 s; distance=321 kB, estimate=406 kB; lsn=0/72078E8, redo lsn=0/72078B0
+2025-02-18 13:12:36.806 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:12:44.036 CET [6452] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.204 s, sync=0.014 s, total=7.231 s; sync files=32, longest=0.002 s, average=0.001 s; distance=382 kB, estimate=404 kB; lsn=0/72673A0, redo lsn=0/7267368
+2025-02-18 13:17:36.043 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:17:41.964 CET [6452] LOG:  checkpoint complete: wrote 55 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.893 s, sync=0.017 s, total=5.922 s; sync files=31, longest=0.005 s, average=0.001 s; distance=318 kB, estimate=395 kB; lsn=0/72B6E28, redo lsn=0/72B6DF0
+2025-02-18 13:22:36.972 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:22:44.216 CET [6452] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.220 s, sync=0.014 s, total=7.245 s; sync files=31, longest=0.001 s, average=0.001 s; distance=332 kB, estimate=389 kB; lsn=0/7309E30, redo lsn=0/7309DF8
+2025-02-18 13:26:12.856 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000000EA8: error code 487
+2025-02-18 13:27:36.233 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:27:42.282 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.019 s, sync=0.018 s, total=6.049 s; sync files=30, longest=0.005 s, average=0.001 s; distance=336 kB, estimate=384 kB; lsn=0/735DF88, redo lsn=0/735DF50
+2025-02-18 13:32:36.288 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:32:43.728 CET [6452] LOG:  checkpoint complete: wrote 69 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.414 s, sync=0.014 s, total=7.441 s; sync files=33, longest=0.001 s, average=0.001 s; distance=352 kB, estimate=380 kB; lsn=0/73B6250, redo lsn=0/73B6218
+2025-02-18 13:37:36.732 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:37:42.760 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.996 s, sync=0.021 s, total=6.028 s; sync files=31, longest=0.005 s, average=0.001 s; distance=345 kB, estimate=377 kB; lsn=0/740C768, redo lsn=0/740C730
+2025-02-18 13:42:36.763 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:42:43.256 CET [6452] LOG:  checkpoint complete: wrote 60 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.458 s, sync=0.019 s, total=6.493 s; sync files=31, longest=0.005 s, average=0.001 s; distance=348 kB, estimate=374 kB; lsn=0/7463858, redo lsn=0/7463820
+2025-02-18 13:47:36.257 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:47:43.383 CET [6452] LOG:  checkpoint complete: wrote 66 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.103 s, sync=0.012 s, total=7.127 s; sync files=30, longest=0.001 s, average=0.001 s; distance=314 kB, estimate=368 kB; lsn=0/74B2368, redo lsn=0/74B2330
+2025-02-18 13:52:36.395 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:52:44.510 CET [6452] LOG:  checkpoint complete: wrote 75 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.085 s, sync=0.021 s, total=8.116 s; sync files=33, longest=0.005 s, average=0.001 s; distance=409 kB, estimate=409 kB; lsn=0/7518A70, redo lsn=0/7518A38
+2025-02-18 13:56:20.608 CET [13844] LOG:  could not reserve shared memory region (addr=000001BA48820000) for child 0000000000000E10: error code 487
+2025-02-18 13:57:36.514 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 13:57:43.755 CET [6452] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.215 s, sync=0.016 s, total=7.242 s; sync files=31, longest=0.001 s, average=0.001 s; distance=413 kB, estimate=413 kB; lsn=0/757FEF0, redo lsn=0/757FEB8
+2025-02-18 14:02:36.769 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 14:02:43.479 CET [6452] LOG:  checkpoint complete: wrote 62 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.679 s, sync=0.019 s, total=6.710 s; sync files=34, longest=0.005 s, average=0.001 s; distance=331 kB, estimate=404 kB; lsn=0/75D2DB8, redo lsn=0/75D2D48
+2025-02-18 14:07:36.495 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 14:07:42.213 CET [6452] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.685 s, sync=0.021 s, total=5.719 s; sync files=29, longest=0.005 s, average=0.001 s; distance=325 kB, estimate=397 kB; lsn=0/7624510, redo lsn=0/76244A0
+2025-02-18 14:12:36.223 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 14:12:47.870 CET [6452] LOG:  checkpoint complete: wrote 107 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=11.614 s, sync=0.021 s, total=11.648 s; sync files=35, longest=0.005 s, average=0.001 s; distance=492 kB, estimate=492 kB; lsn=0/76A0678, redo lsn=0/769F878
+2025-02-18 14:17:36.882 CET [6452] LOG:  checkpoint starting: time
+2025-02-18 14:17:42.933 CET [6452] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.023 s, sync=0.015 s, total=6.052 s; sync files=31, longest=0.001 s, average=0.001 s; distance=321 kB, estimate=475 kB; lsn=0/76F01D8, redo lsn=0/76EFE18
+2025-02-18 14:21:04.021 CET [13844] LOG:  received fast shutdown request
+2025-02-18 14:21:04.023 CET [13844] LOG:  aborting any active transactions
+2025-02-18 14:21:04.023 CET [30868] FATAL:  terminating connection due to administrator command
+2025-02-18 14:21:04.034 CET [13844] LOG:  background worker "logical replication launcher" (PID 14008) exited with exit code 1
+2025-02-18 14:21:04.042 CET [6452] LOG:  shutting down
+2025-02-18 14:21:04.044 CET [6452] LOG:  checkpoint starting: shutdown immediate
+2025-02-18 14:21:04.112 CET [6452] LOG:  checkpoint complete: wrote 53 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.047 s, sync=0.015 s, total=0.070 s; sync files=30, longest=0.001 s, average=0.001 s; distance=322 kB, estimate=460 kB; lsn=0/7740888, redo lsn=0/7740888
+2025-02-18 14:21:04.163 CET [13844] LOG:  database system is shut down
+2025-02-18 16:04:30.027 CET [29700] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-02-18 16:04:30.029 CET [29700] LOG:  listening on IPv6 address "::", port 15432
+2025-02-18 16:04:30.029 CET [29700] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-02-18 16:04:30.036 CET [29700] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-02-18 16:04:30.165 CET [12140] LOG:  database system was shut down at 2025-02-18 14:21:04 CET
+2025-02-18 16:04:30.353 CET [29700] LOG:  database system is ready to accept connections
+2025-02-18 16:09:30.152 CET [11096] LOG:  checkpoint starting: time
+2025-02-18 16:09:39.389 CET [11096] LOG:  checkpoint complete: wrote 87 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.203 s, sync=0.022 s, total=9.238 s; sync files=42, longest=0.005 s, average=0.001 s; distance=477 kB, estimate=477 kB; lsn=0/77FFE30, redo lsn=0/77B7E10
+2025-02-18 16:14:30.398 CET [11096] LOG:  checkpoint starting: time
+2025-02-18 16:14:35.774 CET [11096] LOG:  checkpoint complete: wrote 50 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.351 s, sync=0.013 s, total=5.377 s; sync files=22, longest=0.002 s, average=0.001 s; distance=393 kB, estimate=469 kB; lsn=0/7863108, redo lsn=0/781A528
+2025-02-18 16:15:50.517 CET [29700] LOG:  could not reserve shared memory region (addr=000001FE2D800000) for child 00000000000014F4: error code 487
+2025-02-18 16:19:30.777 CET [11096] LOG:  checkpoint starting: time
+2025-02-18 16:19:37.707 CET [11096] LOG:  checkpoint complete: wrote 64 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.900 s, sync=0.015 s, total=6.930 s; sync files=27, longest=0.005 s, average=0.001 s; distance=359 kB, estimate=458 kB; lsn=0/78BE500, redo lsn=0/7874338
+2025-02-18 16:23:33.863 CET [29700] LOG:  could not reserve shared memory region (addr=000001FE2D800000) for child 00000000000012D0: error code 487
+2025-02-18 16:24:30.714 CET [11096] LOG:  checkpoint starting: time
+2025-02-18 16:24:35.750 CET [11096] LOG:  checkpoint complete: wrote 47 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.011 s, sync=0.018 s, total=5.036 s; sync files=24, longest=0.005 s, average=0.001 s; distance=373 kB, estimate=449 kB; lsn=0/7917348, redo lsn=0/78D17D0
+2025-02-18 16:29:11.724 CET [29700] LOG:  received fast shutdown request
+2025-02-18 16:29:11.725 CET [29700] LOG:  aborting any active transactions
+2025-02-18 16:29:11.725 CET [4596] FATAL:  terminating connection due to administrator command
+2025-02-18 16:29:11.733 CET [29700] LOG:  background worker "logical replication launcher" (PID 12728) exited with exit code 1
+2025-02-18 16:29:11.740 CET [11096] LOG:  shutting down
+2025-02-18 16:29:11.742 CET [11096] LOG:  checkpoint starting: shutdown immediate
+2025-02-18 16:29:11.818 CET [11096] LOG:  checkpoint complete: wrote 48 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.049 s, sync=0.019 s, total=0.078 s; sync files=27, longest=0.002 s, average=0.001 s; distance=321 kB, estimate=436 kB; lsn=0/7921E78, redo lsn=0/7921E78
+2025-02-18 16:29:11.872 CET [29700] LOG:  database system is shut down
+2025-03-04 10:29:06.162 CET [28680] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-04 10:29:06.165 CET [28680] LOG:  listening on IPv6 address "::", port 15432
+2025-03-04 10:29:06.165 CET [28680] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-04 10:29:06.172 CET [28680] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-04 10:29:06.275 CET [23928] LOG:  database system was shut down at 2025-02-27 13:59:38 CET
+2025-03-04 10:29:06.514 CET [28680] LOG:  database system is ready to accept connections
+2025-03-04 10:34:06.270 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:34:21.962 CET [15124] LOG:  checkpoint complete: wrote 146 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=15.644 s, sync=0.036 s, total=15.693 s; sync files=64, longest=0.006 s, average=0.001 s; distance=746 kB, estimate=746 kB; lsn=0/7CE3260, redo lsn=0/7C881F8
+2025-03-04 10:39:06.977 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:39:13.011 CET [15124] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.016 s, sync=0.011 s, total=6.034 s; sync files=12, longest=0.005 s, average=0.001 s; distance=454 kB, estimate=716 kB; lsn=0/7D52438, redo lsn=0/7CF9C50
+2025-03-04 10:44:06.022 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:44:12.077 CET [15124] LOG:  checkpoint complete: wrote 56 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.024 s, sync=0.018 s, total=6.055 s; sync files=27, longest=0.005 s, average=0.001 s; distance=443 kB, estimate=689 kB; lsn=0/7DBDDB8, redo lsn=0/7D68A58
+2025-03-04 10:47:43.285 CET [28680] LOG:  could not reserve shared memory region (addr=0000017AD0E30000) for child 00000000000013B0: error code 487
+2025-03-04 10:49:06.082 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:49:12.446 CET [15124] LOG:  checkpoint complete: wrote 59 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.343 s, sync=0.010 s, total=6.365 s; sync files=24, longest=0.001 s, average=0.001 s; distance=439 kB, estimate=664 kB; lsn=0/7E2AA50, redo lsn=0/7DD6828
+2025-03-04 10:54:06.447 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:54:13.703 CET [15124] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.220 s, sync=0.023 s, total=7.256 s; sync files=31, longest=0.005 s, average=0.001 s; distance=442 kB, estimate=642 kB; lsn=0/7E9D7A0, redo lsn=0/7E45420
+2025-03-04 10:59:06.717 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 10:59:14.832 CET [15124] LOG:  checkpoint complete: wrote 75 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.087 s, sync=0.015 s, total=8.116 s; sync files=27, longest=0.001 s, average=0.001 s; distance=442 kB, estimate=622 kB; lsn=0/7F0CC30, redo lsn=0/7EB3DF0
+2025-03-04 11:04:06.832 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:04:15.864 CET [15124] LOG:  checkpoint complete: wrote 83 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.996 s, sync=0.023 s, total=9.032 s; sync files=39, longest=0.005 s, average=0.001 s; distance=552 kB, estimate=615 kB; lsn=0/7F99C28, redo lsn=0/7F3DEF8
+2025-03-04 11:09:06.866 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:09:14.004 CET [15124] LOG:  checkpoint complete: wrote 66 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.109 s, sync=0.015 s, total=7.138 s; sync files=30, longest=0.002 s, average=0.001 s; distance=455 kB, estimate=599 kB; lsn=0/800C4C0, redo lsn=0/7FAFBF8
+2025-03-04 11:14:06.014 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:14:13.275 CET [15124] LOG:  checkpoint complete: wrote 67 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=7.233 s, sync=0.019 s, total=7.262 s; sync files=30, longest=0.005 s, average=0.001 s; distance=434 kB, estimate=582 kB; lsn=0/801C668, redo lsn=0/801C630
+2025-03-04 11:15:13.326 CET [28680] LOG:  could not reserve shared memory region (addr=0000017AD0E30000) for child 00000000000012D8: error code 487
+2025-03-04 11:19:06.287 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:19:16.065 CET [15124] LOG:  checkpoint complete: wrote 90 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.746 s, sync=0.019 s, total=9.779 s; sync files=31, longest=0.005 s, average=0.001 s; distance=526 kB, estimate=577 kB; lsn=0/80FEA68, redo lsn=0/809FE58
+2025-03-04 11:24:06.077 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:24:14.641 CET [15124] LOG:  checkpoint complete: wrote 79 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.539 s, sync=0.016 s, total=8.564 s; sync files=31, longest=0.005 s, average=0.001 s; distance=475 kB, estimate=567 kB; lsn=0/8116C58, redo lsn=0/8116C20
+2025-03-04 11:29:06.646 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:29:15.749 CET [15124] LOG:  checkpoint complete: wrote 84 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.079 s, sync=0.013 s, total=9.103 s; sync files=32, longest=0.001 s, average=0.001 s; distance=486 kB, estimate=558 kB; lsn=0/8190C70, redo lsn=0/8190580
+2025-03-04 11:34:06.754 CET [15124] LOG:  checkpoint starting: time
+2025-03-04 11:34:14.141 CET [15124] LOG:  checkpoint complete: wrote 68 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.357 s, sync=0.015 s, total=7.388 s; sync files=32, longest=0.001 s, average=0.001 s; distance=424 kB, estimate=545 kB; lsn=0/81FA7D8, redo lsn=0/81FA7A0
+2025-03-04 11:35:10.280 CET [28680] LOG:  received fast shutdown request
+2025-03-04 11:35:10.281 CET [28680] LOG:  aborting any active transactions
+2025-03-04 11:35:10.282 CET [24536] FATAL:  terminating connection due to administrator command
+2025-03-04 11:35:10.291 CET [28680] LOG:  background worker "logical replication launcher" (PID 5100) exited with exit code 1
+2025-03-04 11:35:10.299 CET [15124] LOG:  shutting down
+2025-03-04 11:35:10.301 CET [15124] LOG:  checkpoint starting: shutdown immediate
+2025-03-04 11:35:10.359 CET [15124] LOG:  checkpoint complete: wrote 57 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.035 s, sync=0.017 s, total=0.060 s; sync files=29, longest=0.001 s, average=0.001 s; distance=362 kB, estimate=527 kB; lsn=0/8255068, redo lsn=0/8255068
+2025-03-04 11:35:10.407 CET [28680] LOG:  database system is shut down
+2025-03-04 11:59:48.289 CET [8696] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-04 11:59:48.291 CET [8696] LOG:  listening on IPv6 address "::", port 15432
+2025-03-04 11:59:48.292 CET [8696] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-04 11:59:48.298 CET [8696] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-04 11:59:48.425 CET [33528] LOG:  database system was shut down at 2025-03-04 11:35:10 CET
+2025-03-04 11:59:48.671 CET [8696] LOG:  database system is ready to accept connections
+2025-03-04 12:04:32.950 CET [8696] LOG:  received fast shutdown request
+2025-03-04 12:04:32.951 CET [8696] LOG:  aborting any active transactions
+2025-03-04 12:04:32.952 CET [4072] FATAL:  terminating connection due to administrator command
+2025-03-04 12:04:32.959 CET [8696] LOG:  background worker "logical replication launcher" (PID 1000) exited with exit code 1
+2025-03-04 12:04:32.970 CET [5308] LOG:  shutting down
+2025-03-04 12:04:32.971 CET [5308] LOG:  checkpoint starting: shutdown immediate
+2025-03-04 12:04:33.106 CET [5308] LOG:  checkpoint complete: wrote 135 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.100 s, sync=0.025 s, total=0.137 s; sync files=39, longest=0.002 s, average=0.001 s; distance=681 kB, estimate=681 kB; lsn=0/82FF710, redo lsn=0/82FF710
+2025-03-04 12:04:33.172 CET [8696] LOG:  database system is shut down
+2025-03-04 12:14:28.829 CET [27576] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-04 12:14:28.831 CET [27576] LOG:  listening on IPv6 address "::", port 15432
+2025-03-04 12:14:28.831 CET [27576] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-04 12:14:28.836 CET [27576] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-04 12:14:28.927 CET [13820] LOG:  database system was shut down at 2025-03-04 12:04:33 CET
+2025-03-04 12:14:29.170 CET [27576] LOG:  database system is ready to accept connections
+2025-03-04 12:19:28.924 CET [10968] LOG:  checkpoint starting: time
+2025-03-04 12:19:37.499 CET [10968] LOG:  checkpoint complete: wrote 81 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.550 s, sync=0.015 s, total=8.576 s; sync files=38, longest=0.001 s, average=0.001 s; distance=463 kB, estimate=463 kB; lsn=0/83CD008, redo lsn=0/83733E0
+2025-03-04 12:20:41.832 CET [27576] LOG:  received fast shutdown request
+2025-03-04 12:20:41.833 CET [27576] LOG:  aborting any active transactions
+2025-03-04 12:20:41.834 CET [13884] FATAL:  terminating connection due to administrator command
+2025-03-04 12:20:41.843 CET [27576] LOG:  background worker "logical replication launcher" (PID 27808) exited with exit code 1
+2025-03-04 12:20:41.851 CET [10968] LOG:  shutting down
+2025-03-04 12:20:41.853 CET [10968] LOG:  checkpoint starting: shutdown immediate
+2025-03-04 12:20:41.910 CET [10968] LOG:  checkpoint complete: wrote 48 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.040 s, sync=0.010 s, total=0.059 s; sync files=17, longest=0.001 s, average=0.001 s; distance=437 kB, estimate=460 kB; lsn=0/83E0928, redo lsn=0/83E0928
+2025-03-04 12:20:41.952 CET [27576] LOG:  database system is shut down
+2025-03-04 12:20:53.862 CET [8600] LOG:  starting PostgreSQL 16.6, compiled by Visual C++ build 1942, 64-bit
+2025-03-04 12:20:53.864 CET [8600] LOG:  listening on IPv6 address "::", port 15432
+2025-03-04 12:20:53.864 CET [8600] LOG:  listening on IPv4 address "0.0.0.0", port 15432
+2025-03-04 12:20:53.870 CET [8600] LOG:  listening on Unix socket "C:/Users/z004u6jf/AppData/Local/.winccoa/.s.PGSQL.15432"
+2025-03-04 12:20:53.942 CET [19004] LOG:  database system was shut down at 2025-03-04 12:20:41 CET
+2025-03-04 12:20:54.156 CET [8600] LOG:  database system is ready to accept connections
+2025-03-04 12:22:43.344 CET [8600] LOG:  received fast shutdown request
+2025-03-04 12:22:43.346 CET [8600] LOG:  aborting any active transactions
+2025-03-04 12:22:43.346 CET [7540] FATAL:  terminating connection due to administrator command
+2025-03-04 12:22:43.354 CET [8600] LOG:  background worker "logical replication launcher" (PID 18320) exited with exit code 1
+2025-03-04 12:22:43.357 CET [33536] LOG:  shutting down
+2025-03-04 12:22:43.359 CET [33536] LOG:  checkpoint starting: shutdown immediate
+2025-03-04 12:22:43.454 CET [33536] LOG:  checkpoint complete: wrote 17 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.079 s, sync=0.007 s, total=0.097 s; sync files=10, longest=0.002 s, average=0.001 s; distance=77 kB, estimate=77 kB; lsn=0/83F40A8, redo lsn=0/83F40A8
+2025-03-04 12:22:43.508 CET [8600] LOG:  database system is shut down

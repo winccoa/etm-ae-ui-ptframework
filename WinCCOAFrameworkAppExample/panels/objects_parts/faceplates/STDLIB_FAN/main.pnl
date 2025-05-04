@@ -1,0 +1,50 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+PANEL,-1 -1 360 223 N "_3DFace" 1
+"$CALLING_OBJECT_REF_PATH"
+E E E E E 1 -1 -1 0  0 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+1 1 0 "" 0
+0
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+3 0 "__objRef" -1
+"layoutAlignment" "AlignCenter"
+"" ""
+"objects/symbols_other/stdlib_objectReference_1.pnl" 70 110 T 7 1 0 1 43.5 -49
+1
+"$CALLING_OBJECT_REF_PATH""$CALLING_OBJECT_REF_PATH"
+0

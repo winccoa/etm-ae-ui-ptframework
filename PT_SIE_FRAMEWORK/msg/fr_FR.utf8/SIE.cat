@@ -1,0 +1,125 @@
+buttonNavi_cctv,FR:CCTV
+buttonNavi_dashboard,FR:Dashboard
+buttonNavi_documentation,FR:Documentation
+buttonNavi_gis,FR:GIS
+buttonNavi_messages,FR:Messages
+buttonNavi_overview,FR:Overview
+buttonNavi_settings,FR:Settings
+buttonNavi_systemOverview,FR:System Overview
+buttonNavi_trafficProgram,FR:Traffic Program
+buttonNavi_user,Utilisateur Actuel
+buttonNavi_theme,Thème
+buttonNavi_language,Langue
+buttonNavi_exit,Fermer
+buttonNavi_menu,Réduire le menu
+button_ackAll,FR:acknowledge  all alarms
+button_acknowledgeAll,FR:acknowledge all
+button_close,FR:close
+button_closeDoor,FR:close door
+button_cmdLast24h,FR:Commands of the last 24 hours
+button_dataModel,FR:data model
+button_lightHouse2,FR:Light On/Off house 2
+button_lightHouse3,FR:Light On/Off house 3
+button_mapOffline,FR:Map offline
+button_mapOnline,FR:Map online
+button_openDoor,FR:open door
+button_overview,FR:overview
+button_resetFire,FR:reset fire
+button_showCam1,FR:show\nCamera 1
+button_showCam2,FR:show\nCamera 2
+button_showCam3,FR:show\nCamera 3
+button_showCam4,FR:show\nCamera 4
+button_showConfig1,Activer la configuration 1
+button_showConfig2,Activer la configuration 2
+button_deleteCameras,Supprimer les caméras
+button_alarmOnCam4,Activer l'alarme de caméra 4
+button_alarmOffCam4,Désactiver l'alarme de caméra 4
+button_cam3WriteProtection,Protection en écriture de caméra 3 +- 10s
+button_systemOverview,Ouvrir l'aperçu du système
+button_sidoor,FR:SIDOOR
+button_siemensNbg,FR:Siemens Nuremberg
+button_testSuite,FR:test suite
+button_tpCarBreakdownActive,FR:Car Breakdown
+button_tpConstructionActive,FR:Construction
+button_tpFireActive,FR:Fire
+button_tpNormalActive,FR:Normal
+button_tpPersonInTunnelActive,FR:Person in Tunnel
+button_tpTrafficJamActive,FR:Traffic Jam
+button_tpTunnelBlockingActive,FR:Tunnel Blocking
+button_triggerFire,FR:trigger fire
+button_tunnel2000,FR:Tunnel (2000 m)
+button_tunnel20000,FR:Tunnel (20000 m)
+button_tunnel4000,FR:Tunnel (4000 m)
+button_siriusEmpty,Vide
+button_SIM,Activer le paramètre PLC SIM
+button_RH,Activer le paramètre de RH
+frame_doorControl,FR:door control
+frame_doorRunTime,FR:Door Run Time
+frame_doorStatus,FR:Door Status
+frame_fireAlarmSystem,FR:fire alarm system
+sidoor_closingTime,FR:Closing Time
+sidoor_doorClosed,FR:Door Closed
+sidoor_doorClosing,FR:Door Closing
+sidoor_doorOpened,FR:Door open
+sidoor_doorOpening,FR:Door Opening
+sidoor_error,FR:Error
+sidoor_motorCurrent,FR:Motor Current
+sidoor_motorDeenergized,FR:Motor deenergized
+sidoor_openingTime,FR:Opening Time
+sidoor_position,FR:Position
+sidoor_readyForOperation,FR:Ready for Operation
+sidoor_speed,FR:Speed
+sidoor_stopped,FR:Stopped
+sidoor_torque,FR:Torque
+tpCarBreakdownActive,FR:Car breakdown
+tpConstructionActive,FR:Construction
+tpFireActive,FR:Fire
+tpNormalActive,FR:Normal
+tpPersonInTunnelActive,FR:Person in Tunnel
+tpTunnelBlockingActive,FR:Tunnel blocked
+tpUndefiened,----
+txtSection_commands24h,FR:Commands (last 24h)
+txtSection_doorControl,FR:door control
+txtSection_generalInfo,FR:general information
+txtSection_opcUaServer,FR:OPC UA Server
+txtSection_plcSettings,FR:PLC settings
+txtSection_showModuleFooter,Afficher la ligne d'information
+txtSection_siriusAct,FR:Sirius Act
+txtSection_trafficProgram,FR:Traffic Program
+txtSection_useSirisAct,FR:Use Sirius Act for Login
+txtTab_command,FR:Command
+txtTab_manager,FR:Manager
+txtTab_time,FR:Time
+txtTab_user,FR:User
+txtTab_value,FR:Value
+txt_automatic,FR:automatic
+txt_manual,FR:manual
+txt_sector1,FR:Sector 1
+txt_sector2,FR:Sector 2
+txt_sector3,FR:Sector 3
+txt_toggle,FR:toggle
+video_alarm_txt_1,FR:Emergency button activated
+video_alarm_txt_2,FR:Fire alarm triggered
+video_alarm_txt_3,FR:Escape door open
+video_alarm_txt_4,FR:Alarm
+video_alarm_txt_5,FR:Alarm
+video_objectExplorer,Explorateur d'objets
+video_cameraList,Liste des caméras
+video_configuration,Configuration
+video_playback,Lecture EWO
+tpTrafficJamActive,FR:Traffic Jam
+fpStatus,Statut
+fpOperatingData,Données d'exploitation
+fpParameter,Paramètre
+tpStop,Arrêt
+sfAll,Tous
+sfTraffic,Trafic
+sfVentilation,Ventilation
+sfFire,Protection contre l'incendie
+sfSOS,Appel d'urgence
+sfAirquality,Qualité de l'air
+sfLighting,Éclairage
+baseOverview,Aperçu
+sectorOverview,Aperçu du secteur
+tunnelDemo,Démo de numérisation des tunnels
+tunnelOperation,Exploitation du tunnel

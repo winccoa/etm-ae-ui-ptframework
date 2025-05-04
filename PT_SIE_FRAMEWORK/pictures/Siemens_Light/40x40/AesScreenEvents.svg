@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#41AAAA;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#FFD732;}
+	.st3{fill:#787878;}
+</style>
+<g>
+	<path class="st0" d="M32.2,32.4H7.8c-2,0-3.5-1.6-3.5-3.5V14.8c0-2,1.6-3.5,3.5-3.5h24.4c2,0,3.5,1.6,3.5,3.5v14.1
+		C35.7,30.8,34.1,32.4,32.2,32.4z"/>
+	<g>
+		<rect x="9.9" y="19.5" class="st1" width="11" height="1.8"/>
+		<rect x="9.9" y="15.7" class="st1" width="15.3" height="1.8"/>
+		<rect x="9.9" y="23.2" class="st1" width="9.5" height="1.8"/>
+		<rect x="9.6" y="27" class="st1" width="17" height="1.8"/>
+	</g>
+	<g>
+		<ellipse class="st2" cx="31.2" cy="10.5" rx="6.7" ry="6.5"/>
+		<path class="st3" d="M31.1,3c-4.1,0-7.5,3.3-7.5,7.5s3.3,7.5,7.5,7.5s7.5-3.3,7.5-7.5S35.3,3,31.1,3z M31.1,17
+			c-3.5,0-6.5-2.9-6.5-6.5C24.6,7,27.5,4,31.1,4c3.5,0,6.5,2.9,6.5,6.5C37.6,14,34.7,17,31.1,17z"/>
+		<g>
+			<path class="st0" d="M31.1,6.4L31.1,6.4L31.1,6.4L31.1,6.4L31.1,6.4c-2,0-1.5,2-1.5,2l1,3.7h0.5l0,0h0.5l1-3.7
+				C32.7,8.4,33.1,6.4,31.1,6.4z"/>
+			<ellipse class="st0" cx="31.1" cy="13.8" rx="1.1" ry="1.1"/>
+		</g>
+	</g>
+</g>
+</svg>

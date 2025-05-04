@@ -1,0 +1,7 @@
+# config.level for stdlib
+
+# Use CtrlCCSB.dll for simulated speech output through your soundcard.
+# Use stdlib.ctl and stdlib_hook.ctl for object symbols, elementary symbols and faceplate mechanism.
+
+[ui]
+LoadCtrlLibs = "classes/GUI/faceplate"

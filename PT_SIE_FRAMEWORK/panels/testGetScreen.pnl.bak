@@ -1,0 +1,102 @@
+V 14
+2
+LANG:10000 0 
+LANG:10001 0 
+PANEL,-1 -1 500 403 N "_3DFace" 0
+E E E E E 1 -1 -1 0  150 40
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "94.1104"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+13 29
+"PUSH_BUTTON1"
+""
+1 70 80 E E E 1 E 1 E N "_ButtonText" E N "_Button" E E
+ E E
+1 0 0 0 0 0
+E E E
+8
+2
+LANG:10000 0 
+LANG:10001 0 
+
+1
+"layoutAlignment" "AlignNone"
+2
+LANG:10000 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  68 43 182 137
+
+T 
+2
+LANG:10000 12 PUSH_BUTTON1
+LANG:10001 12 PUSH_BUTTON1
+"main(mapping event)
+{
+  this.text = getMyScreenNum();
+}
+
+int getMyScreenNum(string sModule = myModuleName())
+{
+  int iNum;
+  shape shRootPanel = getShape(sModule + \".\" + rootPanel(sModule) + \":\");
+  shape shModShape = shRootPanel.parentShape();
+  DebugN(\"##### 1 \", shRootPanel, shModShape);
+  shape shModPanel = shModShape.panel();
+  sModule = shModPanel.moduleName();
+  DebugN(\"##### 2 \", sModule, shModShape.moduleName(), shRootPanel, shModShape) ;
+  if (!patternMatch(\"mainModule_*\", sModule))
+  { delay(0,500);
+    DebugN(\"#####\", getMyScreenNum(sModule));
+//     return getMyScreenNum(sModule);
+  }
+  dyn_string dsSplit = strsplit(sModule, \"_\");
+  return dsSplit.last();
+}" 0
+ E E E
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+0

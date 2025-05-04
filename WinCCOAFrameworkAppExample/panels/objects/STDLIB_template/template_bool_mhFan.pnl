@@ -1,0 +1,179 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+PANEL,-1 -1 120 110 N "_3DFace" 3
+"$DP"
+"$_BOOL_ACTION_ENABLE"
+"$_BOOL_DPEDescrAsToolTip"
+"main()
+{
+  stdlib_setGlobalRefNameToInfoArea();
+}
+" 0
+ E E E E 1 -1 -1 0  0 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+1 15 0 "" 7
+0
+1 23 1 "" 2
+31 "transform" 0 0 1 0 0.8357487922705311 72.81443120836036 19.12944836482285
+7 "rotation" 0 0 0
+8 "backCol" 0 0 "STD_led_On"
+0
+1 24 1 "" 5
+31 "transform" 0 0 0.9999999999999999 0 0.8357487922705314 72.81443120836046 19.12944836482284
+7 "rotation" 0 0 0
+0
+1 25 1 "" 7
+31 "transform" 0 0 0.0004141432982413705 -0.1007677816703552 0.0003366146339987648 0.123976491935821 69.2529954039363 46.05473159291438
+7 "rotation" 0 0 270
+0
+1 26 1 "" 10
+20 "primitiveText" 0 0 1
+1
+LANG:10001 0 
+
+0
+2 14
+"dummy"
+""
+1 32 88 E E E 1 E 1 E N "_WindowText" E N "_Window" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+4
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E U  0 E 32 88 34 100
+0 2 2 "0s" 0 0 0 192 0 0  32 88 1
+3
+LANG:10001 48 MS Shell Dlg 2,-1,11,5,400,0,0,0,0,0,0,0,0,0,0,1
+LANG:10000 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0 3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+0
+LAYER, 1 
+0
+1 27 1 "" 1
+31 "transform" 0 0 0.9999999999999999 0 0.835748792270531 72.81443120836032 19.12944836482281
+7 "rotation" 0 0 0
+8 "fill" 0 0 "[pattern,[fit,any,Symbols/CoolFanFront_D.svg]]"
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+1 16 0 "" 1
+0
+1 18 0 "" 3
+2 "visible" 0 0 0
+0
+1 20 0 "" 5
+2 "visible" 0 0 0
+0
+1 22 0 "" 6
+1 "confirm" 1 1 "// SimpleCtrlScriptStart {valid}
+main(int iType)
+{
+  dyn_errClass err;
+
+  int          i, iReturnValue = 1, iDpCount = 1;
+  dyn_int      diType = makeDynInt();
+  dyn_string   dsDps;
+
+  dsDps[1] = $DP+\".alarm\" + \":_alert_hdl.._ack\";
+
+  if ( isFunctionDefined(\"isAckable\") )
+  {
+    isAckable( iType, dsDps, iReturnValue );
+    if ( iReturnValue == 0 || dynlen (dsDps ) < 1 ) return;
+  }
+
+  for ( i = 1; i <= dynlen(dsDps); i++ )
+    diType[i] = iType;
+
+  dpSetWait( dsDps, diType );
+
+  err = getLastError();
+  if ( dynlen(err) > 0 )
+    DebugN(err);
+}
+// SimpleCtrlScript {EP_confirm}
+// dpCount {1}
+// dp1 {$DP + \".alarm\"}
+// SimpleCtrlScriptEnd {EP_confirm}
+" 0
+ 
+31 "transform" 0 0 1 0 1 1.4210854715202e-14 0
+0
+0
+3 0 "infoArea" -1
+"layoutAlignment" "AlignCenter"
+"" ""
+"objects/symbols_click/info_area_mh.pnl" 60 2 T 0 1.549243217199156 0 0.4336823734729494 9.512826928508531 18.29930191972077
+2
+"$DP""$DP"
+"$_BOOL_ACTION_ENABLE""$_BOOL_ACTION_ENABLE"
+3 1 "PANEL_REF2" -1
+"layoutAlignment" "AlignCenter"
+"" ""
+"objects/symbols_bool/stdlib_boolObject_1.pnl" 99 22 T 1 2.250063667289997 0 2.768295535327121 -267.4669887351716 -49.37250080690969
+21
+"$DP""$DP"
+"$DPE""alarm.error"
+"$_BIT_NUMBER"""
+"$_BOOL_DPEDescrAsToolTip""$_BOOL_DPEDescrAsToolTip"
+"$_BOOL_SHOWALARM"""
+"$_DPE_Enable"""
+"$_DPE_Highlight"""
+"$_DPE_Visible"""
+"$_INT_BIT"""
+"$_MSGCAT"""
+"$_MSGTOOLTIP"""
+"$_RULE_Enable"""
+"$_RULE_Highlight"""
+"$_RULE_Visible"""
+"$__ENUM_ActState""2"
+"$__ENUM_Color""|STD_led_On|STD_led_Off"
+"$__ENUM_Image""|Symbols/CoolFanFront_M.svg|Symbols/CoolFanFront_S.svg"
+"$__ENUM_ImageDef""static"
+"$__ENUM_ImageDirection"""
+"$__ENUM_ShapeDirection"""
+"$__ENUM_ShapeForm""0"
+0

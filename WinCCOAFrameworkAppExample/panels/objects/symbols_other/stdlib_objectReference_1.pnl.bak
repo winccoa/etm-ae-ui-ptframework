@@ -1,0 +1,123 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 4 test
+LANG:10027 0 
+PANEL,-1 -1 120 66 N "_3DFace" 2
+"$CALLING_OBJECT_REF_PATH"
+"$DP"
+"main()
+{
+  int error, i;
+  mapping m;
+  dyn_string dsDollars;
+
+  string sObjRefPath=$CALLING_OBJECT_REF_PATH; // get global ref name from the calling object
+  string sSymbol, sDp, stemp;
+
+  if (sObjRefPath!=\"\")
+  {
+    getValue(sObjRefPath, \"dollars\", m); // get Dollar Parameters and values from calling object
+    getValue(sObjRefPath, \"panelFileName\", sSymbol); // get FIlename of calling object
+    // IM 90132 cschnedl: wenn Fehler in Zeile 15 auftritt, dass $DP nicht gefunden
+    // wurde, anderen Referenz-Namen dies Symbols (z.B.: __objRef) im Faceplate verwenden.
+    sDp=m[\"$DP\"];
+
+    dsDollars=mappingKeys(m);  // get all $ Values stored in the mapping
+    shape shRef = getShape(sObjRefPath);
+    invokeMethod(shRef, \"dbgIt\");
+DebugN(\"dollars?=== missing dp\", m, sObjRefPath, $DP, sSymbol, shRef.dollars());
+    for (i=1; i<=dynlen(dsDollars); i++)  // create new dyn_string for dollar parameters from mapping m
+    {
+      if (dsDollars[i]==\"$_BOOL_ACTION_ENABLE\") // set this to false, so that there is no interaction with the object reference is possible
+        dsDollars[i]+=\":\"+\"FALSE\";
+      else
+        dsDollars[i]+=\":\"+m[dsDollars[i]];
+    }
+
+    // split path and filename in parts
+    strreplace(sSymbol, \"\\\\\", \"/\");
+    dyn_string dsSpltPath = strsplit(sSymbol, \"/\");
+    dyn_string dsSpltFile = strsplit(dsSpltPath[dynlen(dsSpltPath)], \"_\");
+    stemp=\"\";
+
+    for (i=1; i<dynlen(dsSpltPath); i++)
+      stemp += dsSpltPath[i]+\"/\";
+
+    for (i=1; i<dynlen(dsSpltFile); i++)  //remove SymbolSize
+      stemp += dsSpltFile[i]+\"_\";
+
+    stemp += \"m.pnl\";
+
+    if (getPath(PANELS_REL_PATH, stemp)!=\"\")  // check if there is a object symbol with size \"m\", if yes use this instead of the original
+      sSymbol=stemp;
+
+    int x, y;
+    getValue(\"objectFrame\", \"position\", x, y);  // get position of object reference
+    error=addSymbol(myModuleName(), myPanelName(), sSymbol, \"stdlib_objectReference_\"+sDp, dsDollars, x, y, 0, 1, 1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+" 0
+ E E E E 1 -1 -1 0  0 0
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+6 0
+"objectFrame"
+""
+1 60 30 E E E 1 E 0 E N {0,0,0} E N {255,255,255} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -60 -30 1 E 60 30 125 95
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+0
+0

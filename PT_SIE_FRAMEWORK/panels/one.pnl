@@ -1,0 +1,125 @@
+V 14
+2
+LANG:10000 0 
+LANG:10001 0 
+PANEL,-1 -1 637 400 N "_3DFace" 0
+E E E E E 1 -1 -1 0  150 40
+""0  1
+E E 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "94.1104"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+2
+LANG:10000 0 
+LANG:10001 0 
+6 0
+"RECTANGLE1"
+""
+1 150 40 E E E 1 E 1 E N {0,0,0} E N {255,255,255} E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+3
+"layoutAlignment" "AlignNone"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 3 2 1 E U  1 E 150 40 260 290
+1 30 0 "1" 7
+0
+1 44 1 "1" 7
+0
+29 58
+"EMBEDDED_MODULE1"
+""
+1 290 90 E E E 1 E 1 E N "_3DText" E N "_3DFace" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+2
+LANG:10000 0 
+LANG:10001 0 
+
+1
+"layoutAlignment" "AlignNone"
+2
+LANG:10000 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+LANG:10001 30 Noto Sans,12,-1,5,50,0,0,0,0,0
+0  290 90 600 280
+15 Canvas.Canvas.1
+0
+"main()
+{
+  RootPanelOnModule(\"testGetScreen.pnl\", \"pppp\", this.ModuleName(), makeDynString());
+}" 0
+0
+LAYER, 1 
+2
+LANG:10000 0 
+LANG:10001 0 
+1 36 0 "2" 1
+0
+1 50 1 "2" 1
+0
+0
+LAYER, 2 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 3 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 4 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 5 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 6 
+2
+LANG:10000 0 
+LANG:10001 0 
+0
+LAYER, 7 
+2
+LANG:10000 0 
+LANG:10001 0 
+1 37 0 "1" 1
+0
+1 51 1 "1" 1
+0
+0
+3 0 "PANEL_REF1" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_template/template_bool_m.pnl" 40 60 T 1 U 
+3
+"$DP""System1:std_1"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+3 1 "PANEL_REF2" -1
+"layoutAlignment" "AlignNone"
+"" ""
+"/objects/STDLIB_template/template_bool_m.pnl" 40 60 T 1 1 0 1 10 120
+3
+"$DP""System1:bbbb"
+"$_BOOL_ACTION_ENABLE"""
+"$_BOOL_DPEDescrAsToolTip"""
+0

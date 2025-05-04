@@ -1,0 +1,238 @@
+V 14
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+PANEL,-1 -1 120 65 N "_3DFace" 3
+"$DP"
+"$_BOOL_ACTION_ENABLE"
+"$dp"
+"main()
+{
+  if ($_BOOL_ACTION_ENABLE==\"\")
+    BOOL_ACTION_ENABLE=true;
+  else
+    BOOL_ACTION_ENABLE=$_BOOL_ACTION_ENABLE;
+
+  dp=$DP;
+  DebugN(\"sp===\",dp, $dp,self.name);
+  if ( dp[strlen(dp) - 1] != '.' )
+    dp += \".\";
+
+  clickFrame.toolTipText=hook_objectTooltip(dp);
+  clickFrame.enabled=BOOL_ACTION_ENABLE;
+
+  makeInfoAreaDisplayConnection(dp);
+}
+" 0
+ E E E E 1 -1 -1 0  60 0
+""0  1
+E "dyn_int diInfoAreaIndex;
+dyn_bool dbInfoAreaUseDefault;
+bool bFirstRun=true;
+dyn_anytype daOldVal;
+string dp;
+bool BOOL_ACTION_ENABLE;
+" 0
+ 4
+"CBRef" "1"
+"EClose" E
+"dpi" "96"
+"pdpi" "96"
+0 0 0
+""
+DISPLAY_LAYER, 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0
+LAYER, 0 
+0
+2 7
+"TEXT_PARENT_REF_NAME"
+""
+1 2 2 E E E 1 E 0 E N "_WindowText" E N "_Window" E E
+ E E
+13 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+4
+"sizePolicy" "Fixed Fixed"
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E U  0 E 12 12 22 22
+0 2 2 "0s" 0 0 0 64 0 0  12 12 1
+3
+LANG:10001 48 MS Shell Dlg 2,-1,11,5,400,0,0,0,0,0,0,0,0,0,0,1
+LANG:10000 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+LANG:10027 37 MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0
+0 3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+0
+LAYER, 1 
+0
+0
+LAYER, 2 
+0
+0
+LAYER, 3 
+0
+0
+LAYER, 4 
+0
+0
+LAYER, 5 
+0
+0
+LAYER, 6 
+0
+0
+LAYER, 7 
+0
+6 1
+"infoArea1"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+2 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -82 2 1 E 143 0 124 19
+6 2
+"infoArea2"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+4 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -82 22 1 E 143 0 124 19
+6 3
+"infoArea3"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+6 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -82 42 1 E 143 0 124 19
+6 4
+"infoArea5"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+8 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -122 2 1 E 143 0 124 19
+6 5
+"infoArea4"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+10 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+3
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 1 1 2 1 E 1 0 1 -122 42 1 E 143 0 124 19
+6 0
+"infoArea6"
+""
+1 60 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ E E
+0 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+4
+"hoverfclr" "N \"_Transparent\""
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E E 0 2 1 2 1 E 1 0 1 -19 -78 1 E 80 80 21 139
+6 6
+"clickFrame"
+""
+1 59 0 E E E 1 E 1 E N "_Transparent" E N "_Transparent" E E
+ "main()
+{
+  openPopUpMenuForDP(dp);
+}" 0
+ E
+12 0 0 0 0 0
+E E E
+0
+3
+LANG:10001 0 
+LANG:10000 0 
+LANG:10027 0 
+
+6
+"hoverfclr" "N \"_Window\""
+"draggable" ""
+"DragStart" "main(int keys)
+{
+  dragStart(dp);
+}"
+"layoutAlignment" "AlignCenter"
+"dashclr"N "_Transparent"
+"antiAliased" "0"
+E "main()
+{
+  hook_openFaceplate(dp);
+}" 0
+ 0 2 1 2 1 E 0.9921259842519684 0 1 0 0 1 E 64 0 0 63
+0
+0
