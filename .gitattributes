@@ -1,9 +1,7 @@
 # WinCC OA files for language classification
-*.ctl linguist-detectable
+* linguist-detectable=false
+
 *.ctl linguist-language=Control-Control++
-*.ctc linguist-detectable
 *.ctc linguist-language=Control-Control++
-*.pnl linguist-detectable
 *.pnl linguist-language=WinCCOA-Panel
-*.xml linguist-detectable
 *.xml linguist-language=WinCCOA-Panel
