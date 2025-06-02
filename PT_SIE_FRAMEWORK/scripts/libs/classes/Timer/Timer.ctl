@@ -21,29 +21,33 @@ class Timer
 //@public members
 //--------------------------------------------------------------------------------
 #event TimerDone()
+#event StartTimer()
+#event StopTimer()
+
   //------------------------------------------------------------------------------
   /** The Default Constructor.
   */
   public Timer(const int &delaytime)
   {
     _delaytime = delaytime;
+    classConnect(this, StartTimerCB, this, StartTimer);
+    classConnect(this, StopTimerCB, this, StopTimer);
   }
 
   /**
-    @brief Function to start timer in new thread
+    @brief Function to start timer in new thread.
   */
   public void Start()
   {
-    _threadId = startThread(this, TimerThread);
+    StartTimer();
   }
 
+  /**
+    @brief Function to stop timer thread.
+  */
   public void Stop()
   {
-    if (_threadId >= 0)
-    {
-      stopThread(_threadId);
-      _threadId = -1;
-    }
+    StopTimer();
   }
 
 //--------------------------------------------------------------------------------
@@ -54,7 +58,7 @@ class Timer
 //@private members
 //--------------------------------------------------------------------------------
   /**
-    @brief Timer thread function
+    @brief Timer thread function.
   */
   private void TimerThread()
   {
@@ -65,6 +69,30 @@ class Timer
     }
   }
 
-  private int _delaytime;
-  private int _threadId = -1;
+  /**
+    @brief Callback function to start timer thread.
+  */
+  private void StartTimerCB() synchronized(_threadId)
+  {
+    if (_threadId < 0)
+    {
+      _threadId = startThread(this, TimerThread);
+    }
+  }
+
+  /**
+    @brief Callback function to stop timer thread.
+  */
+  private void StopTimerCB() synchronized(_threadId)
+  {
+    if (_threadId >= 0)
+    {
+      stopThread(_threadId);
+    }
+
+    _threadId = -1;
+  }
+ 
+  private int _delaytime; //!< The delay time in seconds.
+  private int _threadId = -1; //!< The thread ID of the timer thread.
 };
