@@ -4,7 +4,8 @@ Displays an icon on a certain infoArea
 @param InfoAreaNr ... nr of the infoArea, "infoArea" + InfoAreaNr must exist in the symbol somewhere, normally by using info_area.pnl as reference
 @param dpesForInfoArea ... mapping with DPE names and values
 *///C:/Users/z004u6jf/OneDrive - Siemens AG/PT_SIE_FRAMEWORK/scripts/libs/classes/GUI\faceplate.ctl
-#uses "classes/GUI/faceplate"
+#uses "classes/GUI/GUIFaceplate"
+
 void hook_displayInfoAreaIcon(int InfoAreaNr, mapping dpesForInfoArea)
 {
   int iconId;
@@ -170,7 +171,7 @@ void hook_openFaceplate(string dp)
     {
       sParams += "§" + dsParameter[i];
     }
-    Faceplate::triggerOpenFaceplate(dp+"§"+dp+"§"+ sPanel +"§"+dpTypeName(dp)+ sParams + "§$STDLIB:1");
+    GUIFaceplate::TriggerOpenFaceplate(dp+"§"+dp+"§"+ sPanel +"§"+dpTypeName(dp)+ sParams + "§$STDLIB:1");
 //     callFunction("Faceplate::triggerOpenFaceplate", dp+"§"+dp+"§"+ sPanel +"§"+dpTypeName(dp)+ sParams + "§STDLIB");
   }
   else if (gFaceplateModal)
