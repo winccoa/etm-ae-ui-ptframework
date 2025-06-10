@@ -4,4 +4,4 @@
 # Use stdlib.ctl and stdlib_hook.ctl for object symbols, elementary symbols and faceplate mechanism.
 
 [ui]
-LoadCtrlLibs = "classes/GUI/faceplate"
+LoadCtrlLibs = "classes/GUI/GUIFaceplate"
